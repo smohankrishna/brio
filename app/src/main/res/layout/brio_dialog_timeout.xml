@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/dialog_bkg"
+        android:padding="16dp"
+        android:layout_margin="@dimen/app_dialog_margin_root">
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Title"
+            android:id="@+id/tvTitle"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center" />
+
+        <include layout="@layout/view_loading"
+            android:id="@+id/timeout_loading"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"/>
+
+        <net.hova_it.barared.brio.apis.views.BrioButton2
+            android:id="@+id/btnCancel"
+            style="@style/BrioButton.Gris"
+            android:layout_width="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/brio_cancelar"/>
+    </LinearLayout>
+
+</FrameLayout>

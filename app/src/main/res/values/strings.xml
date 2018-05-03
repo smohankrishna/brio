@@ -1,0 +1,798 @@
+<resources>
+    <!-- ############################################################################################################################# -->
+    <!-- Strings globales inicio -->
+    <string name="brio_unidad">Unidad</string>
+    <string name="brio_continuar">Continuar</string>
+    <string name="brio_aceptar">Aceptar</string>
+    <string name="brio_cancelar">Cancelar</string>
+    <string name="brio_error">Error</string>
+    <string name="brio_guardar">Guardar</string>
+    <string name="brio_regresar">Regresar</string>
+    <string name="brio_seleccion">Seleccione la opción adecuada</string>
+    <string name="brio_loading_msg">Cargando, espere un momento por favor&#8230;</string>
+    <string name="brio_nointernet">No hay conexión a internet.\nVuelve a intentarlo cuando estés conectado a internet.</string>
+    <!-- Strings globales fin -->
+    <!-- ############################################################################################################################# -->
+    <!-- Config inicio -->
+    <string name="app_name">Brío</string>
+    <!-- Config fin -->
+    <!-- ############################################################################################################################# -->
+    <!-- Activity main inicio -->
+    <!--<string name="activity_info"><![CDATA[<p>Comercio:&emsp;<b>?0</b>&emsp;|&emsp;Caja&emsp;<b>?1</b>&emsp;|&emsp;Usuario:&emsp;<b>?2</b></p>]]></string>-->
+    <string name="activity_info_loggedin">Comercio: ?0  |  Id Comercio: ?1  |  Usuario: ?2</string>
+    <string name="activity_info_notlogged">Comercio: ?0  |  Id Comercio: ?1</string>
+    <string name="activity_info_notregistered">No registrado</string>
+    <string name="activity_tab_1">Ventas</string>
+    <string name="activity_tab_2">Servicios</string>
+    <string name="activity_tab_3">Reportes</string>
+    <string name="activity_tab_4">Administración</string>
+    <string name="activity_tab_5">Mi Brío</string>
+    <!-- Activity main fin -->
+    <!-- ############################################################################################################################# -->
+    <!-- otros inicio -->
+    <string name="sync_error">No fue posible realizar la sincronización.\nVuelve a intentarlo más tarde.</string>
+    <!-- otros fin -->
+    <!-- ############################################################################################################################# -->
+    <!-- Menus inicio -->
+    <string name="menu_subtitle">Seleccione la opción deseada</string>
+
+    <string name="menu_reportes_estadocuenta">Estado de cuenta</string>
+    <string name="menu_reportes_ventas">Reportes de ventas</string>
+    <string name="menu_reportes_detallesestadocuenta">Detalles estado de cuenta</string>
+
+    <string name="menu_administracion_cajaentrada">Entrada de dinero</string>
+    <string name="menu_administracion_cajasalida">Salida de dinero</string>
+    <string name="menu_administracion_balance">Balance de caja</string>
+    <string name="menu_administracion_cajacierre">Cierre de caja</string>
+    <string name="menu_administracion_admoninventarios">Administración de inventarios</string>
+    <string name="menu_administracion_admonusuarios">Administración de usuarios</string>
+    <string name="menu_administracion_nuevousuario">Nuevo usuario</string>
+    <string name="menu_administracion_cierresesion">Cierre de sesión</string>
+    <string name="menu_administracion_sincronizacion">Sincronización</string>
+    <string name="menu_administracion_actualizacion">Sincronizar Brío</string>
+    <string name="menu_administracion_enviaticketspendientes">Enviar tickets pendientes</string>
+    <string name="menu_administracion_cierresesion_mensaje">¿Desea cerrar su sesión?</string>
+
+    <string name="menu_administracion_inventarios_altaarticulo">Alta de productos</string>
+    <string name="menu_administracion_inventarios_inventario">Inventario</string>
+
+    <string name="menu_mibrio_briouniversidad">Universidad Brío</string>
+    <string name="menu_mibrio_brionoticias">Brío Noticias</string>
+    <string name="menu_mibrio_briomail">Mi Mail Brío</string>
+    <string name="menu_mibrio_briocontrato">Mi Contrato Brío</string>
+    <string name="menu_mibrio_briogarantia">Garantía Extendida</string>
+    <string name="menu_mibrio_brioservicios">Servicios para el Asociado</string>
+    <string name="menu_mibrio_briohorarios">Horarios Brío</string>
+    <string name="menu_mibrio_briopoliticas">Políticas de Servicio</string>
+    <string name="menu_mibrio_briotiempos">Compromiso de Atención</string>
+    <!-- Menus fin -->
+    <!-- ############################################################################################################################# -->
+    <!-- Setup Manager inicio -->
+    <string name="setup_internet_error">No hay acceso a internet.</string>
+    <string name="setup_activation_error">Se requiere acceso a internet para la activación de Brio.\nNo podrás continuar hasta que actives tu comercio en Brio.\n¿Deseas reintentar la activación?</string>
+    <string name="setup_update_title">Actualizar Brío</string>
+    <string name="setup_update_msj">Ocurrió un error al buscar actualizaciones Brío.\nVuelve a intentarlo más tarde.</string>
+    <string name="setup_update_init">Buscando actualizaciones&#8230;</string>
+    <string name="setup_update_ok_uptodate">Tienes la versión más reciente de Brío.</string>
+    <string name="setup_update_ok_install">Por favor acepta la instalación de la nueva versión de Brío.</string>
+    <!-- ############################################################################################################################# -->
+    <!-- Payment Service inicio -->
+    <string name="payment_title">Resumen</string>
+    <string name="payment_total">Total a cobrar:</string>
+    <string name="payment_restante">Restante:</string>
+    <string name="payment_title_efectivo">EFECTIVO</string>
+    <string name="payment_title_tarjeta">TARJETA</string>
+    <string name="payment_title_fiado">FIADO</string>
+    <string name="payment_efectivo">Ingrese efectivo</string>
+    <string name="payment_tarjeta">Ingrese monto tarjeta</string>
+    <string name="payment_billpocket_notfound">Para realizar cobros con tarjeta requiere la aplicación de Billpocket.\n¿Desea instalarla ahora?</string>
+    <string name="payment_ticket_default_descripcion">Mostrador</string>
+    <string name="payment_cambio">Cambio:</string>
+
+    <string name="payment_tipo_ticket_pos">Venta</string>
+    <string name="payment_tipo_ticket_servicio">Pago de servicios</string>
+    <string name="payment_tipo_ticket_tae">Recarga telefónica</string>
+    <string name="payment_tipo_ticket_internet">Pago de internet</string>
+    <string name="payment_tipo_ticket_banco_entrada">Entrada bancaria</string>
+    <string name="payment_tipo_ticket_banco_salida">Retiro bancario</string>
+    <string name="payment_tipo_ticket_seguro">COMPRA DE SEGURO</string>
+    <string name="payment_tipo_ticket_western_pago">PAGO DE REMESA</string>
+    <string name="payment_tipo_ticket_western_aviso">
+ENTREGA TRANSFERENCIA DE DINERO BAJO LA MARCA WESTERN UNION. Los Envíos de Dinero se
+entregan en efectivo a los beneficiarios, sujeto a la
+disponibilidad y las condiciones aplicables, sin cobrar
+comisión alguna a éstos. CAMBIO DE MONEDA. Los
+Envíos de Dinero se entregan en Pesos, Moneda Nacional
+a los beneficiarios. El monto del Envío de Dinero que se
+entrega al beneficiario en México es acordado por el
+remitente y Western Union en el país de origen. El tipo de
+cambio que se utiliza para los Envíos de Dinero a México
+es fijado por Western Union y aceptado por el remitente.
+Si hubiere una diferencia a favor de Western Union entre
+la cantidad del Envío de Dinero entregada por el remitente
+al Agente autorizado de Western Union en el país de
+origen y la cantidad entregada al beneficiario en México
+derivada del tipo de cambio fijado por Western Union,
+dicha diferencia quedará en favor de Western Union o en
+algunos casos, de sus Agentes autorizados.
+REEMBOLSO. Los reembolsos estarán sujetos a las
+condiciones aplicables y únicamente se realizan al
+Remitente en el Extranjero. POR NINGUN CONCEPTO,
+WESTERN UNION O CUALQUIERA DE SUS AGENTES
+AUTORIZADOS SERÁ RESPONSABLE POR DAÑOS Y
+PERJUICIOS EN EXCESO DE LA CANTIDAD EN PESOS,
+MONEDA NACIONAL EQUIVALENTE A US$500 DÓLARES
+AMERICANOS (ADEMÁS DE REEMBOLSAR EL MONTO
+PRINCIPAL DEL ENVÍO DE DINERO Y LA COMISION
+COBRADA POR EL ENVÍO DE DINERO). El beneficiario,
+mediante la firma del presente formato, acepta haber
+recibido de conformidad el Envío de Dinero objeto de esta
+operación. El Servicio de Transferencia de Dinero hacia
+Mexico se ofrece a través de Western Union Financial
+Services, Inc., y una red de Agentes/Pagadores
+Autorizados. El Servicio de Recepción de Transferencias
+de Dinero de Western Union en México, es ofrecido por
+Grupo Dinámico Empresarial, S.A. de C.V., Transmisor de
+Dinero. Registro número 20362, 4 noviembre 2011. AVISO
+DE PRIVACIDAD En cumplimiento a la Ley Federal de
+Protección de Datos Personales en Posesión de los
+Particulares y su Reglamento (la “Ley”), Grupo Dinámico
+Empresarial S.A. de C.V. (en adelante, el “Responsable”),
+con domicilio en Av. Paseo de la Reforma No. 505, piso
+17, Col. Cuauhtémoc, C.P. 06500, Ciudad de México,
+informa que recaba sus datos personales por conducto de
+su Encargado, SERVICIOS CASETEROS SAPI DE CV, para
+la prestación del servicio de transferencias de dinero, y
+para los siguientes fines que no son necesarios para la
+existencia, mantenimiento y cumplimiento de la relación
+jurídica entre el Responsable y Usted: fines
+promocionales, programas de premios, conocer sus
+preferencias de mercadotecnia (“Marketing”) y evaluación
+de la calidad del servicio del Responsable. Si no está de
+acuerdo en que sus Datos Personales se utilicen para
+finalidades distintas a aquéllas que son necesarias para la
+relación jurídica entre el Responsable y Usted, le
+agradeceremos lo haga saber por escrito al Departamento
+de Datos Personales del Responsable con domicilio en
+Paseo de la Reforma No. 505, piso 17, Col. Cuauhtémoc,
+C.P. 06500, Ciudad de México o al correo electrónico
+privacymx@westernunion.com Usted puede conocer el
+Aviso de Privacidad Integral del Responsable, al ingresar
+a la página de internet www.westernunionmexico.com,
+solicitarlo vía correo electrónico a
+privacymx@westernunion.com o por escrito directamente
+al Responsable en el domicilio anteriormente señalado.
+DUDAS CON EL SERVICIO 01 800 719 8911
+        </string>
+    <string name="payment_tipo_ticket_western_declara">
+Declaro bajo protesta de decir verdad que actúo en mi nombre
+y por cuenta propia y que el origen de los recursos que estoy
+recibiendo como Beneficiario, proceden de una fuente lícita
+        </string>
+
+
+    <string name="payment_tipo_ticket_seguro_aviso">
+        En las próximas 48 horas recibirá por correo electrónico su certificado, es importante que cuando lo reciba valide que toda la información sea correcta.
+        Para cualquier duda o aclaración marcar desde la Ciudad de México 30936741 o desde el interior de la Republica 01 800 044 9999
+        ¡Felicidades! Tienes un mes gratis para realizar llamadas, solo debes marcar al 01 55 53508358 e ingresar tu PIN
+
+    </string>
+
+    <string name="direccion_western">
+        Av. Jose Eleuterio #250 int 201, Col Santa Maria, Monterrey, Nuevo Leon
+        CP 64650, Tel 50475555
+    </string>
+
+    <string name="direccion_western_html">
+        Av. Jose Eleuterio #250 int 201, Col Santa Maria, Monterrey, Nuevo Leon CP 64650, Tel 50475555
+    </string>
+
+    <!-- Payment Service fin -->
+    <!-- ############################################################################################################################# -->
+    <!-- POS Manager inicio -->
+    <string name="pos_cliente_texto">Por favor identifique al cliente Barared (puede escribir el número de la tarjeta):</string>
+    <string name="pos_granel_title">Productos a Granel</string>
+    <string name="pos_granel_add">Agregar ?</string>
+    <string name="pos_granel_change">Cambiar ?</string>
+    <string name="pos_ticket_title">Venta ?</string>
+    <string name="pos_article_notfound_title">Artículo no registrado</string>
+    <string name="pos_article_notfound">No se encontró el artículo buscado.\n¿Desea darlo de alta ahora?</string>
+    <string name="pos_empty">No hay artículos en el ticket</string>
+    <string name="pos_error_cantidad_title">Cantidad incorrecta</string>
+    <string name="pos_error_cantidad_msg">No puede ingresar 0 unidades del artículo</string>
+
+    <string name="pos_varios_precio_msg">Ingrese el precio del artículo</string>
+
+    <string name="ticket_name_efectivo">Efectivo</string>
+    <string name="ticket_name_tarjeta">Tarjeta</string>
+    <string name="ticket_name_vales">Vales</string>
+    <string name="ticket_name_fiado">Fiado</string>
+
+
+    <string name="search_title">Resultado de búsqueda</string>
+    <string name="search_add_article">¿Desea agregar el artículo al ticket?</string>
+    <string name="search_notresults">No se encontraron artículos</string>
+    <!-- POS Manager fin -->
+    <!-- ############################################################################################################################# -->
+    <!-- Inventario inicio -->
+    <string name="inventario_btn_producto">Producto</string>
+    <string name="inventario_btn_marca">Marca</string>
+    <string name="inventario_btn_contenido">Contenido</string>
+    <string name="inventario_btn_codigo">Código</string>
+    <string name="inventario_btn_precio_compra">P.Compra</string>
+    <string name="inventario_btn_precio_venta">P.Venta</string>
+    <string name="inventario_btn_existencias">Existencias</string>
+    <string name="inventario_sin_articulos">Sin articulos para mostrar</string>
+    <string name="inventario_editar_precio">¿Está usted seguro que\ndesea editar el precio\ndel articulo\u0020</string>
+    <string name="inventario_editar_existencias">¿Está usted seguro que\ndesea editar las existencias\ndel articulo\u0020</string>
+    <string name="inventario_borrar">¿Está usted seguro que\ndesea borrar \n el articulo\u0020</string>
+    <string name="inventario_ingresar_cantidad_articulos">Ingrese la cantidad de articulos\na agregar a las existencias</string>
+    <string name="inventario_ingresar_precio_nuevo">Ingrese el nuevo precio</string>
+    <!-- Inventario fin -->
+
+    <!-- ReporSplashScreenicio -->
+    <string name="report_column_articulo">Articulo</string>
+    <string name="report_column_tipo_ticket">Tipo</string>
+    <string name="report_column_vendidos">Vendidos</string>
+    <string name="report_column_compra">Compra</string>
+    <string name="report_column_venta">Venta</string>
+    <string name="report_column_ganancia">Ganancia</string>
+    <string name="report_column_ticket">Ticket</string>
+    <string name="report_column_fecha">Fecha</string>
+    <string name="report_column_total">Total</string>
+    <string name="report_title">Reportes</string>
+    <string name="report_tipo">Reporte:</string>
+    <string name="report_button">Reporte</string>
+    <string name="report_start_date">Fecha inicial:</string>
+    <string name="report_end_date">Fecha final:</string>
+    <string name="report_show_detalle_pos">Venta de productos</string>
+    <string name="report_show_detalle_western">Western Union</string>
+    <string name="report_show_detalle_seguros">Seguros</string>
+    <string name="report_show_detalle_servicios">Servicios</string>
+    <string name="report_show_detalle_tae">Venta de tiempo aire</string>
+    <string name="report_show_detalle_internet">Internet</string>
+    <string name="report_show_detalle_tarjeta">Detalles de pagos con tarjeta</string>
+    <string name="report_show_detalle_banco">Bancos</string>
+    <string name="report_show_detalle_transacciones">Transacciones:</string>
+    <string name="report_show_detalle_total">Total:$</string>
+    <string name="report_sin_articulos">Sin información para mostrar</string>
+    <string name="report_sin_internet">Favor de conectarse a internet para mostrar información</string>
+    <string name="report_default">Elija tipo de reporte</string>
+    <string name="report_10_most_sold">Los 10 articulos mas vendidos</string>
+    <string name="report_10_less_sold">Los 10 articulos menos vendidos</string>
+    <string name="report_earning">Ganancias</string>
+    <string name="report_drawer">Entradas y Salidas de caja</string>
+    <string name="report_error_title">Error</string>
+    <string name="report_error_date">Fecha fin debe ser mayor o igual\na Fecha inicio</string>
+    <string name="report_error_type_report">Seleccione un tipo de reporte</string>
+
+
+    <!-- Reportes Fin -->
+    <!-- ############################################################################################################################# -->
+    <!-- Articulos inicio -->
+    <string name="ap_title">Alta de Productos</string>
+    <string name="ap_subtitle">Por favor llene la siguiente información:</string>
+    <string name="ap_cod_produc">Código de barras:</string>
+    <string name="ap_cod_product_invalid">codigo de barra excede el maximo de digitos</string>
+    <string name="ap_nom_produc">Nombre del producto:</string>
+    <string name="ap_existencia">Existencias:</string>
+    <string name="ap_tipo">A granel:</string>
+    <string name="ap_preciogral">Precio venta:</string>
+    <string name="ap_pcompra">Precio compra:</string>
+    <string name="ap_valcodigo">Codigo de barras no puede ir vacio</string>
+    <string name="ap_valcodigoequals">El codigo de barras ya existe</string>
+    <string name="ap_valnombre">Nombre no puede ir vacio</string>
+    <string name="ap_valnombrequals">Este nombre ya existe para otro producto</string>
+    <string name="ap_valpregral">Ingresar un número válido para precio de venta</string>
+    <string name="ap_val_precnull">Precio no puede ir vacio</string>
+    <string name="ap_valexist">Ingresar un número valido para existencias</string>
+    <string name="ap_daralta">Guardar</string>
+
+    <string name="ap_dialogaddexpress_title">Articulo alta express</string>
+    <string name="ap_dialogaddexpress_subtitle">Llena los siguientes campos:</string>
+    <string name="ap_dialogaddexpress_edit_title">Establecer precio de venta</string>
+    <string name="ap_dialogaddexpress_edit_subtitle">El artículo solicitado no tiene un precio establecido por ?\nPor favor ingréselo a continuación:</string>
+    <string name="ap_dialogaddexpress_hintcodigo">Codigo de barras</string>
+    <string name="ap_dialogaddexpress_hintnombre">Nombre del artículo</string>
+    <string name="ap_dialogaddexpress_hintprecio">Precio por ? del artículo</string>
+    <string name="ap_dialogaddexpress_exit">Artículo ingresado correctamente</string>
+    <string name="ap_dialogaddexpress_exit_edit">Precio ingresado correctamente</string>
+    <string name="ap_dialogaddexpress_cancel">El artículo no fue capturado</string>
+    <string name="ap_dialogaddexpress_cancel_edit">El precio no fue cambiado</string>
+
+    <string name="ap_articlecreate_title">Artículo Creado</string>
+    <string name="ap_article_create">El artículo ha sido creado exitosamente</string>
+
+    <!-- Articulos fin -->
+    <!-- ############################################################################################################################# -->
+    <!-- Datos Comercio inicio-->
+    <string name="form_commerce_regsistro">Ya estoy registrado</string>
+    <string name="form_commerce_title_alta">Alta del comercio</string>
+    <string name="form_commerce_title_recuperar">Recuperación de comercio</string>
+    <string name="form_commerce_title_principal">Seleccione la opción adecuada</string>
+    <string name="form_commerce_title">Captura la siguiente información: </string>
+    <string name="form_commerce_nombre_comercio">Nombre del Comercio</string>
+    <string name="form_commerce_descripcion_hint">No has ingresado una descrpción o ya existe para otro comercio </string>
+
+    <string name="form_commerce_nombre_legal">Nombre Legal</string>
+    <string name="form_commerce_rfc">RFC</string>
+    <string name="form_commerce_direccion_legal">Dirección Legal</string>
+    <string name="form_commerce_numero_exterior_legal">Numero Exterior Legal</string>
+    <string name="form_commerce_numero_interior_legal">Numero Interior Legal</string>
+    <string name="form_commerce_colonia_legal">Colonia Legal</string>
+    <string name="form_commerce_municipio_legal">Municipio Legal</string>
+    <string name="form_commerce_estado_legal">Seleccione Estado Legal</string>
+    <string name="form_commerce_edo_legal">Estado Legal</string>
+    <string name="form_commerce_codigo_postal_legal">Codigo Postal Legal</string>
+    <string name="form_commerce_pais_legal">Seleccione País Legal</string>
+    <string name="form_commerce_country_legal">País Legal</string>
+    <string name="form_commerce_direccion_fisica">Dirección</string>
+    <string name="form_commerce_numero_exterior_fisica">Numero Exterior</string>
+    <string name="form_commerce_numero_interior_fisica">Numero Interior</string>
+    <string name="form_commerce_colonia_fisica">Colonia</string>
+    <string name="form_commerce_municipio_fisica">Municipio</string>
+    <string name="form_commerce_estado_fisica">Seleccione Estado (Obligatorio)</string>
+    <string name="form_commmerce_estado_fisico_label">Estado</string>
+    <string name="form_commerce_codigo_postal_fisica">Codigo Postal</string>
+    <string name="form_commerce_pais_fisica">Seleccione País (Obligatorio)</string>
+    <string name="form_commerce_pais_fisic">País</string>
+    <string name="form_commerce_token">Clave del comercio</string>
+    <string name="form_commerce_mensaje">¿Está usted seguro que\ndesea guardar la información\ndel comercio?</string>
+    <string name="form_commerce_save_exit">Guardado con exito</string>
+    <string name="form_commerce_ya_existente">\nYa esta registrado.\nPor favor elija otro nombre</string>
+    <string name="form_commerce_error_de_conexion_titulo">Error de conexión</string>
+    <string name="form_commerce_error_de_conexion">Favor de intentar mas tarde</string>
+    <string name="form_commerce_valida_not_null">Obligatorio</string>
+    <string name="form_commerce__subtitle">Ingrese los datos solicitados</string>
+    <string name="form_commerce_recuperacion_title">Recuperación de comercio</string>
+    <string name="form_commerce_recuperacion_exitosa">La recuperación de datos del comercio fue exitosa.\nSe requiere un reinicio de la aplicación.</string>
+    <string name="form_commerce_recuperacion_fallida">No fue posible acceder a los datos de recuperación.\nVuelva a intentarlo más tarde.</string>
+    <string name="form_commerce_recuperacion_datosnoencontrados">No se encontraron datos del comercio.\nVuelva a intentarlo más tarde.</string>
+    <string name="form_commerce_id_invalido">Por favor ingresa un ID de comercio válido.</string>
+    <string name="form_commerce_recuperando_datos">Recuperando datos de comercio...</string>
+
+    <string name="comm_status_cancelado_title">Comercio Cancelado</string>
+    <string name="comm_status_cancelado_text">Tu comercio Brío ha sido cancelado, comunícate con el CAB para mayor información.</string>
+    "comm_status_cancelado_text">
+
+    <string name="comm_status_suspendido_title">Comercio Suspendido</string>
+    <string name="comm_status_suspendido_text">Tu comercio Brío ha sido suspendido, por lo que no podrás realizar cobros de servicios.</string>
+    <!-- Datos Comercio fin-->
+    <!-- ############################################################################################################################# -->
+    <!-- Session Manager inicio -->
+    <string name="session_close_inactive">Sesión finalizada por inactividad</string>
+    <!-- Session Manager fin -->
+    <!-- ############################################################################################################################# -->
+    <!-- Formulario de usuario inicio -->
+    <string name="form_usuario_titulo">Registro de Usuarios</string>
+    <string name="form_usuario_usuario">Usuario</string>
+    <string name="form_usuario_password1">Contraseña</string>
+    <string name="form_usuario_password2">Repetir Contraseña</string>
+    <string name="form_usuario_edit_password">Ingrese contraseña (solo si desea editarla)</string>
+    <string name="form_usuario_nombre">Nombre</string>
+    <string name="form_usuario_apellidos">Apellidos</string>
+
+    <string name="form_usuario_preguntas">Pregunta de Seguridad</string>
+    <string name="form_usuario_pregunta">Seleccione Pregunta</string>
+    <string name="form_usuario_perfil_title">Perfil</string>
+    <string name="form_usuario_perfil">Seleccione Perfil</string>
+    <string name="form_usuario_respuesta">Respuesta</string>
+
+    <string name="form_usuario_valida_size">caracteres</string>
+    <string name="form_usuario_valida_usuario_invalido">Usuario Inválido</string>
+    <string name="form_usuario_valida_usuario_nodisponible">Usuario No Disponible</string>
+    <string name="form_usuario_valida_password_invalido">Contraseña Inválida</string>
+    <string name="form_usuario_valida_password_nocoincide">Contraseñas No Coinciden</string>
+    <string name="form_usuario_valida_campo_obligatorio">Campo Obligatorio</string>
+
+    <string name="form_usuario_valida_alert_title">Administración de Usuarios</string>
+    <string name="form_usuario_valida_alert_message">Usuario Guardado Exitosamente</string>
+    <!-- Formulario de usuario fin -->
+    <!-- ############################################################################################################################# -->
+    <!-- Login inicio -->
+    <string name="form_login_user">Ingrese su nombre de usuario</string>
+    <string name="form_login_password">Ingrese su contraseña</string>
+    <string name="form_login_title">Iniciar Sesión</string>
+    <string name="form_login_user_error">Contraseña Invalida</string>
+    <string name="form_login_password_error">Contraseña Inválida</string>
+    <string name="form_login_password_forgot">Olvidé mi contraseña</string>
+    <string name="form_login_version">Brío Android - Versión:</string>
+    <string name="form_login_reset_title">Restablecer Contraseña</string>
+    <string name="form_login_reset_response">Escribe la respuesta</string>
+    <string name="form_login_reset_password">Escribe la nueva contraseña</string>
+    <string name="form_login_reset_reset">Cambiar</string>
+    <string name="form_login_reset_admin">Cambiar contraseña admin.</string>
+    <string name="form_login_reset_admin_title">Cambio de contraseña de administrador</string>
+    <string name="form_login_reset_admin_sub_1">Contraseña nueva para la cuenta "admin".</string>
+    <string name="form_login_reset_admin_sub_2">Repite la contraseña.</string>
+    <string name="form_login_reset_admin_msg1">Por seguridad debes cambiar la contraseña de la cuenta de administrador.\nIntentos restantes: {0}.</string>
+    <string name="form_login_reset_admin_msg2">La cuenta de administrador permanecerá bloqueada hasta que cambie la contraseña.</string>
+
+    <string name="form_login_reset_error_user">Capture un Usuario</string>
+    <string name="form_login_reset_error_response">La Respuesta No Coincide</string>
+    <!-- Login fin -->
+    <!-- ############################################################################################################################# -->
+    <!-- Caja inicio -->
+    <string name="form_registro_caja_titulo">Registro de Caja</string>
+    <string name="form_registro_caja_subtitulo">Elija un nombre para esta caja</string>
+    <string name="form_registro_caja_nombre">Nombre de Caja</string>
+    <string name="form_registro_caja_caracteres">El nombre debe contener por lo menos 3 caracteres</string>
+    <string name="form_registro_caja_notifocacion">¿Desea nombrar a la caja\u0020</string>
+    <!-- Caja fin -->
+    <!-- ############################################################################################################################# -->
+    <!-- Catalogo usuarios inicio -->
+    <string name="cat_usuarios_titulo">Catálogo de Usuarios</string>
+    <string name="cat_usuarios_user">Usuario</string>
+    <string name="cat_usuarios_nombre">Nombre</string>
+    <string name="cat_usuarios_apellidos">Apellidos</string>
+    <string name="cat_usuarios_activo">Activo</string>
+    <string name="cat_usuarios_mensaje">¿Está usted seguro que\ndesea editar la información\ndel usuario "</string>
+    <string name="cat_usuarios_activar">¿Activar el usuario "</string>
+    <string name="cat_usuarios_desactivar">¿Desactivar el usuario "</string>
+    <!-- Catalogo usuarios fin -->
+    <!-- ############################################################################################################################# -->
+    <!-- Videollamada inicio -->
+    <string name="videollamada_api_key">45490912</string>
+    <string name="videollamada_rest_sesion_id_get">http://chat.barared.net:8284/OpenTokSessionAdmon/rest/opentok/generaSession</string>
+    <string name="videollamada_rest_token_get">http://chat.barared.net:8284/OpenTokSessionAdmon/rest/opentok/generaToken</string>
+    <string name="videollamada_rest_conexion_get">http://chat.barared.net:8284/OpenTokSessionAdmon/rest/opentok/conexion</string>
+    <string name="videollamada_session_id_not_found">Por el momento no es posible iniciar sesión.\nIntente nuevamente más tarde.</string>
+    <string name="videollamada_session_id_fail">Ocurrió un error al buscar una sesión disponible.\nIntente nuevamente más tarde.</string>
+    <string name="videollamada_token_not_found">No fue posible unirse a la sesión de video llamada.\nIntente nuevamente más tarde.</string>
+    <string name="videollamada_token_fail">Ocurrió un error al iniciar la sesión.\nIntente nuevamente más tarde.</string>
+    <string name="videollamada_desc">Pulse el botón para iniciar una sesión de video llamada con un ejecutivo del CAB (Centro de Atención Brío)</string>
+    <!-- Videollamada fin -->
+    <!-- ############################################################################################################################# -->
+    <!-- Correos ini -->
+    <string name="mail_ok">Correo enviado exitosamente.</string>
+    <string name="mail_error">No fue posible enviar el correo.</string>
+    <!-- Correos fin -->
+    <!-- ############################################################################################################################# -->
+    <!-- Strings Caja Apertura -->
+    <string name="CajaApertura_cierre_reciente">Cierre más reciente:</string>
+    <string name="CajaApertura_cierre_realizado">Cierre realizado por:</string>
+    <string name="CajaApertura_efectivo_real">Efectivo real en caja:</string>
+    <string name="CajaApertura_ingreso_efectivo">Ingrese el monto de efectivo</string>
+    <string name="CajaApertura_ingreso_erroneo_msn">Las cantidades del cierre mas reciente\ny efectivo real en caja no coinciden</string>
+    <string name="CajaApertura_ingreso_erroneo_informacion_faltante">Ingrese efectivo real en caja</string>
+
+    <!--Cierre de caja-->
+    <string name="caja_cierre_title">Cierre de caja</string>
+    <string name="caja_cierre_entrada_dinero">Entrada de dinero</string>
+    <string name="caja_cierre_salida_dinero">Salida de dinero</string>
+    <string name="caja_cierre_monto_total">Monto total</string>
+    <string name="caja_cierre_monto_total_efectivo">Monto total efectivo en caja</string>
+    <string name="caja_cierre_monto_dialog">Ingrese el monto total efectivo en caja</string>
+    <string name="caja_cierre_confirmacion">Confirmación de cierre de caja</string>
+
+    <!--Cierre de caja-->
+
+    <!-- Strings Caja Entrda y Salida -->
+    <string name="TipodeMoneda_Caja">Tipo de moneda:</string>
+    <string name="TituloSalida">Salida de Dinero</string>
+    <string name="concepto_cajas">Concepto</string>
+    <string name="Cantidad_Caja">Cantidad:</string>
+    <string name="concepto_Caja_editable">Ingrese un concepto</string>
+    <string name="concepto_Caja_editable1">Ingrese un concepto</string>
+    <string name="validacion_Cantidad">Ingrese una cantidad </string>
+    <string name="caja_entrada_exitosa">Ticket de entrada exitoso</string>
+    <string name="caja_salida_exitosa">Ticket de salida exitoso</string>
+    <string name="caja_entrada_spinner">Selecciona tipo de moneda</string>
+    <string name="caja_entrada_datos_faltantes">Ingresa los datos faltantes</string>
+
+    <!-- Strings Caja Terminos -->
+    <string name="titulo6">Términos y condiciones de uso</string>-
+    <string name="TextCheck">Acepto los términos y condiciones</string>
+
+
+    <!-- Strings Caja Balance -->
+    <string name="balance_saldo_inicial">Saldo inicial:</string>
+    <string name="balance_entradas_din">Entradas de dinero:</string>
+    <string name="balance_salidas_din">Salidas de dinero:</string>
+    <string name="balance_ventas_fiado">Ventas en fiado:</string>
+    <string name="balance_ventas_efect">Ventas en efectivo:</string>
+    <string name="balance_ventas_pagadas">Ventas pagadas con tarjeta:</string>
+    <string name="balance_venta_vales">Ventas pagadas con vales:</string>
+    <string name="balance_total">Total:</string>
+    <string name="Titulo_Balance">Balance de Caja </string>
+
+    <string name="dialog_ban_sync">Estimado Asociado(a): llevas ?0 horas sin sincronizar.</string>
+    <string name="dialog_ban_no_sync_days">Estimado Asociado(a): no has sincronizado en {0} día(s).</string>
+    <string name="dialog_ban_no_sync">Estimado Asociado(a): no has sincronizado.</string>
+
+    <string name="terminos_noaccept">Para continuar, es necesario\naceptar los términos y\ncondiciones</string>
+    <string name="terminos_texto">TÉRMINOS Y CONDICIONES
+ÁMBITO DE APLICACIÓN.\n\n
+Bienvenido al sitio web Brío, estos Términos y Condiciones (estos “TCs” o “Acuerdo”) entre Usted y Brío (individual y colectivamente, “nosotros,” o “Brío”) y todas sus divisiones, subsidiarias, afiliadas y sitios de internet, la cual te ofrecen acceso al sitio web y te venden productos y servicios bajo los TCs establecidos en la misma; asimismo gobierna su acceso y uso de varios sitios web que son propiedad y/o operados por Brío, incluyendo www.brio.lat (colectivamente los “Sitio(s)”) y/o uso de la Solución Brío (como se define mas adelante), te rogamos que leas detenidamente los presentes términos y condiciones antes de utilizar el sitio web www.brio.lat, ya que al entrar a nuestro sitio confirmas tu entendimiento con los mismos, si no aceptas estos términos y condiciones de uso, no podrás utilizar este sitio.
+Los presentes términos y condiciones, regulan el uso de la plataforma Brío y del sitio web www.brio.lat, del que Servicios Caseteros, S. A. P. I. de C. V., es propietario, la cual es una Sociedad Promotora de Inversión de Capital Variable, con domicilio en Antonio Caso Número 150, Piso 2, Despacho 202, Colonia San Rafael, Delegación Cuauhtémoc, C.P. 06470, en la Ciudad de México.\n
+
+A través de su plataforma Brío y sitio web www.brio.lat, Servicios Caseteros, S. A. P. I. de C.V., comercializa diversos servicios, ofreciendo a sus usuarios y asociados la posibilidad de su adquisición de equipo y de los propios servicios a comercializar, debido al contenido y la finalidad del sitio web, las personas que quieran beneficiarse de sus servicios deben de suscribirse, lo cual se realiza a través del llenado del formulario de registro y siguiendo los pasos que con posterioridad se les comunicará por medio de correo electrónico para dichos efectos, la condición de asociado supone la aceptación de los términos y condiciones de uso.\n
+
+Una vez completado el formulario de registro y adquirido el hardware Brío, el asociado del sitio recibirá una contraseña de acceso, el asociado será el único responsable de mantener la contraseña proporcionada y así como otros identificadores de cuentas seguras, el titular de la cuenta es totalmente responsable de todas las actividades que ocurran bajo su contraseña o cuenta, por otra parte, debes notificarnos de cualquier uso no autorizado de tu contraseña o cuenta, de ninguna manera, nosotros seremos responsables, directos o indirectamente, por cualquier pérdida o daño de cualquier tipo incurridos como resultado de la falta de cumplimiento de esta condición.
+Servicios Caseteros, S. A. P. I. de C.V., se reserva el derecho de cambiar, modificar, añadir o eliminar partes de estos términos y condiciones de uso en cualquier momento, los cambios serán efectivos cuando se publiquen en el sitio www.brio.lat, por favor revisa periódicamente las actualizaciones de estos términos y condiciones de uso, ya que tendrás que aceptar los cambios que se realicen para poder seguir accediendo al sitio y seguir comprando productos.\n
+
+INFORMACION IMPORTANTE A TENER EN CUENTA:\n\n
+
+LA SOLUCION BRIO (COMO SE DEFINE MAS ADELANTE) FACILITA LA COMERCIALIZACIÓN DE SERVICIOS Y PAGO DE MISMOS, ASI COMO A INSTITUCIONES FINANCIERAS REGULADAS Y NO REGULADAS, BASANDOSE EN SU AUTORIZACION DIRECTA. ESTA SOLUCION NO ES UNA TARJETA DE CREDITO, CUENTA DE BANCO O GARANTIA DE PAGO O MERCANCIA.&quot;
+BRIO NO ES UNA INSTITUCION BANCARIA: BRIO PROCESA PAGOS EN NOMBRE DE LOS USUARIOS, A TRAVES DE SUS PROPIAS CUENTAS BANCARIAS EN LINEA DE SUS INSTITUCIONES BANCARIAS. BRIO NO ES UN BANCO U OTRA INSTITUCION DEPOSITARIA REGISTRADA. TODOS LOS FONDOS EN PODER DE BRIO EN CONEXIÓN CON EL PROCESAMIENTO DE TODOS LOS PAGOS UTILIZANDO LA SOLUCION DE PAGOS DE BRIO NO SON OBLIGACIONES DE DEPOSITO DEL USUARIO Y NO ESTAN ASEGURADAS PARA BENEFICIO DEL USUARIO POR IPAB O CUALQUIER OTRA INSTITUCION GUBERNAMENTAL.&quot;
+AL UTILIZAR LA SOLUCION BRIO (COMO SE DEFINE MAS ADELANTE), Y ACCESAR LOS SITIOS WEB PARA HACER USO DE NUESTRA PLATAFORMA, USTED (I) MANIFIESTA Y ACEPTACION IRREVOCABLE DE ESTOS TC’s Y (II) REPRESENTA QUE USTED ES MAYOR DE EDAD PARA ACEPTAR ESTOS TC’s.&quot;\n
+
+ESTOS TCs APLICAN A TODOS LOS VISITANTES O USUARIOS DE ESTOS SITIOS, INCLUYENDO USUARIOS DE LA SOLUCION BRIO (COMO SE DEFINE MAS ADELANTE). AL AUTORIZAR PAGO DE CUALQUIER SERVICIOS DE NUESTROS PROVEEDORES (COMO SE DEFINEN MAS ADELANTE) UTILIZANDO LA SOLUCION BRIO, USTED ACEPTA CUMPLIR CON ESTE ACUERDO, TODAS LAS REGLAS DE LOS SITIOS WEB, INCLUYENDO PERO NO LIMITADO A LA POLITICA DE PRIVACIDAD DE LOS SITIOS WEB Y/O LA SOLUCION BRIO (COMO SE DEFINE MAS ADELANTE), LOS TERMINOS Y CONDICIONES DE TODOS LOS PROVEEDORES (COMO SE DEFINEN MAS ADELANTE) Y EN SU CASO LAS INSTITUCIONES FINANCIERAS PARTICIPANTES. DICHA ACEPTACION SERA EN SU TOTALIDAD, EN PLENA FUERZA Y EFECTO Y EN TANTO QUE USTED UTILICE LOS SITIOS WEB Y/O LA SOLUCION BRIO.
+CADA SERVICIO, O CARACTERISTICA TENDRA SUS PROPIAS REGLAS ESPECIFICAS. AL PARTICIPAR EN O UTILIZAR UN SERVICIO DE LOS SITIOS WEB, USTED ACEPTA TODAS LAS REGLAS DEL SERVICIO, ADEMAS DE ESTOS TERMINOS Y CONDICIONES Y LA POLITICA DE PRIVACIDAD DE BRIO.&quot;
+LA VENTA Y ENTREGA DE TODOS LOS PRODUCTOS O SERVICIOS COMPRADOS A UN TERCER COMERCIO, UTILIZANDO EL SISTEMA DE PAGOS DE BRIO SERA GOBERNADO POR LOS TERMINOS Y CONDICIONES DEL RESPECTIVO COMERCIO.
+USO DE WWW.BRIO.LAT\n
+
+Para poder utilizar el sitio www.brio.lat “el Sitio” debes de tener 18 años de edad y reconoce expresamente que es nuestro sitio de información corporativa. El Sitio contiene información importante para usted, los comercios y las instituciones financieras con respecto a nuestros servicios, incluyendo, pero no limitado a la Solución de Brío. El Sitio también permite a los usuarios de la Solución Brío hacer consultas de servicio a clientes e iniciar reclamaciones.
+Al aceptar los presentes términos y condiciones “TC’s” te concedemos una licencia no transferible y revocable para utilizar nuestra plataforma y su sitio, en virtud de los TC’s descritos y aceptados, con el propósito de la comercialización de productos y servicios ofertados en nuestra plataforma y página.&quot;\n
+
+El uso comercial o el nombre de terceros están prohibidos, salvo lo expresamente permitido el propietario de dichos derechos,, cualquier infracción de estos términos y condiciones dará lugar a la revocación inmediata de la licencia otorgada en este apartado, sin previo aviso.&quot;\n
+
+Ciertos servicios y las características relacionadas con los mismos, que pueden estar disponibles en el sitio www.brio.lat, pueden requerir el registro o suscripción, si decides registrarte o suscribirte a cualquiera de estos servicios o funciones relacionadas, te comprometes a proporcionar información precisa y actualizada acerca de ti mismo, para actualizar rápidamente esa información si hay algún cambio.
+SOLUCIÓN BRIO.\n
+
+Brío ofrece un servicio de facilitación de pagos en línea permitiendo a los usuarios adquirir productos y servicios de nuestros clientes. Las adquisiciones solo podrán hacerse con los asociados y en comercios autorizados a procesar la transacción con Brío (en adelante referidos como “Comercios Asociados”).&quot;
+La Solución Brío permite a usted pagar en su moneda nacional en los Comercios Asociados. Usted nunca tiene que divulgar su información financiera personal a los comercios asociados. Una vez que ha hecho sus operaciones en el comercio asociado y sometido su orden al solicitar a Brío, se le entregara el comprobante de la operación y/o se le enviara vía correo electrónico comprobante de su pago, el cual servirá y posibles consultas de servicio a clientes (la “Transaction ID”), incluyendo pero no limitado a rembolsos y reclamaciones de ser procedentes.\n
+USO DE LA SOLUCIÓN BRIO.\n\n
+
+Brío se reserva el derecho de suspender, cambiar o descontinuar la Solución Brío en cualquier momento, sin previo aviso o responsabilidad. Brío no garantiza que las funciones contenidas en la Solución será ininterrumpido o libre de errores, y no seremos responsables por ninguna interrupción de servicio (incluyendo pero no limitada a, cortes de energía, fallas del sistema u otras interrupciones que puedan afectar el recibo, procesamiento, aceptación, terminación o compensación de una compra).&quot;
+a. Su uso de la Solución Brío constituirá como su aceptación de estos TC’s y los términos y condiciones del Distribuidor o institución financiera participante.&quot;
+b. Usted reconoce y acepta que las compras productos o servicios son transacciones entre usted y el el Distribuidor o institución financiera, y no con Brío. Brío no es parte de sus transacciones y Brío no es un comprador o vendedor en conexión con ninguna transacción de pago utilizando la Solución Brío.
+ENVIO DE PROMOCIONES Y OFERTAS.
+
+Durante el proceso de registro, aceptas recibir correos electrónicos promocionales del sitio www.brio.lat, no obstante, posteriormente, puedes optar por no recibir tales correos promocionales haciendo clic en el enlace en la parte inferior de cualquier correo electrónico promocional.
+Asimismo durante el proceso de registro nos autorizas expresamente a realizarte llamadas telefónicas y enviarte mensajes de texto con fines mercadológicos, no obstante en todo tiempo tienes la facultad de revocar este consentimiento enviándonos un correo a contacto@brio.lat donde nos manifiestes de forma expresa tu deseo de no seguir recibiendo llamadas telefónicas ni envió de mensajes de texto por parte de nuestro equipo de mercadotecnia.
+Lo anterior de conformidad con la Ley federal de Protección al Consumidor, así como del Acuerdo por el que se establecen las reglas de operación y funcionamiento del Registro Público de Consumidores.
+
+LAS COMUNICACIONES DEL USUARIO
+
+Cualquier comunicación que envíes al sitio web www.brio.lat, incluyéndose de forma enunciativa más no limitativa, preguntas, críticas, comentarios, sugerencias se convertirá en nuestra única y exclusiva propiedad y no serán devueltos, salvo que medie orden judicial, asimismo cuando remites comentarios o críticas al sitio, también nos concedes el derecho a utilizar el nombre que envíes, en el marco de dicha revisión, comentario, o cualquier otro contenido, por último, cabe mencionar que, no debes de usar una dirección de correo electrónico falsa, es decir, pretender ser alguien que no eres.
+Asimismo serán de nuestra propiedad y no serán devueltos salvo que medie orden judicial, los datos que los asociados envíen al sitio web www.brio.lat, para registrar diversas cuentas con la finalidad de verse beneficiados con las promociones de nuevos asociados, dichas cuentas serán anuladas y dadas de baja inmediatamente, cualquier beneficio o promoción que se haya intentado redimir será cancelado y el asociado que haya intentando obtener el beneficio, se le podrá revocar la licencia que se le otorgo al momento de la suscripción, procediendo a cancelar cualquier pedido de productos que hubiera realizado, sin ningún tipo de responsabilidad de nuestra parte.
+
+RESPONSABILIDAD
+
+Hay casos en los cuales una orden de compra puede no ser procesada por circunstancias ajenas a nosotros y las cuales no pueden ser previstas, circunstancias en las cuales interviene la fuerza mayor o el caso fortuito, en ese sentido, en su plataforma Brío o www.brio.lat, informara al cliente de inmediato el motivo por el cual no fue posible procesar una orden, restituyendo cualquier cantidad cobrada al asociado, dejando claro que en este proceso se puede pedir información adicional para completar el proceso de reembolso.
+Asimismo se refiere que todos los productos ofertados en el sitio www.brio.lat, están sujetos a disponibilidad, aun y cuando aparezca plataforma Brío o en el sitio web www.brio.lat, en cuyo caso se le informara al asociado de tal situación procediendo al reembolso de cualquier cantidad pagada por el producto adquirido si es el caso o bien se le notificara de la imposibilidad de procesar la orden de compra.&quot;
+Si derivado de algunos de los supuestos contemplados en el presente apartado, o de otras circunstancias, tuviéramos que reembolsar al asociado alguna cantidad de dinero, este reembolso previó consentimiento del asociado también podrá realizarse mediante un fondeo electrónico en la plataforma por el total del monto a reembolsarse.&quot;
+El asociado antes de la compra del producto, debe aceptar las condiciones particulares de venta, siendo el caso que los presente términos y condiciones generales podrán verse adicionados, limitados o modificados en función de las correspondientes condiciones particulares de venta del producto de que se trate, en caso de conflicto o contradicción en los presentes términos y condiciones y las condiciones particulares de venta, estas últimas prevalecerán sobre las primeras, en consecuencia el asociado debe leer con atención además de los presente términos y condiciones, las condiciones particulares de venta, las cuales se entenderán aceptadas en el momento que el asociado proceda a la compra del producto.
+Todas las ofertas de venta, comunicaciones, solicitudes de información entre otros, se realizan a través de la plataforma Brío o del sitio www.brio.lat, mi representada no será responsable de comunicaciones que se envíen fuera de este sitio, asimismo tampoco será responsable por depósitos en efectivo, transferencias o pagos mediante tarjetas de crédito que hagan los asociados a cuentas diversas a las autorizadas en la compra de productos y servicios, refiriéndose que jamás se hacen solicitudes de depósito a cuentas de particulares.
+
+RESPONSABILIDAD
+
+Los datos proporcionados por el cliente son protegidos de acuerdo a nuestro aviso de privacidad, publicado en www.brio.lat/privacidad
+
+GARANTIA
+
+La garantía de los servicios comercializados será brindada directamente por los distribuidores de los mismos, la duración de dichas garantías se refiere claramente en la descripción de cada producto y es emitida y validada por el distribuidor de cada producto, por lo que Servicios Caseteros, S. A. P. I. de C. V., no asume responsabilidad alguna en torno a dichas garantías y el asociado se obliga a contactar directamente al proveedor del servicio de que se trate para hacer efectiva dicha garantía.
+Servicios Caseteros, S. A. P. I. de C. V., no será responsable por las garantías otorgadas por los distribuidores de los productos, pero realizara todas las acciones tendientes a proporcionar a los asociados que así lo soliciten los datos de contacto de dicho servicio.
+
+FACTURACION
+
+Los asociados que adquieran productos podrán solicitar la factura de los mismos al momento de realizar la compra, en caso de no solicitarse contaran con 5 días naturales para solicitarla.
+RESPONSABILIDAD DEL USUARIO SOBRE IMPUESTOS Y CONTRIBUCIONES.t
+El reporte y pago de cualquier impuesto y/o contribución aplicable que surja del uso de la Solución Brío es su responsabilidad. Por el presente usted reconoce y acepta cumplir con todos y cada uno de las leyes aplicables en materia fiscal, incluyendo el reporte y pago de todos los impuestos generados en conexión con todas las compras.
+BRIO NO ES UNA INSTITUCIÓN BANCARIA.
+
+Brío procesa pagos en nombre de los usuarios a través de su propia cuenta bancaria y el sistema en línea de institución financiera. Todos los fondos depositados en Brío en conexión con el procesamiento de cualquier pago utilizando la Solución Brío no son obligaciones de depósito para el usuario y no están asegurados para beneficio del usuario por le institución para la Protección del Ahorro bancario o por ninguna otra Institución gubernamental.
+
+
+USO DE LOS SITIOS/CONCESIÓN DE LICENCIA.
+
+Como usuario de los Sitios, a usted se le otorga una licencia no exclusiva, no transferible, revocable y limitada, para accesar y usar los Sitios (y su contenido asociado) de conformidad con este Acuerdo. Brío retiene el derecho de terminar esta licencia, a su sola y absoluta discreción, en cualquier momento y por cualquier motivo. Brío reserva todos los derechos no otorgados explícitamente en este Acuerdo.
+Ninguna parte de los Sitios y/o de la Solución Brío podrá ser reproducida in ninguna forma o incorporada a ningún sistema de recuperación de información, electrónico o mecánico. Usted no podrá usar, copiar, emular, clonar, rentar, arrendar, vender, modificar, descompilar, desarmar, hacer técnicas de ingeniería inversa, o transferir los Sitios, la Solución Brio o cualquier porción de los mismos. Brío reserva cualquier derecho no otorgado explícitamente en este Acuerdo. Usted no podrá usar ningún dispositivo, software, o rutina para interferir, o tratar de interferir, con el correcto funcionamiento de los Sitios y/o de la Solución Brío. Usted no podrá tomar ninguna acción que imponga una carga irrazonable o desproporcionadamente grande en la infraestructura de los Sitios.
+
+DERECHOS DE AUTOR Y PROPIEDAD INDUSTRIAL.
+
+El contenido de los Sitios, incluyendo y sin limitación de las pruebas, software, scripts, gráficos, fotos, sonidos música, videos, características interactivas y similares (el “Contenido”) y las marcas registradas, marcas de servicio y logos contenidos en el mismo (las “Marcas”), son propiedad de o licenciadas a Brío, sujeto a derechos de autor y otros derechos de propiedad intelectual. La copia, redistribución o publicación por parte de usted de cualquier parte de los Sitios esta estrictamente prohibido. Usted no adquiere propiedad de los derechos de ningún Contenido, Marcas, servicios u otros materiales vistos en, dentro o a través de los Sitios o de la Solución Brío.
+
+MODIFICACIÓN DEL ACUERDO.
+
+Brío se reserva el derecho, a su sola y absoluta discreción, de cambiar, modificar, o enmendar cualquier porción de este Acuerdo en cualquier momento y sin aviso. Los cambios se consideraran como aceptados por usted por su continuo acceso a los Sitios o el uso de la Solución Brío. Por lo tanto, es su obligación expresa el checar los Sitios frecuentemente para ver si hay cualquier cambio a alguna de nuestras políticas o de estos TC’s. En el caso de que usted no este de acuerdo con dicha modificación, su único y exclusive remedio es el terminar el uso de los Sitios y de la Solución Brío.
+
+LEY APLICABLE Y JURISDICCIÓN
+
+Para la interpretación y cumplimiento de los presentes términos y condiciones, las partes se someten a la jurisdicción de los tribunales de la Ciudad de México renunciado expresamente a cualquier otro fuero que pudiere corresponderles por razón de sus domicilios presentes o futuros.&quot;
+USTED EXPRESAMENTE AUTORIZA A BRIO A QUE CUMPLA CON TODOS Y CADA UNO DE LOS AVISOS LEGALES, CITATORIOS, ORDENES JURISDICCIONALES Y/O GARANTIAS SIN PREVIO AVISO PARA USTED.
+
+CONTACTO
+
+Servicios Caseteros, S. A. P. I. de C. V., sitio web www.brio.lat, con domicilio en Antonio Caso Número 150, Piso 2, Despacho 202, Colonia San Rafael, Delegación Cuauhtémoc, C.P. 06470, en la Ciudad de México
+    </string>
+    <!-- ############################################################################################################################# -->
+
+
+    <!-- Dongle -->
+    <string name="dongle_conectado">Conectado con dispositivo</string>
+
+    <string name="format_id">Format ID: </string>
+
+    <string name="masked_pan">Masked PAN: </string>
+    <string name="pan">PAN:</string>
+    <string name="expiry_date">Expiry Date: </string>
+    <string name="cardholder_name">Cardholder Name: </string>
+    <string name="ksn">KSN: </string>
+    <string name="epb">EPB: </string>
+    <string name="service_code">Service Code: </string>
+    <string name="track_1_length">Track 1 Length: </string>
+    <string name="track_2_length">Track 2 Length: </string>
+    <string name="track_3_length">Track 3 Length: </string>
+    <string name="encrypted_tracks">Encrypted Tracks: </string>
+    <string name="encrypted_track_1">Encrypted Track 1: </string>
+    <string name="encrypted_track_2">Encrypted Track 2: </string>
+    <string name="encrypted_track_3">Encrypted Track 3: </string>
+    <string name="track_1_status">Track 1 Status: </string>
+    <string name="track_2_status">Track 2 Status: </string>
+    <string name="track_3_status">Track 3 Status: </string>
+    <string name="partial_track">Partial Track: </string>
+    <string name="product_type">Product Type:</string>
+    <string name="final_message">Final Message:</string>
+    <string name="random_number">Random Number:</string>
+    <string name="encrypted_working_key">Encrypted Working Key:</string>
+    <string name="mac">MAC:</string>
+
+    <string name="bootloader_version">Bootloader Version: </string>
+    <string name="firmware_version">Firmware Version: </string>
+    <string name="main_processor_version">Main Processor Version: </string>
+    <string name="coprocessor_version">Coprocessor Version: </string>
+    <string name="coprocessor_bootloader_version">Coprocessor Bootloader Version: </string>
+    <string name="usb">USB: </string>
+    <string name="charge">Charge: </string>
+    <string name="battery_level">Battery Level: </string>
+    <string name="battery_percentage">Battery Percentage:</string>
+    <string name="hardware_version">Hardware Version: </string>
+
+    <string name="track_1_supported">Track 1 Supported: </string>
+    <string name="track_2_supported">Track 2 Supported: </string>
+    <string name="track_3_supported">Track 3 Supported: </string>
+    <string name="product_id">Product ID:</string>
+    <string name="pin_ksn">PIN KSN: </string>
+    <string name="emv_ksn">EMV KSN: </string>
+    <string name="track_ksn">Track KSN: </string>
+    <string name="mac_ksn">MAC KSN: </string>
+    <string name="nfc_ksn">NFC KSN: </string>
+    <string name="message_ksn">Message KSN: </string>
+    <string name="csn">CSN: </string>
+    <string name="uid">UID: </string>
+    <string name="vendor_id_hex">Vendor ID (HEX):</string>
+    <string name="vendor_id_ascii">Vendor ID (ASCII):</string>
+    <string name="terminal_setting_version">Terminal Setting Version:</string>
+    <string name="device_setting_version">Device Setting Version:</string>
+    <string name="serial_number">Serial Number:</string>
+    <string name="model_name">Model Name: </string>
+    <string name="enter_pin_on_keypad">Please enter PIN on keypad</string>
+    <string name="request_data_to_server">Request data to server.</string>
+    <string name="batch_data">Batch Data:\n</string>
+    <string name="reversal_data">Reversal Data:\n</string>
+    <string name="command_not_available">Command not available</string>
+    <string name="device_no_response">Device no response</string>
+    <string name="unknown_error">Unknown error</string>
+    <string name="device_busy">Device Busy</string>
+    <string name="out_of_range">Input out of range.</string>
+    <string name="invalid_format">Input invalid format.</string>
+    <string name="input_invalid">Input invalid.</string>
+    <string name="cashback_not_supported">Cashback not supported.</string>
+    <string name="crc_error">CRC Error.</string>
+    <string name="comm_error">Communication Error.</string>
+    <string name="bypass">Bypass</string>
+
+    <string name="bluetooth_disconnected">Bluetooth disconnected</string>
+    <string name="bluetooth_scan_timeout">Bluetooth scan timeout</string>
+    <string name="bluetooth_scan_stopped">Bluetooth scan stopped</string>
+    <string name="amount_confirmed">Amount confirmed</string>
+    <string name="amount_canceled">Amount canceled</string>
+    <string name="pin_entered">PIN entered</string>
+    <string name="pin_bypassed">PIN bypassed</string>
+    <string name="pin_canceled">PIN canceled</string>
+    <string name="pin_timeout">PIN timeout</string>
+    <string name="fail_to_start_audio">Fail to start audio</string>
+    <string name="fail_to_start_bluetooth">Fail to start bluetooth</string>
+    <string name="invalid_function">Invalid function</string>
+    <string name="comm_link_uninitialized">Comm link uninitialized</string>
+    <string name="bluetooth_4_not_supported">Bluetooth 4 not supported</string>
+    <string name="channel_buffer_full">Channel buffer full</string>
+    <string name="bluetooth_permission_denied">Bluetooth permission denied</string>
+    <string name="volume_warning_not_accepted">Volume warning not accepted</string>
+    <string name="fail_to_start_serial">Fail to start serial</string>
+    <string name="usb_device_not_found">USB device not found</string>
+    <string name="usb_device_permission_denied">USB device permission denied</string>
+    <string name="usb_not_supported">USB not supported</string>
+    <string name="error_message">Error message:</string>
+    <string name="cancel_check_card_success">Cancel check card success</string>
+    <string name="cancel_check_card_fail">Cancel check card fail</string>
+    <string name="request_printer_data">Request printer data:</string>
+    <string name="request_reprint_data">Request reprint data:</string>
+    <string name="printer_operation_cancelled">Printer operation cancelled</string>
+    <string name="printer_operation_end">Printer operation end</string>
+    <string name="amount_with_colon">Amount:</string>
+    <string name="cashback_with_colon">Cashback:</string>
+    <string name="currency_with_colon">Currency:</string>
+    <string name="enable_input_amount_success">Enable input amount success</string>
+    <string name="enable_input_amount_fail">Enable input amount fail</string>
+    <string name="disable_input_amount_success">Disable input amount success</string>
+    <string name="disable_input_amount_fail">Disable input amount fail</string>
+    <string name="phone_number">Phone No.:</string>
+    <string name="timeout">Timeout</string>
+    <string name="canceled">Canceled</string>
+    <string name="wrong_length">Wrong Length</string>
+    <string name="emv_card_data_result">EMV card data result:</string>
+    <string name="emv_card_data_failed">Get EMV card data failed</string>
+    <string name="encrypted_data">Encrypted Data:</string>
+    <string name="update_terminal_setting_success">Update terminal setting success</string>
+    <string name="update_terminal_setting_tag_not_found">Update terminal setting failed. Tag not found</string>
+    <string name="update_terminal_setting_length_incorrect">Update terminal setting failed. Length incorrect</string>
+    <string name="update_terminal_setting_tlv_incorrect">Update terminal setting failed. TLV incorrect</string>
+    <string name="update_terminal_setting_bootloader_not_support">Update terminal setting failed. Bootloader not support</string>
+    <string name="update_terminal_setting_tag_not_allowed_to_change">Update terminal setting failed. Tag not allowed to change</string>
+    <string name="update_terminal_setting_user_defined_data_not_allowed_to_change">Update terminal setting failed. User defined data not allowed to change</string>
+    <string name="update_terminal_setting_tag_not_written_correctly">Update terminal setting failed. Tag not written correctly</string>
+    <string name="read_terminal_setting_success">Read terminal setting success</string>
+    <string name="read_terminal_setting_tag_not_found">Read terminal setting failed. Tag not found</string>
+    <string name="read_terminal_setting_length_incorrect">Read terminal setting failed. Length incorrect</string>
+    <string name="read_terminal_setting_tlv_incorrect">Read terminal setting failed. TLV incorrect</string>
+    <string name="read_terminal_setting_bootloader_not_support">Read terminal setting failed. Bootloader not support</string>
+    <string name="read_terminal_setting_tag_not_allowed_to_access">Read terminal setting failed. Tag not allowed to access</string>
+    <string name="read_terminal_setting_user_defined_data_not_allowed_to_change">Read terminal setting failed. User defined data not allowed to change</string>
+    <string name="read_terminal_setting_tag_not_written_correctly">Read terminal setting failed. Tag not written correctly</string>
+    <string name="value">Value:</string>
+    <string name="data">Data:</string>
+    <string name="sending_encrypted_pin_session_key">Sending encrypted PIN Session Key&#8230;</string>
+    <string name="sending_encrypted_data_session_key">Sending encrypted Data Session Key&#8230;</string>
+    <string name="sending_encrypted_track_session_key">Sending encrypted Track Session Key&#8230;</string>
+    <string name="sending_encrypted_mac_session_key">Sending encrypted MAC Session Key&#8230;</string>
+    <string name="inject_session_key_success">Inject Session Key success</string>
+    <string name="inject_session_key_failed">Inject Session Key failed</string>
+    <string name="apdu_result">APDU Result:</string>
+    <string name="encrypt_data_failed">Encrypt data failed</string>
+    <string name="please_press_reprint_or_print_next">Please press reprint or print next</string>
+    <string name="no_aid_matched">No AID matched</string>
+    <string name="sending">Sending:</string>
+    <string name="apdu_failed">APDU Failed</string>
+    <string name="power_on_icc_success">Power on ICC Success</string>
+    <string name="atr">ATR:</string>
+    <string name="atr_length">ATR Length:</string>
+    <string name="power_on_icc_failed">Power on ICC Failed</string>
+    <string name="power_off_icc_success">Power off ICC Success</string>
+    <string name="power_off_icc_failed">Power off ICC Failed</string>
+    <string name="track_encoding">Track Encoding:</string>
+    <string name="capk">CAPK:</string>
+    <string name="location">Location:</string>
+    <string name="rid">RID:</string>
+    <string name="index">Index:</string>
+    <string name="exponent">Exponent:</string>
+    <string name="modulus">Modulus:</string>
+    <string name="checksum">Checksum:</string>
+    <string name="size">Size:</string>
+    <string name="update_capk_success">Update CAPK success</string>
+    <string name="update_capk_fail">Update CAPK fail</string>
+    <string name="emv_report_list">EMV report list:</string>
+    <string name="emv_report">EMV report: </string>
+    <string name="b_id">bID</string>
+    <string name="public_key_version">Public Key Version</string>
+    <string name="pos_entry_mode">POS Entry Mode</string>
+    <string name="brio_limpiar">Limpiar</string>
+    <string name="dialogo_contrato_titulo">Firma de contrato y anexo comisiones</string>
+    <string name="razon_social_brio">Soluciones Brío, S.A.P.I de C.V.</string>
+    <string name="contrato_representado_por">Por: JOSE DE JESUS GONZALEZ MACIN</string>
+    <string name="brio_representante_legal">Representante Legal</string>
+    <string name="razon_social_asociado">Nombre del comercio</string>
+    <string name="brio_asociado">Asociado</string>
+    <string name="brio_comercio_titular">Titular del comercio</string>
+    <string name="dialog_msg_printer_not_found">No se ha detectado ninguna impresora, favor de conectarla.</string>
+    <string name="dialog_title_advertencia">Advertencia</string>
+    <string name="ticket_no_encontrado_titulo">Ticket no encontrado</string>
+    <string name="ticket_no_encontrado_mensaje">El ticket selecionado no está disponible. Favor de llamar al CAB.</string>
+    <string name="dialog_version_beta_mensaje">Usted está trabajando con una versión Beta de la aplicación, está es una versión de prueba; la cual le muestra avances de los posibles cambios para la próxima actualización.\n\n Para regresar a la versión da clic en el botón de recuperar</string>
+    <string name="dialog_version_beta_titulo">Versión Beta</string>
+    <string name="dialog_version_beta_rollback">Descargando última versión estable</string>
+    <string name="hind_edit_numero_telefonico">Número telefónico</string>
+    <string name="str_correo_electronico">Correo electrónico</string>
+    <string name="lbl_envio_ticket">Envío de Ticket</string>
+    <string name="str_no_enviar">No enviar</string>
+    <string name="str_enviar">Enviar</string>
+    <string name="enviar_sms">Enviar SMS</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="envio_ticket_title">Envío de ticket</string>
+    <string name="envio_ticket_msj">El correo capturado es inválido. Presione Cancelar para  verificar el correo o Continuar para continuar sin  enviar.</string>
+
+</resources>

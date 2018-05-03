@@ -1,0 +1,99 @@
+<resources>
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorAccent">@color/primary_color</item>
+        <item name="android:textColorPrimary">@color/font_gris_2</item>
+        <item name="android:colorForeground">@android:color/transparent</item>
+        <item name="android:textColor">@color/font_gris_1</item>
+    </style>
+
+    <style name="AppTheme.FullScreen" parent="AppTheme">
+        <item name="android:windowFullscreen">true</item>
+    </style>
+
+
+
+    <!-- plecas y pestanas inicio -->
+        <style name="AppTheme.Pleca">
+            <item name="android:textAppearance">?android:attr/textAppearanceLarge</item>
+
+            <item name="android:layout_height">50dp</item>
+            <item name="android:gravity">center</item>
+            <!-- <item name="android:textSize">?android:attr/textAppearanceLarge</item> -->
+            <!-- <item name="android:textAllCaps">true</item> -->
+        </style>
+
+        <style name="AppTheme.Pleca.Inactiva">
+            <item name="android:background">@drawable/view_bkg_pleca_inactiva</item>
+            <item name="android:textColor">@color/app_sol_fuente_inactiva</item>
+        </style>
+
+        <style name="AppTheme.Pleca.Activa" parent="AppTheme.Pleca.Inactiva">
+            <item name="android:background">@drawable/view_bkg_pleca_activa</item>
+            <item name="android:textColor">@color/app_sol_blanco</item>
+        </style>
+
+        <style name="AppTheme.Pleca.Pestana_Inactiva" parent="AppTheme.Pleca.Inactiva">
+            <item name="android:elevation">6dp</item>
+            <item name="android:layout_margin">6dp</item>
+        </style>
+
+
+    <!-- plecas y pestanas fin -->
+    <!-- Botones nuevos inicio -->
+        <style name="BrioButton">
+            <item name="android:layout_height">50dp</item>
+            <item name="android:textAppearance">?android:attr/textAppearanceLarge</item>
+            <item name="android:textAllCaps">false</item>
+            <item name="android:textColor">#ffffff</item>
+            <item name="android:paddingLeft">20dp</item>
+            <item name="android:paddingRight">20dp</item>
+
+            <item name="android:shadowColor">#000000</item>
+            <item name="android:shadowDx">1</item>
+            <item name="android:shadowDy">1</item>
+            <item name="android:shadowRadius">2</item>
+        </style>
+
+        <style name="BrioButton.Gris" parent="BrioButton">
+            <item name="android:background">@drawable/brio_btn_gris</item>
+
+        </style>
+
+        <style name="BrioButton.Rosa" parent="BrioButton">
+            <item name="android:background">@drawable/brio_btn_rosa</item>
+  
+        </style>
+
+        <style name="BrioButton.Naranja" parent="BrioButton">
+            <item name="android:background">@drawable/brio_btn_naranja</item>
+        </style>
+    <!-- Botones nuevos fin -->
+    <!--  Para el estilo en VistaGIF -->
+    <style name="Widget.VistaGif" parent="@android:style/Widget"/>
+
+    <!-- Style de Title y subtitle -->
+        <style name="AppTheme.Brio_title">
+            <item name="android:textColor">@color/black</item>
+            <item name="android:textSize">@dimen/articulo_alta_titles_form</item>
+            <item name="android:textStyle">bold</item>
+            <item name="android:gravity">center</item>
+            <item name="android:padding">5dp</item>
+        </style>
+
+    <style name="AppTheme.Brio_subtitle">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">@dimen/articulo_alta_subtitles_form</item>
+           <item name="android:gravity">center</item>
+        <item name="android:padding">5dp</item>
+    </style>
+
+    <style name="MenuList">
+        <item name="android:padding">@dimen/activity_vertical_margin</item>
+        <item name="android:layout_marginStart">32dp</item>
+        <item name="android:layout_marginEnd">32dp</item>
+        <item name="android:scrollbars">vertical</item>
+        <item name="android:scrollbarFadeDuration">0</item>
+    </style>
+
+
+</resources>

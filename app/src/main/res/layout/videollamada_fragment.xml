@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/view_menu_grd"
+    android:padding="32dp" >
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/relativeLayout4"
+        android:text="@string/videollamada_desc"
+        android:gravity="center"
+        android:textSize="40sp"/>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/relativeLayout4">
+
+        <net.hova_it.barared.brio.apis.views.BrioButton2
+            style="@style/BrioButton.Rosa"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:text="@string/brio_continuar"
+            android:id="@+id/btnAccept"
+            android:layout_alignTop="@+id/btnCancel"
+            android:layout_alignParentEnd="true" />
+
+    </RelativeLayout>
+</RelativeLayout>

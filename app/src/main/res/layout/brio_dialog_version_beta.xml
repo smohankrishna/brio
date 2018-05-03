@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!-- body -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:background="@drawable/dialog_bkg"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:id="@+id/dialog_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/_16sdp"
+                    android:gravity="center"
+                    android:text="@string/dialog_version_beta_titulo"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:visibility="visible" />
+
+                <TextView
+                    android:id="@+id/dialog_msg"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:paddingEnd="16dp"
+                    android:paddingStart="16dp"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                    android:text="@string/dialog_version_beta_mensaje"
+                      />
+
+                <ImageButton
+                    style="@style/Base.Widget.AppCompat.Button.Borderless"
+                    android:layout_width="@dimen/_60sdp"
+                    android:layout_height="@dimen/_55sdp"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginBottom="@dimen/_5sdp"
+                    android:adjustViewBounds="true"
+                    android:scaleType="fitXY"
+
+                    android:src="@drawable/ic_rollback_version" />
+
+                <CheckBox
+                    android:id="@+id/cb_ocultar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="false"
+                    android:textColor="@color/font_gris_1"
+                    android:layout_marginBottom="@dimen/_10sdp"
+                    android:text="No volver a mostrar" />
+
+                <net.hova_it.barared.brio.apis.views.BrioButton2
+                    android:id="@+id/btnAccept"
+                    style="@style/BrioButton.Rosa"
+                    android:layout_width="wrap_content"
+                    android:text="@string/brio_aceptar" />
+
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+</FrameLayout>

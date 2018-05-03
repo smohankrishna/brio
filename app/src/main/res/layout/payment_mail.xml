@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:brio="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="8dp"
+    android:background="@drawable/view_menu_grd"
+    android:gravity="center_vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:gravity="center"
+            android:text="@string/lbl_envio_ticket"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/app_sol_rosa" />
+
+        <AutoCompleteTextView
+            android:id="@+id/edMail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:gravity="center"
+            android:hint="@string/str_correo_electronico"
+            android:textColor="@color/font_gris_1"
+            android:textSize="@dimen/articulo_alta_botones_form"
+            android:completionThreshold="2"
+            android:lines="1"
+            android:padding="8dp"
+            android:inputType="textEmailAddress"
+            android:background="@drawable/edittext_shape_blue"
+            android:singleLine="true"
+            android:imeOptions="actionDone"/>
+
+        <net.hova_it.barared.brio.apis.views.BrioEditText
+            android:id="@+id/edSms"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="40dp"
+            android:gravity="center"
+            android:hint="@string/hind_edit_numero_telefonico"
+            android:textColor="@color/black"
+            android:textSize="@dimen/articulo_alta_botones_form"
+            android:lines="1"
+            android:inputType="number"
+            android:singleLine="true"
+            android:imeOptions="actionDone"
+            android:visibility="gone"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:orientation="horizontal"
+        android:layout_margin="10dp"
+        >
+
+        <net.hova_it.barared.brio.apis.views.BrioButton2
+            android:id="@+id/btnContinuarSinEnviar"
+            style="@style/BrioButton.Gris"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/str_no_enviar"
+            android:layout_weight="1"
+            android:layout_margin="10dp" />
+
+
+        <net.hova_it.barared.brio.apis.views.BrioButton2
+            android:id="@+id/btnSendMail"
+            style="@style/BrioButton.Rosa"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/str_enviar"
+            android:layout_weight="1"
+            android:layout_margin="10dp"
+            />
+
+
+        <net.hova_it.barared.brio.apis.views.BrioButton2
+            android:id="@+id/btnSendSmS"
+            style="@style/BrioButton.Rosa"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/enviar_sms"
+            android:layout_weight="1"
+            android:layout_margin="10dp"
+            android:visibility="gone"/>
+
+
+    </LinearLayout>
+
+
+
+</RelativeLayout>

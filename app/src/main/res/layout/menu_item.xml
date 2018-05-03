@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_horizontal">
+
+    <!-- layout_width es la suma de 64 - 8 (padding) + layout_width textview titulo + 2*padding horizontal -->
+    <!-- 288 = 56 + 200 + 32 -->
+    <LinearLayout
+        android:layout_width="338dp"
+        android:layout_height="64dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/view_bkg_pleca_inactiva"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="4dp">
+
+        <ImageView
+            android:id="@+id/menu_icono"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="8dp"
+            android:adjustViewBounds="true"
+            android:src="@drawable/menu_mibrio_briomail_off"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/menu_titulo"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="título"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@color/app_sol_fuente_inactiva" />
+
+    </LinearLayout>
+</RelativeLayout>

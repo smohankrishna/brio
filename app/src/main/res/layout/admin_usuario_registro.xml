@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:brio="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    android:orientation="vertical"
+    android:background="@drawable/pos_bkg_gradient"
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
+        android:layout_marginTop="15dp"
+        android:orientation="vertical"
+        >
+
+    <TextView
+        android:id="@+id/subtitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/form_usuario_titulo"
+        style="@style/AppTheme.Brio_title"
+        />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:text="@string/form_commerce_title"
+            style="@style/AppTheme.Brio_subtitle"
+
+            />
+    </LinearLayout>
+    <ScrollView
+        android:id="@+id/scrollUserForm"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/articulo_alta_height_form"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal"
+                >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:paddingLeft="3dp"
+                    android:text="@string/form_usuario_usuario"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/articulo_alta_botones_form"
+                    android:textAlignment="gravity"/>
+
+                <net.hova_it.barared.brio.apis.views.BrioEditText
+                    android:id="@+id/editUsuario"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:paddingLeft="10dp"
+                    android:layout_weight="1"
+                    brio:tipo_teclado="alfanumerico"
+                    android:textSize="@dimen/articulo_alta_botones_form"
+                    android:background="@drawable/ap_bkg_blue"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/articulo_alta_height_form"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal"
+                >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:paddingLeft="3dp"
+                    android:text="@string/form_usuario_password1"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/articulo_alta_botones_form"
+                    android:textAlignment="gravity"/>
+
+                <net.hova_it.barared.brio.apis.views.BrioEditText
+                    android:id="@+id/editPassword1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:paddingLeft="10dp"
+                    android:layout_weight="1"
+                    brio:tipo_teclado="alfanumerico_pass"
+                    android:textSize="@dimen/articulo_alta_botones_form"
+                    android:background="@drawable/ap_bkg_blue"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/articulo_alta_height_form"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal"
+                >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:paddingLeft="3dp"
+                    android:text="@string/form_usuario_password2"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/articulo_alta_botones_form"
+                    android:textAlignment="gravity"/>
+
+                <net.hova_it.barared.brio.apis.views.BrioEditText
+                    android:id="@+id/editPassword2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:paddingLeft="10dp"
+                    android:layout_weight="1"
+                    brio:tipo_teclado="alfanumerico_pass"
+                    android:textSize="@dimen/articulo_alta_botones_form"
+                    android:background="@drawable/ap_bkg_blue"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/articulo_alta_height_form"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal"
+                >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:paddingLeft="3dp"
+                    android:text="@string/form_usuario_nombre"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/articulo_alta_botones_form"
+                    android:textAlignment="gravity"/>
+
+                <net.hova_it.barared.brio.apis.views.BrioEditText
+                    android:id="@+id/editNombre"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:paddingLeft="10dp"
+                    android:layout_weight="1"
+                    brio:tipo_teclado="alfanumerico"
+                    android:textSize="@dimen/articulo_alta_botones_form"
+                    android:background="@drawable/ap_bkg_blue"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/articulo_alta_height_form"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal"
+                >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:paddingLeft="3dp"
+                    android:text="@string/form_usuario_apellidos"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/articulo_alta_botones_form"
+                    android:textAlignment="gravity"/>
+
+                <net.hova_it.barared.brio.apis.views.BrioEditText
+                    android:id="@+id/editApellidos"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:paddingLeft="10dp"
+                    android:layout_weight="1"
+                    brio:tipo_teclado="alfanumerico"
+                    android:textSize="@dimen/articulo_alta_botones_form"
+                    android:background="@drawable/ap_bkg_blue"
+                    android:inputType="textPersonName"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/articulo_alta_height_form"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal"
+                >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:text="@string/form_usuario_perfil_title"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/articulo_alta_botones_form"
+                    android:textAlignment="textEnd"/>
+
+                <Spinner
+                    android:id="@+id/spinnerPerfil"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:textSize="@dimen/articulo_alta_botones_form"
+                    android:background="@drawable/ap_bkg_blue"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/articulo_alta_height_form"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal"
+                >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:text="@string/form_usuario_preguntas"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/articulo_alta_botones_form"
+                    android:textAlignment="textEnd"/>
+
+                <Spinner
+                    android:id="@+id/spinnerPregunta1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:textSize="@dimen/articulo_alta_botones_form"
+                    android:background="@drawable/ap_bkg_blue"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/articulo_alta_height_form"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal"
+                >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:paddingLeft="3dp"
+                    android:text="@string/form_usuario_respuesta"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/articulo_alta_botones_form"
+                    android:textAlignment="gravity"/>
+
+                <net.hova_it.barared.brio.apis.views.BrioEditText
+                    android:id="@+id/editRespuesta1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:paddingLeft="10dp"
+                    android:layout_weight="1"
+                    brio:tipo_teclado="alfanumerico"
+                    android:textSize="@dimen/articulo_alta_botones_form"
+                    android:background="@drawable/ap_bkg_blue"
+                    android:inputType="text"/>
+
+            </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:orientation="horizontal"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:layout_gravity="center"
+           >
+
+
+                <net.hova_it.barared.brio.apis.views.BrioButton2
+                    android:id="@+id/buttonCancel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+
+                    style="@style/BrioButton.Gris"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginLeft="25dp"
+                    android:layout_weight="1"
+                    android:text="@string/brio_cancelar"
+                    />
+
+                <net.hova_it.barared.brio.apis.views.BrioButton2
+                    android:id="@+id/buttonSave"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+
+                    style="@style/BrioButton.Rosa"
+                    android:layout_marginRight="25dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_weight="1"
+                    android:text="@string/brio_guardar"
+                   />
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

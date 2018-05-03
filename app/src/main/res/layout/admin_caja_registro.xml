@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:brio="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="20dp"
+    android:background="@drawable/pos_bkg_gradient"
+    android:gravity="center">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="30dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:id="@+id/loginLayout"
+            android:layout_gravity="center">
+
+            <TextView
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/form_registro_caja_titulo"
+                style="@style/AppTheme.Brio_title"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:gravity="center_horizontal"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp"
+                android:text="@string/form_registro_caja_subtitulo"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="@color/black" />
+
+            <net.hova_it.barared.brio.apis.views.BrioEditText
+                android:id="@+id/nombreCaja"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:layout_margin="20dp"
+                android:hint="@string/form_registro_caja_nombre"
+                android:inputType="text"
+                android:nestedScrollingEnabled="true"
+                brio:tipo_teclado="alfanumerico"/>
+
+
+            <TextView
+                android:id="@+id/textLoginError"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="#ff0000" />
+
+            <net.hova_it.barared.brio.apis.views.BrioButton2
+                android:id="@+id/buttonSaveCaja"
+                style="@style/BrioButton.Rosa"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginLeft="20dp"
+                android:text="@string/brio_guardar"
+                android:layout_gravity="center_horizontal" />
+
+            <TextView
+                android:id="@+id/caracteres"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="15dp"
+                android:gravity="center"
+                android:text=""
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="#ff63e5"
+                />
+
+
+        </LinearLayout>
+        </ScrollView>
+
+</LinearLayout>
+
+

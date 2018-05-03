@@ -1,0 +1,63 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:brio="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/pos_bkg_gradient"
+    android:padding="@dimen/inner_space"
+    android:layout_gravity="center">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/pos_cliente_texto"
+        android:id="@+id/tvMsg"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:gravity="center"
+        android:textColor="@color/black"
+        android:layout_marginTop="20dp"
+        android:layout_above="@+id/tbvCodigoCliente" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:id="@+id/tvMsg2"
+        android:gravity="center"
+        android:textColor="@color/app_sol_rosa"
+        android:layout_below="@+id/tbvCodigoCliente"
+        android:layout_alignParentEnd="true" />
+
+    <net.hova_it.barared.brio.apis.views.BrioButton2
+        android:id="@+id/btnNoCliente"
+        style="@style/BrioButton.Gris"
+        android:layout_width="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:visibility="visible"
+        android:layout_marginBottom="20dp"
+        android:text="@string/brio_cancelar"/>
+
+    <net.hova_it.barared.brio.apis.views.BrioButton2
+        android:id="@+id/btnContinuar"
+        android:layout_width="wrap_content"
+        style="@style/BrioButton.Rosa"
+        android:visibility="gone"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp"
+        android:text="@string/brio_continuar"/>
+
+    <net.hova_it.barared.brio.apis.views.BrioSearchView
+        android:id="@+id/tbvCodigoCliente"
+        brio:hint="Código Cliente"
+        brio:id_layout_ocultable_por_teclado="@id/pos_panel_left"
+        brio:tipo_teclado="alfanumerico"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_alignParentEnd="true"/>
+
+</RelativeLayout>

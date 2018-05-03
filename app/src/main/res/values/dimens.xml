@@ -1,0 +1,30 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_vertical_margin">16dp</dimen>
+
+    <dimen name="inner_space">10dp</dimen>
+    <dimen name="inner_space_center">5dp</dimen>
+
+    <dimen name="app_dialog_margin_root">16dp</dimen>
+
+    <!--_____________________ArticuloAlta_________________________-->
+    <dimen name="articulo_alta_height_form">45dp</dimen>
+    <dimen name="articulo_alta_titles_form">25sp</dimen>
+    <dimen name="articulo_alta_subtitles_form">20sp</dimen>
+    <dimen name="articulo_alta_botones_form">18sp</dimen>
+    <!--_____________________Teclado_________________________-->
+
+    <dimen name="text_keys_number">40sp</dimen>
+    <dimen name="text_keys_alpha">26sp</dimen>
+    <dimen name="text_keys_alpha_20">27sp</dimen>
+
+    <dimen name="brio_dialog_ic_size">80dp</dimen>
+    <dimen name="brio_corner_size">16dp</dimen>
+    <dimen name="brio_ic_action_size">32dp</dimen>
+    <dimen name="pos_ticket_item_padding">8dp</dimen>
+    <dimen name="brio_button_position_padding">5dp</dimen>
+    <dimen name="payment_text">26sp</dimen>
+
+    <!-- Icono de video llamada -->
+    <dimen name="brio_fab_margen">18dp</dimen>
+</resources>

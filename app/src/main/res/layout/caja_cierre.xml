@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+ <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:brio="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="10dp"
+    android:background="@drawable/pos_bkg_gradient">
+
+
+
+
+    <TextView
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/caja_cierre_title"
+        style="@style/AppTheme.Brio_title"
+        android:layout_marginBottom="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginLeft="30dp"
+        />
+
+
+
+<LinearLayout
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:layout_marginRight="10dp"
+android:orientation="vertical">
+
+
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/articulo_alta_height_form"
+    android:layout_marginTop="10dp"
+    android:orientation="horizontal"
+    android:layout_marginLeft="20dp"
+    android:layout_marginRight="20dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingEnd="12dp"
+        android:layout_weight="1.5"
+        android:text="@string/caja_cierre_entrada_dinero"
+        android:textColor="@color/black"
+        android:textSize="@dimen/articulo_alta_subtitles_form"
+        android:textAlignment="textEnd"
+        android:gravity="end"/>
+
+    <TextView
+        android:id="@+id/caja_cierre_entrada"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="10dp"
+        android:paddingLeft="10dp"
+        android:layout_weight="1"
+        android:text="prueba"
+        android:gravity="start"
+        android:textSize="@dimen/articulo_alta_subtitles_form"
+        />
+
+</LinearLayout>
+
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/articulo_alta_height_form"
+    android:layout_marginTop="10dp"
+    android:orientation="horizontal"
+    android:layout_marginLeft="20dp"
+    android:layout_marginRight="20dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingEnd="12dp"
+        android:layout_weight="1.5"
+        android:text="@string/caja_cierre_salida_dinero"
+        android:textColor="@color/black"
+        android:textSize="@dimen/articulo_alta_subtitles_form"
+        android:textAlignment="textEnd"
+        android:gravity="end"/>
+
+    <TextView
+        android:id="@+id/caja_cierre_salida"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="10dp"
+        android:paddingLeft="10dp"
+        android:layout_weight="1"
+        android:text="prueba"
+        android:gravity="start"
+        android:textSize="@dimen/articulo_alta_subtitles_form"
+        />
+
+</LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/articulo_alta_height_form"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingEnd="12dp"
+            android:layout_weight="1.5"
+            android:text="@string/caja_cierre_monto_total"
+            android:textColor="@color/black"
+            android:textSize="@dimen/articulo_alta_subtitles_form"
+            android:textAlignment="textEnd"
+            android:gravity="end"/>
+
+        <TextView
+            android:id="@+id/caja_cierre_monto"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:paddingLeft="10dp"
+            android:layout_weight="1"
+            android:text="prueba"
+            android:gravity="start"
+            android:textSize="@dimen/articulo_alta_subtitles_form"
+            />
+
+    </LinearLayout>
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="10dp"
+    android:orientation="horizontal"
+    android:layout_marginLeft="20dp"
+    android:layout_marginRight="20dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingEnd="12dp"
+        android:layout_weight="1.5"
+        android:text="@string/caja_cierre_monto_total_efectivo"
+        android:textColor="@color/black"
+        android:textSize="@dimen/articulo_alta_subtitles_form"
+        android:textAlignment="textEnd"
+        android:gravity="end"/>
+
+    <net.hova_it.barared.brio.apis.views.BrioEditText
+        android:id="@+id/caja_cierre_monto_efectivo"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:layout_marginLeft="10dp"
+        android:paddingLeft="10dp"
+        android:hint="Ingrese el monto "
+        android:background="@drawable/ap_bkg_blue"
+        android:gravity="start|center_vertical"
+        brio:tipo_teclado="numerico"
+        android:textSize="@dimen/articulo_alta_subtitles_form"
+        />
+
+</LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_marginBottom="30dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="40dp"
+        android:layout_gravity="center"
+        android:orientation="horizontal">
+
+        <net.hova_it.barared.brio.apis.views.BrioButton2
+            android:id="@+id/caja_cierre_btn_cancelar"
+            style="@style/BrioButton.Gris"
+            android:layout_gravity="start"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="15dp"
+            android:layout_weight="1"
+            android:gravity="center"
+
+            android:text="@string/brio_cancelar"/>
+
+        <net.hova_it.barared.brio.apis.views.BrioButton2
+            android:id="@+id/caja_cierre_btn_aceptar"
+            style="@style/BrioButton.Rosa"
+            android:layout_gravity="start"
+
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="20dp"
+            android:layout_weight="1"
+            android:gravity="center"
+
+            android:text="@string/brio_aceptar"/>
+    </LinearLayout>
+
+
+
+</LinearLayout>
+</LinearLayout>

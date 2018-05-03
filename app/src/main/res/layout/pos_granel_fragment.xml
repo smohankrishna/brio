@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/pos_granel_title"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+
+        android:textAppearance="?android:attr/textAppearanceMedium"
+
+        style="@style/AppTheme.Pleca.Activa"
+        android:text="@string/pos_granel_title" />
+
+    <!--android:layout_height="?android:attr/listPreferredItemHeightSmall"-->
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/pos_granel_bkg_granel"
+        android:layout_below="@+id/pos_granel_title"
+        android:padding="@dimen/inner_space"
+        android:weightSum="1">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="vertical"
+            android:visibility="gone" />
+
+        <include
+            android:id="@+id/granel_pb_cargando"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            layout="@layout/view_loading"
+            android:layout_gravity="center" />
+
+    </LinearLayout>
+
+
+
+</RelativeLayout>

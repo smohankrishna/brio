@@ -1,0 +1,151 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:brio="http://schemas.android.com/apk/res-auto"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/pos_bkg_gradient"
+    android:padding="16dp"
+    >
+
+
+
+
+
+    <TextView
+        style="@style/AppTheme.Brio_title"
+        android:id="@+id/tvRestanteTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:layout_marginTop="16dp"
+        android:text="Apertura de Caja" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/tvRestanteTitle"
+        android:layout_above="@+id/CA_btn_aceptar">
+
+
+    <LinearLayout
+        android:layout_below="@+id/tvRestanteTitle"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/CA_btn_aceptar"
+        android:gravity="center_vertical"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp">
+
+        <!-- Cierre más reciente -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1.5"
+                android:gravity="center_vertical|end"
+                android:paddingEnd="12dp"
+                android:text="@string/CajaApertura_cierre_reciente"
+                android:textAlignment="textEnd"
+                android:textColor="@color/black"
+                android:textSize="@dimen/articulo_alta_subtitles_form" />
+
+            <TextView
+                android:id="@+id/CA_cierre_mas_reciente"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"
+                android:gravity="center_vertical|start"
+                android:paddingLeft="10dp"
+                android:text="prueba"
+                android:textSize="@dimen/articulo_alta_subtitles_form" />
+
+        </LinearLayout>
+
+        <!-- Cierre realizado por -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1.5"
+                android:gravity="center_vertical|end"
+                android:paddingEnd="12dp"
+                android:text="@string/CajaApertura_cierre_realizado"
+                android:textAlignment="textEnd"
+                android:textColor="@color/black"
+                android:textSize="@dimen/articulo_alta_subtitles_form" />
+
+            <TextView
+                android:id="@+id/CA_cierre_realizado_por"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"
+                android:gravity="center_vertical|start"
+                android:paddingLeft="10dp"
+                android:text="CA_cierre_realizado_por"
+                android:textSize="@dimen/articulo_alta_subtitles_form" />
+
+        </LinearLayout>
+
+
+
+        <!-- Efectivo real en caja -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.5"
+                android:gravity="center_vertical|end"
+                android:paddingEnd="12dp"
+                android:text="@string/CajaApertura_efectivo_real"
+                android:textAlignment="textEnd"
+                android:textColor="@color/black"
+                android:textSize="@dimen/articulo_alta_subtitles_form" />
+
+            <net.hova_it.barared.brio.apis.views.BrioEditText
+                android:id="@+id/CA_efectivo_real"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/ap_bkg_blue"
+                android:gravity="center_vertical|start"
+                android:hint="@string/CajaApertura_ingreso_efectivo"
+                android:paddingLeft="10dp"
+                android:textSize="@dimen/articulo_alta_subtitles_form"
+                brio:tipo_teclado="numerico" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    </ScrollView>
+
+    <net.hova_it.barared.brio.apis.views.BrioButton2
+        android:id="@+id/CA_btn_aceptar"
+        style="@style/BrioButton.Rosa"
+        android:layout_width="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="@string/brio_aceptar"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
+
+</RelativeLayout>

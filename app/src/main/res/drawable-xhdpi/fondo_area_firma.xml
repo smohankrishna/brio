@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android" android:autoMirrored="true">
+    <!-- 1 Plana - ->
+    <item android:height="12.5px" android:width="32px" android:left="10px">
+        <bitmap android:src="@drawable/app_ic_brio_logo2"/>
+    </item>
+    <item android:height="12.5px" android:width="32px" android:left="45px">
+        <bitmap android:src="@drawable/app_ic_brio_logo2"/>
+    </item>
+    <item android:height="12.5px" android:width="32px" android:left="80px">
+        <bitmap android:src="@drawable/app_ic_brio_logo2"/>
+    </item>
+    <item android:height="12.5px" android:width="32px" android:left="115px">
+        <bitmap android:src="@drawable/app_ic_brio_logo2"/>
+    </item>
+    <item android:height="12.5px" android:width="32px" android:left="150px">
+        <bitmap android:src="@drawable/app_ic_brio_logo2"/>
+    </item>
+    <item android:height="12.5px" android:width="32px" android:left="185px">
+        <bitmap android:src="@drawable/app_ic_brio_logo2"/>
+    </item>
+    <item android:height="12.5px" android:width="32px" android:left="220px">
+        <bitmap android:src="@drawable/app_ic_brio_logo2"/>
+    </item>
+
+    <!- - 2 Plana - ->
+    <item android:height="12.5px" android:width="32px" android:left="-9px" android:top="12.5px">
+        <bitmap android:src="@drawable/app_ic_brio_logo2"/>
+    </item>
+    <item android:height="12.5px" android:width="32px" android:left="26px" android:top="12.5px">
+        <bitmap android:src="@drawable/app_ic_brio_logo2"/>
+    </item>
+    <item android:height="12.5px" android:width="32px" android:left="61px" android:top="12.5px">
+        <bitmap android:src="@drawable/app_ic_brio_logo2"/>
+    </item>
+    <item android:height="12.5px" android:width="32px" android:left="96px" android:top="12.5px">
+        <bitmap android:src="@drawable/app_ic_brio_logo2"/>
+    </item>
+    <item android:height="12.5px" android:width="32px" android:left="131px" android:top="12.5px">
+        <bitmap android:src="@drawable/app_ic_brio_logo2"/>
+    </item>
+    <item android:height="12.5px" android:width="32px" android:left="166px" android:top="12.5px">
+        <bitmap android:src="@drawable/app_ic_brio_logo2"/>
+    </item>
+    <item android:height="12.5px" android:width="32px" android:left="201px" android:top="12.5px">
+        <bitmap android:src="@drawable/app_ic_brio_logo2"/>
+    </item>
+    <item android:height="12.5px" android:width="32px" android:left="236px" android:top="12.5px">
+        <bitmap android:src="@drawable/app_ic_brio_logo2"/>
+    </item>
+
+    <!- - 3 Plana - ->
+    <item android:height="12.5px" android:width="32px" android:left="10px" android:top="25px">
+        <bitmap android:src="@drawable/app_ic_brio_logo2"/>
+    </item>
+    <item android:height="12.5px" android:width="32px" android:left="45px" android:top="25px">
+        <bitmap android:src="@drawable/app_ic_brio_logo2"/>
+    </item>
+    <item android:height="12.5px" android:width="32px" android:left="80px" android:top="25px">
+        <bitmap android:src="@drawable/app_ic_brio_logo2"/>
+    </item>
+    <item android:height="12.5px" android:width="32px" android:left="115px" android:top="25px">
+        <bitmap android:src="@drawable/app_ic_brio_logo2"/>
+    </item>
+    <item android:height="12.5px" android:width="32px" android:left="150px" android:top="25px">
+        <bitmap android:src="@drawable/app_ic_brio_logo2"/>
+    </item>
+    <item android:height="12.5px" android:width="32px" android:left="185px" android:top="25px">
+        <bitmap android:src="@drawable/app_ic_brio_logo2"/>
+    </item>
+    <item android:height="12.5px" android:width="32px" android:left="220px" android:top="25px">
+        <bitmap android:src="@drawable/app_ic_brio_logo2"/>
+    </item>
+
+    <!- - 4 Plana - ->
+    <item android:height="12.5px" android:width="32px" android:left="-9px" android:top="37.5px">
+        <bitmap android:src="@drawable/app_ic_brio_logo2"/>
+    </item>
+    <item android:height="12.5px" android:width="32px" android:left="26px" android:top="37.5px">
+        <bitmap android:src="@drawable/app_ic_brio_logo2"/>
+    </item>
+    <item android:height="12.5px" android:width="32px" android:left="61px" android:top="37.5px">
+        <bitmap android:src="@drawable/app_ic_brio_logo2"/>
+    </item>
+    <item android:height="12.5px" android:width="32px" android:left="96px" android:top="37.5px">
+        <bitmap android:src="@drawable/app_ic_brio_logo2"/>
+    </item>
+    <item android:height="12.5px" android:width="32px" android:left="131px" android:top="37.5px">
+        <bitmap android:src="@drawable/app_ic_brio_logo2"/>
+    </item>
+    <item android:height="12.5px" android:width="32px" android:left="166px" android:top="37.5px">
+        <bitmap android:src="@drawable/app_ic_brio_logo2"/>
+    </item>
+    <item android:height="12.5px" android:width="32px" android:left="201px" android:top="37.5px">
+        <bitmap android:src="@drawable/app_ic_brio_logo2"/>
+    </item>
+    <item android:height="12.5px" android:width="32px" android:left="236px" android:top="37.5px">
+        <bitmap android:src="@drawable/app_ic_brio_logo2"/>
+    </item>
+
+    <!- - 5 Plana - ->
+    <item android:height="12.5px" android:width="32px" android:left="10px" android:top="50px">
+        <bitmap android:src="@drawable/app_ic_brio_logo2"/>
+    </item>
+    <item android:height="12.5px" android:width="32px" android:left="45px" android:top="50px">
+        <bitmap android:src="@drawable/app_ic_brio_logo2"/>
+    </item>
+    <item android:height="12.5px" android:width="32px" android:left="80px" android:top="50px">
+        <bitmap android:src="@drawable/app_ic_brio_logo2"/>
+    </item>
+    <item android:height="12.5px" android:width="32px" android:left="115px" android:top="50px">
+        <bitmap android:src="@drawable/app_ic_brio_logo2"/>
+    </item>
+    <item android:height="12.5px" android:width="32px" android:left="150px" android:top="50px">
+        <bitmap android:src="@drawable/app_ic_brio_logo2"/>
+    </item>
+    <item android:height="12.5px" android:width="32px" android:left="185px" android:top="50px">
+        <bitmap android:src="@drawable/app_ic_brio_logo2"/>
+    </item>
+    <item android:height="12.5px" android:width="32px" android:left="220px" android:top="50px">
+        <bitmap android:src="@drawable/app_ic_brio_logo2"/>
+    </item>
+
+    <!- - 6 Plana - ->
+    <item android:height="12.5px" android:width="32px" android:left="-9px" android:top="62.5px">
+        <bitmap android:src="@drawable/app_ic_brio_logo2"/>
+    </item>
+    <item android:height="12.5px" android:width="32px" android:left="26px" android:top="62.5px">
+        <bitmap android:src="@drawable/app_ic_brio_logo2"/>
+    </item>
+    <item android:height="12.5px" android:width="32px" android:left="61px" android:top="62.5px">
+        <bitmap android:src="@drawable/app_ic_brio_logo2"/>
+    </item>
+    <item android:height="12.5px" android:width="32px" android:left="96px" android:top="62.5px">
+        <bitmap android:src="@drawable/app_ic_brio_logo2"/>
+    </item>
+    <item android:height="12.5px" android:width="32px" android:left="131px" android:top="62.5px">
+        <bitmap android:src="@drawable/app_ic_brio_logo2"/>
+    </item>
+    <item android:height="12.5px" android:width="32px" android:left="166px" android:top="62.5px">
+        <bitmap android:src="@drawable/app_ic_brio_logo2"/>
+    </item>
+    <item android:height="12.5px" android:width="32px" android:left="201px" android:top="62.5px">
+        <bitmap android:src="@drawable/app_ic_brio_logo2"/>
+    </item>
+    <item android:height="12.5px" android:width="32px" android:left="236px" android:top="62.5px">
+        <bitmap android:src="@drawable/app_ic_brio_logo2"/>
+    </item>
+
+    <!- - 7 Plana - ->
+    <item android:height="12.5px" android:width="32px" android:left="10px" android:top="75px">
+        <bitmap android:src="@drawable/app_ic_brio_logo2"/>
+    </item>
+    <item android:height="12.5px" android:width="32px" android:left="45px" android:top="75px">
+        <bitmap android:src="@drawable/app_ic_brio_logo2"/>
+    </item>
+    <item android:height="12.5px" android:width="32px" android:left="80px" android:top="75px">
+        <bitmap android:src="@drawable/app_ic_brio_logo2"/>
+    </item>
+    <item android:height="12.5px" android:width="32px" android:left="115px" android:top="75px">
+        <bitmap android:src="@drawable/app_ic_brio_logo2"/>
+    </item>
+    <item android:height="12.5px" android:width="32px" android:left="150px" android:top="75px">
+        <bitmap android:src="@drawable/app_ic_brio_logo2"/>
+    </item>
+    <item android:height="12.5px" android:width="32px" android:left="185px" android:top="75px">
+        <bitmap android:src="@drawable/app_ic_brio_logo2"/>
+    </item>
+    <item android:height="12.5px" android:width="32px" android:left="220px" android:top="75px">
+        <bitmap android:src="@drawable/app_ic_brio_logo2"/>
+    </item>
+
+    <!- - 8 Plana - ->
+    <item android:height="12.5px" android:width="32px" android:left="-9px" android:top="87.5px">
+        <bitmap android:src="@drawable/app_ic_brio_logo2"/>
+    </item>
+    <item android:height="12.5px" android:width="32px" android:left="26px" android:top="87.5px">
+        <bitmap android:src="@drawable/app_ic_brio_logo2"/>
+    </item>
+    <item android:height="12.5px" android:width="32px" android:left="61px" android:top="87.5px">
+        <bitmap android:src="@drawable/app_ic_brio_logo2"/>
+    </item>
+    <item android:height="12.5px" android:width="32px" android:left="96px" android:top="87.5px">
+        <bitmap android:src="@drawable/app_ic_brio_logo2"/>
+    </item>
+    <item android:height="12.5px" android:width="32px" android:left="131px" android:top="87.5px">
+        <bitmap android:src="@drawable/app_ic_brio_logo2"/>
+    </item>
+    <item android:height="12.5px" android:width="32px" android:left="166px" android:top="87.5px">
+        <bitmap android:src="@drawable/app_ic_brio_logo2"/>
+    </item>
+    <item android:height="12.5px" android:width="32px" android:left="201px" android:top="87.5px">
+        <bitmap android:src="@drawable/app_ic_brio_logo2"/>
+    </item>
+    <item android:height="12.5px" android:width="32px" android:left="236px" android:top="87.5px">
+        <bitmap android:src="@drawable/app_ic_brio_logo2"/>
+    </item-->
+
+    <!-- Marco -->
+    <item>
+        <shape>
+            <size android:height="100px" android:width="256px"/>
+            <corners android:radius="2dp"/>
+            <solid android:color="@android:color/transparent"/>
+            <stroke android:width="2dp"  android:color="@color/app_pleca_grd_rosa_1" />
+        </shape>
+    </item>
+</layer-list>

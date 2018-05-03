@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/app_dialog_margin_root"
+        android:background="@drawable/dialog_bkg"
+        android:padding="16dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/dialog_bkg_ban_sync"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <TextView
+                android:id="@+id/txtTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="8dp"
+                android:paddingEnd="8dp"
+                android:paddingStart="8dp"
+                android:paddingTop="4dp"
+                android:text="@string/dialog_ban_sync"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="#FF00005E"
+                android:textStyle="bold"
+                android:gravity="center"/>
+        </RelativeLayout>
+    </LinearLayout>
+
+    <net.hova_it.barared.brio.apis.views.BrioCloseButton
+        android:id="@+id/btnCancelar"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+
+        android:layout_gravity="right|top" />
+</FrameLayout>

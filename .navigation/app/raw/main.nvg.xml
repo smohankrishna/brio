@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<navigationModel
+  ns = "http://schemas.android.com?import=com.android.tools.idea.editors.navigation.model.*">
+  <locations  
+    class = "java.util.ArrayList">
+    <statePointEntry>
+      <state      
+        class = "com.android.tools.idea.editors.navigation.model.ActivityState"      
+        className = "net.hova_it.barared.brio.apis.drawer.CajaEntrada"/>
+      <point      
+        x = "5840"      
+        y = "100"/>
+    </statePointEntry>
+    <statePointEntry>
+      <state      
+        class = "com.android.tools.idea.editors.navigation.model.ActivityState"      
+        className = "net.hova_it.barared.brio.apis.drawer.CajaMenu"/>
+      <point      
+        x = "3288"      
+        y = "188"/>
+    </statePointEntry>
+    <statePointEntry>
+      <state      
+        class = "com.android.tools.idea.editors.navigation.model.ActivityState"      
+        className = "net.hova_it.barared.brio.apis.drawer.CajaTerminos"/>
+      <point      
+        x = "76"      
+        y = "32"/>
+    </statePointEntry>
+    <statePointEntry>
+      <state      
+        class = "com.android.tools.idea.editors.navigation.model.ActivityState"      
+        className = "net.hova_it.barared.brio.apis.drawer.CajaAperturaFragment"/>
+      <point      
+        x = "1764"      
+        y = "108"/>
+    </statePointEntry>
+    <statePointEntry>
+      <state      
+        class = "com.android.tools.idea.editors.navigation.model.ActivityState"      
+        className = "net.hova_it.barared.brio.BrioActivityMain"/>
+      <point      
+        x = "284"      
+        y = "84"/>
+    </statePointEntry>
+  </locations>
+</navigationModel>

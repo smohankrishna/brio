@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- ////////////////////////////////////////////////////////////////////////
+    [1]                 ATRIBUTOS PARA BRIO CUSTOM VIEWS paquete apis.views
+    http://stackoverflow.com/questions/6020379/declaring-styleable-attributes-in-android
+         ////////////////////////////////////////////////////////////////////////-->
+        <!-- Atributos globales para BrioViews-->
+        <attr name="id_layout_ocultable_por_teclado" format="reference" />
+        <attr name="hint" format="string" />
+        <attr name="text" format="string"/>
+        <attr name="mostrar_como_dialogo" format="boolean"/>
+        <attr name="titulo_teclado" format="string"/>
+        <attr name="valor_default_teclado" format="string"/>
+
+        <attr name="tipo_teclado" format="enum">
+            <enum name="alfanumerico" value="0" />
+            <enum name="numerico" value="1" />
+            <enum name="fecha" value="2" />
+            <enum name="numerico_entero" value="3" />
+            <enum name="alfanumerico_pass" value="4" />
+            <enum name="numerico_entero_cp" value="5" />
+            <enum name="textVisiblePassword" value="6" />
+        </attr>
+
+        <declare-styleable name="BrioEditText">
+            <attr name="id_layout_ocultable_por_teclado"/>
+            <attr name="mostrar_como_dialogo"/>
+            <attr name="cerrar_teclado_en_enter" format="boolean" />
+            <attr name="tipo_teclado"/>
+            <attr name="titulo_teclado"/>
+            <attr name="valor_default_teclado"/>
+            <attr name="nativo" format="boolean" />
+            <attr name="maxDecimal" format="integer" />
+        </declare-styleable>
+
+        <declare-styleable name="BrioSearchView">
+            <attr name="id_layout_ocultable_por_teclado" />
+            <attr name="mostrar_como_dialogo"/>
+            <attr name="hint"/>
+            <attr name="tipo_teclado"/>
+            <attr name="nativosearch" format="boolean" />
+        </declare-styleable>
+
+        <declare-styleable name="BrioTextView">
+            <attr name="id_layout_ocultable_por_teclado" />
+            <attr name="tipo_teclado"/>
+            <attr name="mostrar_como_dialogo"/>
+        </declare-styleable>
+    <!-- [1 end] -->
+
+    <declare-styleable name="VistaGIF">
+        <attr name="gif" format="reference" />
+        <attr name="pausa" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="CustomTheme">
+        <attr name="vistaGifEstilo" format="reference" />
+    </declare-styleable>
+
+</resources>
+

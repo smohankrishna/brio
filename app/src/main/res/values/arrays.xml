@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- ############################################################################################################################# -->
+    <!-- Mensajes de error inicio -->
+        <string-array name="errors_printer">
+            <item>didAccessoryConnectSuccess</item>
+            <item>didPrinterOnline</item>
+            <item>didPrinterPaperReady</item>
+            <item>didPrinterCoverClose</item>
+            <item>didPrinterPaperNearEmpty</item>
+            <item>didPrinterImpossible</item>
+        </string-array>
+
+        <string-array name="errors_keyboard">
+            <item>DIE!!!</item>
+        </string-array>
+    <!-- Mensajes de error fin -->
+    <!-- ############################################################################################################################# -->
+    <!-- Menus inicio -->
+    <!-- ************************************
+            Nombrado de menus
+            Seguir esta regla...
+                menu_<menu>_<submenu1>_<submenu2>..._<opcion_sin_guiones>
+
+            NOTA:
+            Dado que estos nombres se ligan a los permisos, para editar estos
+            nombres es necesario editarlos tambien en la caden de permisos en la B.D.
+         ************************************ -->
+        <string-array name="menu_reportes">
+            <item>@string/menu_reportes_estadocuenta</item>
+            <item>@string/menu_reportes_ventas</item>
+            <item>@string/menu_reportes_detallesestadocuenta</item>
+        </string-array>
+
+            <array name="menu_reportes_iconos_off">
+                <item>@drawable/menu_reportes_estadocuenta_off</item>
+                <item>@drawable/menu_reportes_ventas_off</item>
+                <item>@drawable/menu_reportes_detallesestadocuenta_off</item>
+            </array>
+
+        <string-array name="menu_administracion">
+            <item>@string/menu_administracion_cajaentrada</item>
+            <item>@string/menu_administracion_cajasalida</item>
+            <item>@string/menu_administracion_balance</item>
+            <item>@string/menu_administracion_cajacierre</item>
+            <item>@string/menu_administracion_admoninventarios</item>
+            <item>@string/menu_administracion_admonusuarios</item>
+            <item>@string/menu_administracion_nuevousuario</item>
+            <item>@string/menu_administracion_cierresesion</item>
+            <item>@string/menu_administracion_actualizacion</item>
+            <item>@string/menu_administracion_enviaticketspendientes</item>
+        </string-array>
+
+            <array name="menu_administracion_iconos_off">
+                <item>@drawable/menu_administracion_cajaentrada_off</item>
+                <item>@drawable/menu_administracion_cajasalida_off</item>
+                <item>@drawable/menu_administracion_balance_off</item>
+                <item>@drawable/menu_administracion_cajacierre_off</item>
+                <item>@drawable/menu_administracion_admoninventarios_off</item>
+                <item>@drawable/menu_administracion_admonusuarios_off</item>
+                <item>@drawable/menu_administracion_nuevousuario_off</item>
+                <item>@drawable/menu_administracion_cierresesion_off</item>
+                <item>@drawable/menu_administracion_actualizacion_off</item>
+                <item>@drawable/menu_administracion_enviaticketspendientes_off</item>
+            </array>
+
+        <!-- <item>@string/menu_administracion_sincronizacion</item> -->
+
+        <string-array name="menu_administracion_inventarios">
+            <item>@string/menu_administracion_inventarios_altaarticulo</item>
+            <item>@string/menu_administracion_inventarios_inventario</item>
+        </string-array>
+
+            <array name="menu_administracion_inventarios_iconos_off">
+                <item>@drawable/menu_administracion_inventarios_altaarticulo_off</item>
+                <item>@drawable/menu_administracion_inventarios_inventario_off</item>
+            </array>
+
+        <string-array name="menu_mibrio">
+            <item>@string/menu_mibrio_briouniversidad</item>
+            <item>@string/menu_mibrio_brionoticias</item>
+            <!--item>@string/menu_mibrio_videollamada</item-->
+            <item>@string/menu_mibrio_briomail</item>
+            <item>@string/menu_mibrio_briocontrato</item>
+            <item>@string/menu_mibrio_briogarantia</item>
+            <item>@string/menu_mibrio_briohorarios</item>
+            <item>@string/menu_mibrio_briopoliticas</item>
+            <item>@string/menu_mibrio_brioservicios</item>
+            <item>@string/menu_mibrio_briotiempos</item>
+            <item>@string/menu_mibrio_briorecompensa</item>
+
+            <!--<item>@string/menu_mibrio_briobanners</item>-->
+        </string-array>
+            <array name="menu_mibrio_iconos_off">
+                <item>@drawable/menu_mibrio_briouniversidad_off</item>
+                <item>@drawable/menu_mibrio_brionoticias_off</item>
+                <!--item>@drawable/menu_mibrio_videollamada_off</item-->
+                <item>@drawable/menu_mibrio_briomail_off</item>
+                <item>@drawable/menu_mibrio_briocontrato_off</item>
+                <item>@drawable/menu_mibrio_briogarantia_off</item>
+                <item>@drawable/menu_mibrio_briohorarios_on</item>
+                <item>@drawable/menu_mibrio_briopoliticas_on</item>
+                <item>@drawable/menu_mibrio_brioservicios_on</item>
+                <item>@drawable/menu_mibrio_briotiempos_on</item>
+                <item>@drawable/menu_mibrio_briorecompensa_on</item>
+
+
+                <!--<item>@drawable/menu_mibrio_briobanners_off</item>-->
+            </array>
+    <!-- Menus fin -->
+    <!-- ############################################################################################################################# -->
+
+    <string-array name="brio_permisos">
+        <item></item>
+        <item>menu_reportes_estadocuenta|menu_reportes_ventas|menu_reportes_detallesestadocuenta|menu_administracion_cajaentrada|menu_administracion_cajasalida|menu_administracion_balance|menu_administracion_cajacierre|menu_administracion_admoninventarios|menu_administracion_inventarios_altaarticulo|menu_administracion_inventarios_inventario|menu_administracion_admonusuarios|menu_administracion_nuevousuario|menu_administracion_cierresesion|menu_administracion_sincronizacion|menu_administracion_actualizacion|menu_mibrio_briouniversidad|menu_mibrio_brionoticias|menu_mibrio_videollamada|menu_mibrio_briomail|menu_mibrio_briobanners|menu_administracion_enviaticketspendientes|menu_mibrio_briocontrato|menu_mibrio_briogarantia|menu_mibrio_briohorarios|menu_mibrio_briopoliticas|menu_mibrio_brioservicios|menu_mibrio_briotiempos|menu_mibrio_briorecompensa</item>
+        <item>menu_reportes_estadocuenta|menu_reportes_ventas|menu_reportes_detallesestadocuenta|menu_administracion_cajaentrada|menu_administracion_cajasalida|menu_administracion_balance|menu_administracion_cajacierre|menu_administracion_admoninventarios|menu_administracion_inventarios_altaarticulo|menu_administracion_inventarios_inventario|menu_administracion_admonusuarios|menu_administracion_nuevousuario|menu_administracion_cierresesion|menu_administracion_sincronizacion|menu_administracion_actualizacion|menu_mibrio_briouniversidad|menu_mibrio_brionoticias|menu_mibrio_videollamada|menu_mibrio_briomail|menu_mibrio_briobanners|menu_administracion_enviaticketspendientes</item>
+        <item>menu_reportes_estadocuenta|menu_reportes_ventas|menu_reportes_detallesestadocuenta|menu_administracion_cajaentrada|menu_administracion_cajasalida|menu_administracion_balance|menu_administracion_cajacierre|menu_administracion_cierresesion|menu_administracion_sincronizacion|menu_administracion_actualizacion|menu_administracion_admoninventarios|menu_administracion_inventarios_altaarticulo|menu_mibrio_briouniversidad|menu_mibrio_brionoticias|menu_mibrio_videollamada|menu_mibrio_briomail|menu_mibrio_briobanners|menu_administracion_enviaticketspendientes</item>
+    </string-array>
+
+    <string name="menu_mibrio_briorecompensa">Recompensa Brío</string>
+</resources>

@@ -1,0 +1,842 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:brio="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/pos_bkg_gradient"
+    android:orientation="vertical"
+    android:padding="10dp">
+
+    <include
+        android:id="@+id/loading_commerce"
+        layout="@layout/view_loading"
+        android:visibility="gone" />
+
+    <!-- panelTitulo -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
+        android:layout_marginTop="15dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/txtTitle"
+            style="@style/AppTheme.Brio_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/form_commerce_title_alta" />
+
+        <TextView
+            android:id="@+id/txtSubtitle"
+            style="@style/AppTheme.Brio_subtitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="5dp"
+            android:gravity="center"
+            android:text="@string/form_commerce_title_principal" />
+
+    </LinearLayout>
+
+    <!-- panelPrincipal -->
+    <LinearLayout
+        android:id="@+id/panelPrincipal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="24dp"
+        android:visibility="visible"
+        android:weightSum="1">
+
+        <net.hova_it.barared.brio.apis.views.BrioButton2
+            android:id="@+id/opcRecuperarComercio"
+            style="@style/BrioButton.Naranja"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="12dp"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:layout_weight=".5"
+            android:text="@string/form_commerce_regsistro" />
+
+        <net.hova_it.barared.brio.apis.views.BrioButton2
+            android:id="@+id/opcAltaComercio"
+            style="@style/BrioButton.Rosa"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:layout_marginStart="12dp"
+            android:layout_weight=".5"
+            android:text="Registrar nuevo comercio" />
+
+    </LinearLayout>
+
+    <!-- panel de alta comercio -->
+    <LinearLayout
+        android:id="@+id/panelAltaComercio"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <ScrollView
+            android:id="@+id/scrollUserForm"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/articulo_alta_height_form"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+
+                        android:layout_weight="2"
+                        android:text="@string/form_commerce_nombre_comercio"
+                        android:textAlignment="gravity"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/articulo_alta_botones_form" />
+
+                    <net.hova_it.barared.brio.apis.views.BrioEditText
+                        android:id="@+id/editDescripcion"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:maxLength="30"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/ap_bkg_blue"
+                        android:paddingLeft="10dp"
+                        android:textSize="@dimen/articulo_alta_botones_form"
+                        brio:tipo_teclado="alfanumerico" />
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/articulo_alta_height_form"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2"
+                        android:text="@string/form_commerce_direccion_fisica"
+                        android:textAlignment="textEnd"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/articulo_alta_botones_form" />
+
+                    <net.hova_it.barared.brio.apis.views.BrioEditText
+                        android:id="@+id/editDireccionFisica"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/ap_bkg_blue"
+                        android:inputType="textPersonName"
+                        android:paddingLeft="10dp"
+                        android:textSize="@dimen/articulo_alta_botones_form"
+                        android:maxLength="30"
+                        brio:tipo_teclado="alfanumerico" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/articulo_alta_height_form"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2"
+                        android:text="@string/form_commerce_numero_exterior_fisica"
+                        android:textAlignment="textEnd"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/articulo_alta_botones_form" />
+
+                    <net.hova_it.barared.brio.apis.views.BrioEditText
+                        android:id="@+id/editExteriorFisica"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/ap_bkg_blue"
+                        android:inputType="textPersonName"
+                        android:paddingLeft="10dp"
+                        android:textSize="@dimen/articulo_alta_botones_form"
+                        brio:tipo_teclado="alfanumerico" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/articulo_alta_height_form"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2"
+
+                        android:text="@string/form_commerce_numero_interior_fisica"
+                        android:textAlignment="textEnd"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/articulo_alta_botones_form" />
+
+                    <net.hova_it.barared.brio.apis.views.BrioEditText
+                        android:id="@+id/editInteriorFisica"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/ap_bkg_blue"
+                        android:inputType="textPersonName"
+                        android:paddingLeft="10dp"
+                        android:textSize="@dimen/articulo_alta_botones_form"
+                        brio:tipo_teclado="alfanumerico" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/articulo_alta_height_form"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2"
+                        android:text="@string/form_commerce_colonia_fisica"
+                        android:textAlignment="textEnd"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/articulo_alta_botones_form" />
+
+                    <net.hova_it.barared.brio.apis.views.BrioEditText
+                        android:id="@+id/editColoniaFisica"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/ap_bkg_blue"
+                        android:inputType="textPersonName"
+                        android:paddingLeft="10dp"
+                        android:textSize="@dimen/articulo_alta_botones_form"
+                        android:maxLength="30"
+                        brio:tipo_teclado="alfanumerico" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/articulo_alta_height_form"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2"
+                        android:text="@string/form_commerce_municipio_fisica"
+                        android:textAlignment="textEnd"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/articulo_alta_botones_form" />
+
+                    <net.hova_it.barared.brio.apis.views.BrioEditText
+                        android:id="@+id/editMunicipioFisica"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/ap_bkg_blue"
+                        android:inputType="textPersonName"
+                        android:paddingLeft="10dp"
+                        android:textSize="@dimen/articulo_alta_botones_form"
+                        android:maxLength="30"
+                        brio:tipo_teclado="alfanumerico" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/articulo_alta_height_form"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2"
+                        android:text="@string/form_commmerce_estado_fisico_label"
+                        android:textAlignment="textEnd"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/articulo_alta_botones_form" />
+
+                    <Spinner
+                        android:id="@+id/spinnerEstadoFisico"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/ap_bkg_blue"
+                        android:textSize="@dimen/articulo_alta_botones_form" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/articulo_alta_height_form"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2"
+
+                        android:text="@string/form_commerce_codigo_postal_fisica"
+                        android:textAlignment="textEnd"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/articulo_alta_botones_form" />
+
+                    <net.hova_it.barared.brio.apis.views.BrioEditText
+                        android:id="@+id/editCodigoPostalFisica"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/ap_bkg_blue"
+                        android:inputType="number"
+                        android:paddingLeft="10dp"
+                        android:textSize="@dimen/articulo_alta_botones_form"
+                        brio:tipo_teclado="numerico_entero_cp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/articulo_alta_height_form"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2"
+                        android:text="@string/form_commerce_pais_fisic"
+                        android:textAlignment="textEnd"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/articulo_alta_botones_form" />
+
+                    <Spinner
+                        android:id="@+id/spinnerPaisFisico"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/ap_bkg_blue"
+                        android:textSize="@dimen/articulo_alta_botones_form" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/articulo_alta_height_form"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2"
+                        android:text="@string/form_commerce_token"
+                        android:textAlignment="textEnd"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/articulo_alta_botones_form" />
+
+                    <net.hova_it.barared.brio.apis.views.BrioEditText
+                        android:id="@+id/editTokenComercioAlta"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/ap_bkg_blue"
+                        android:inputType="textPersonName"
+                        android:paddingLeft="10dp"
+                        android:textSize="@dimen/articulo_alta_botones_form"
+                        android:maxLength="30"
+                        brio:tipo_teclado="alfanumerico" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/articulo_alta_height_form"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2"
+                        android:text="@string/form_commerce_rfc"
+                        android:textAlignment="textEnd"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/articulo_alta_botones_form" />
+
+                    <net.hova_it.barared.brio.apis.views.BrioEditText
+                        android:id="@+id/editRFC"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/ap_bkg_blue"
+                        android:paddingLeft="10dp"
+                        android:textSize="@dimen/articulo_alta_botones_form"
+                        brio:tipo_teclado="alfanumerico" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/articulo_alta_height_form"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2"
+
+                        android:text="@string/form_commerce_nombre_legal"
+                        android:textAlignment="textEnd"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/articulo_alta_botones_form" />
+
+                    <net.hova_it.barared.brio.apis.views.BrioEditText
+                        android:id="@+id/editNombreLegal"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/ap_bkg_blue"
+                        android:paddingLeft="10dp"
+                        android:textSize="@dimen/articulo_alta_botones_form"
+                        brio:tipo_teclado="alfanumerico" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/articulo_alta_height_form"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2"
+                        android:text="@string/form_commerce_direccion_legal"
+                        android:textAlignment="textEnd"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/articulo_alta_botones_form" />
+
+                    <net.hova_it.barared.brio.apis.views.BrioEditText
+                        android:id="@+id/editDireccionLegal"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/ap_bkg_blue"
+                        android:inputType="textPersonName"
+                        android:paddingLeft="10dp"
+                        android:textSize="@dimen/articulo_alta_botones_form"
+                        brio:tipo_teclado="alfanumerico" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/articulo_alta_height_form"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2"
+
+                        android:text="@string/form_commerce_numero_exterior_legal"
+                        android:textAlignment="textEnd"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/articulo_alta_botones_form" />
+
+                    <net.hova_it.barared.brio.apis.views.BrioEditText
+                        android:id="@+id/editExteriorLegal"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/ap_bkg_blue"
+                        android:inputType="textPersonName"
+                        android:paddingLeft="10dp"
+                        android:textSize="@dimen/articulo_alta_botones_form"
+                        brio:tipo_teclado="alfanumerico" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/articulo_alta_height_form"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2"
+
+                        android:text="@string/form_commerce_numero_interior_legal"
+                        android:textAlignment="textEnd"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/articulo_alta_botones_form" />
+
+                    <net.hova_it.barared.brio.apis.views.BrioEditText
+                        android:id="@+id/editInteriorLegal"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/ap_bkg_blue"
+                        android:inputType="textPersonName"
+                        android:paddingLeft="10dp"
+                        android:textSize="@dimen/articulo_alta_botones_form"
+                        brio:tipo_teclado="alfanumerico" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/articulo_alta_height_form"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2"
+                        android:text="@string/form_commerce_colonia_legal"
+                        android:textAlignment="textEnd"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/articulo_alta_botones_form" />
+
+                    <net.hova_it.barared.brio.apis.views.BrioEditText
+                        android:id="@+id/editColoniaLegal"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/ap_bkg_blue"
+                        android:inputType="textPersonName"
+                        android:paddingLeft="10dp"
+                        android:textSize="@dimen/articulo_alta_botones_form"
+                        brio:tipo_teclado="alfanumerico" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/articulo_alta_height_form"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2"
+                        android:text="@string/form_commerce_municipio_legal"
+                        android:textAlignment="textEnd"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/articulo_alta_botones_form" />
+
+                    <net.hova_it.barared.brio.apis.views.BrioEditText
+                        android:id="@+id/editMunicipioLegal"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/ap_bkg_blue"
+                        android:inputType="textPersonName"
+                        android:paddingLeft="10dp"
+                        android:textSize="@dimen/articulo_alta_botones_form"
+                        brio:tipo_teclado="alfanumerico" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/articulo_alta_height_form"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2"
+                        android:text="@string/form_commerce_edo_legal"
+                        android:textAlignment="textEnd"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/articulo_alta_botones_form" />
+
+                    <Spinner
+                        android:id="@+id/spinnerEstadoLegal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/ap_bkg_blue"
+                        android:textSize="@dimen/articulo_alta_botones_form" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/articulo_alta_height_form"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2"
+                        android:text="@string/form_commerce_codigo_postal_legal"
+                        android:textAlignment="textEnd"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/articulo_alta_botones_form" />
+
+                    <net.hova_it.barared.brio.apis.views.BrioEditText
+                        android:id="@+id/editCodigoPostalLegal"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/ap_bkg_blue"
+                        android:inputType="textPersonName"
+                        android:paddingLeft="10dp"
+                        android:textSize="@dimen/articulo_alta_botones_form"
+                        brio:tipo_teclado="numerico_entero" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/articulo_alta_height_form"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2"
+                        android:text="@string/form_commerce_country_legal"
+                        android:textAlignment="textEnd"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/articulo_alta_botones_form" />
+
+                    <Spinner
+                        android:id="@+id/spinnerPaisLegal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/ap_bkg_blue"
+                        android:textSize="@dimen/articulo_alta_botones_form" />
+
+                </LinearLayout>
+
+                <!-- botones -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:orientation="horizontal">
+
+                    <net.hova_it.barared.brio.apis.views.BrioButton2
+                        android:id="@+id/buttonAltaBack"
+                        style="@style/BrioButton.Gris"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginTop="30dp"
+                        android:text="@string/brio_regresar" />
+
+                    <net.hova_it.barared.brio.apis.views.BrioButton2
+                        android:id="@+id/buttonSave"
+                        style="@style/BrioButton.Rosa"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginTop="30dp"
+                        android:text="@string/brio_guardar" />
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+    <!-- panel de recuperar comercio -->
+    <RelativeLayout
+        android:id="@+id/panelRecuperarComercio"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="gone"
+        android:padding="32dp">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/linearLayout5">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <!-- id comercio -->
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="1"
+                    android:layout_marginTop="10dp" >
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="Id de comercio"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/articulo_alta_botones_form"
+                        android:layout_weight=".4"/>
+
+                    <net.hova_it.barared.brio.apis.views.BrioEditText
+                        android:gravity="center"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".6"
+                        android:id="@+id/editIdComercio"
+                        brio:tipo_teclado="numerico_entero"/>
+
+                </LinearLayout>
+
+
+                <!-- sobre escribir -->
+
+                <!-- token comercio -->
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="1"
+                    android:layout_marginTop="10dp"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/form_commerce_token"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/articulo_alta_botones_form"
+                        android:layout_weight=".4"/>
+
+                    <net.hova_it.barared.brio.apis.views.BrioEditText
+                        android:gravity="center"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".6"
+                        android:id="@+id/editTokenComercioRecuperar"
+                        brio:tipo_teclado="alfanumerico"/>
+
+                </LinearLayout>
+            </LinearLayout>
+
+        </ScrollView>
+
+        <!-- botones -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true"
+            android:id="@+id/linearLayout5"
+            android:weightSum="1">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".5"
+                android:gravity="center_horizontal">
+
+                <net.hova_it.barared.brio.apis.views.BrioButton2
+                    android:id="@+id/buttonRecuperarBack"
+                    style="@style/BrioButton.Gris"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/brio_regresar" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".5"
+                android:gravity="center_horizontal">
+
+                <net.hova_it.barared.brio.apis.views.BrioButton2
+                    android:id="@+id/buttonRecuperar"
+                    style="@style/BrioButton.Rosa"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Recuperar" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </RelativeLayout>
+</LinearLayout>

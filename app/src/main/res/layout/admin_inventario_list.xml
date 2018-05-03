@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_weight="1"
+    android:id="@+id/layoutTabla"
+    android:gravity="center"
+    android:background="@drawable/view_menu_grd"
+    android:padding="10dp"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:brio="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <net.hova_it.barared.brio.apis.views.BrioSearchView
+            android:id="@+id/busqueda"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            brio:hint="Buscar..."
+            brio:mostrar_como_dialogo="true"
+            brio:nativosearch="true"
+            brio:tipo_teclado="textVisiblePassword" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_btn_sort"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+
+        >
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/inventario_btn_producto"
+            android:id="@+id/btnProducto"
+            style="@style/BrioButton.Gris"
+            android:layout_weight="1"
+            android:textColor="#FFFFFFFF"
+            android:textSize="19dp"
+            android:singleLine="true"
+            android:background="@drawable/view_bkg_pleca_activa" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/inventario_btn_marca"
+            android:id="@+id/btnMarca"
+            style="@style/BrioButton.Gris"
+            android:layout_weight="1"
+            android:textColor="#FFFFFFFF"
+            android:singleLine="true"
+            android:textSize="19dp"
+            android:background="@drawable/view_bkg_pleca_inactiva" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/inventario_btn_contenido"
+            android:id="@+id/btnContenido"
+            style="@style/BrioButton.Gris"
+            android:layout_weight="1"
+            android:textColor="#ffffff"
+            android:textSize="19dp"
+            android:singleLine="true"
+            android:background="@drawable/view_bkg_pleca_inactiva" />
+
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/inventario_btn_codigo"
+            android:id="@+id/btnCategoria"
+            style="@style/BrioButton.Gris"
+            android:layout_weight="1"
+            android:textColor="#FFFFFFFF"
+            android:textSize="19dp"
+            android:singleLine="true"
+            android:background="@drawable/view_bkg_pleca_inactiva"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/inventario_btn_precio_compra"
+            android:id="@+id/btnPrecioCompra"
+            android:autoText="true"
+            style="@style/BrioButton.Gris"
+            android:layout_weight="1"
+            android:textSize="19dp"
+            android:textColor="#FFFFFFFF"
+            android:singleLine="true"
+            android:background="@drawable/view_bkg_pleca_inactiva"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/inventario_btn_precio_venta"
+            android:id="@+id/btnPrecioVenta"
+            style="@style/BrioButton.Gris"
+            android:layout_weight="1"
+            android:textColor="#FFFFFFFF"
+            android:singleLine="true"
+            android:textSize="19dp"
+            android:background="@drawable/view_bkg_pleca_inactiva"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/inventario_btn_existencias"
+            android:id="@+id/btnExistencias"
+            style="@style/BrioButton.Gris"
+            android:layout_weight="1"
+            android:textSize="19dp"
+            android:textColor="#FFFFFFFF"
+            android:singleLine="true"
+            android:background="@drawable/view_bkg_pleca_inactiva"/>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingTop="5dp"
+        android:id="@+id/tablaInventario">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/listInventario"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="false" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="@string/inventario_sin_articulos"
+            android:id="@+id/textSinArticulos"
+            android:visibility="gone"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:textColor="#8d8181"
+            android:textSize="30dp" />
+
+        <ProgressBar
+            android:id="@+id/pbProgressBarGenerico"
+            style="@style/Base.Widget.AppCompat.ProgressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true" />
+
+    </RelativeLayout>
+
+</LinearLayout>

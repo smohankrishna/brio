@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <!-- body -->
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/dialog_bkg"
+            android:layout_margin="16dp"
+            android:padding="16dp"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/imgLogo"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="20dp"
+                android:src="@drawable/app_ic_brio_logo2" />
+
+            <LinearLayout
+                android:id="@+id/dlg_conectar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/imageView"
+                android:gravity="center"
+                android:visibility="gone"
+                >
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_centerHorizontal="true">
+
+                    <lat.brio.api.vistas.VistaGIF
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_gravity="center"
+                        app:gif="@drawable/switch_hand"
+                        android:layout_centerHorizontal="true"/>
+                </RelativeLayout>
+                <!--include
+                    layout="@layout/view_conectar_dispositivo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/imageView"
+                    android:layout_gravity="center_horizontal" /-->
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/dlg_procesar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/imageView"
+                android:gravity="center"
+                android:visibility="gone">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_centerHorizontal="true">
+
+                    <lat.brio.api.vistas.VistaGIF
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_gravity="center"
+                        app:gif="@drawable/pasar_tarjeta"
+                        android:layout_centerHorizontal="true"/>
+                </RelativeLayout>
+                <!--include
+                    layout="@layout/view_conectar_dispositivo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/imageView"
+                    android:layout_gravity="center_horizontal" /-->
+
+            </LinearLayout>
+
+            <!--LinearLayout
+                android:id="@+id/dlg_autorizar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/imageView"
+                android:gravity="center"
+                android:visibility="visible">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_gravity="center">
+
+                    <TableLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="8">
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1">
+
+                            <TextView
+                                android:id="@+id/teclado_btn1"
+                                style="@style/EstiloTeclado"
+                                android:text="1" />
+
+                            <TextView
+                                android:id="@+id/teclado_btn2"
+                                style="@style/EstiloTeclado"
+                                android:text="2" />
+
+                            <TextView
+                                android:id="@+id/teclado_btn3"
+                                style="@style/EstiloTeclado"
+                                android:text="3" />
+
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1">
+
+                            <TextView
+                                android:id="@+id/teclado_btn4"
+                                style="@style/EstiloTeclado"
+                                android:text="4" />
+
+                            <TextView
+                                android:id="@+id/teclado_btn5"
+                                style="@style/EstiloTeclado"
+                                android:text="5" />
+
+                            <TextView
+                                android:id="@+id/teclado_btn6"
+                                style="@style/EstiloTeclado"
+                                android:text="6" />
+
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1">
+
+                            <TextView
+                                android:id="@+id/teclado_btn7"
+                                style="@style/EstiloTeclado"
+                                android:text="7" />
+
+                            <TextView
+                                android:id="@+id/teclado_btn8"
+                                style="@style/EstiloTeclado"
+                                android:text="8" />
+
+                            <TextView
+                                android:id="@+id/teclado_btn9"
+                                style="@style/EstiloTeclado"
+                                android:text="9" />
+
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1">
+
+                            <TextView
+                                android:id="@+id/teclado_btn00"
+                                style="@style/EstiloTeclado"
+                                android:text="00"
+                                android:textColor="#50000000" />
+
+                            <TextView
+                                android:id="@+id/teclado_btn0"
+                                style="@style/EstiloTeclado"
+                                android:text="0" />
+
+                            <TextView
+                                android:id="@+id/teclado_btnD"
+                                style="@style/EstiloTeclado"
+                                android:text="x" />
+                        </TableRow>
+
+                    </TableLayout>
+                </RelativeLayout>
+            </LinearLayout-->
+
+            <LinearLayout
+                android:id="@+id/dlg_firmar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/imageView"
+                android:gravity="center"
+                android:visibility="gone">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_centerHorizontal="true">
+
+                    <lat.brio.api.vistas.VistaFirma
+                        android:id="@+id/vfFirma"
+                        android:layout_width="match_parent"
+                        android:layout_height="300dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerInParent="true"
+                        android:layout_gravity="center" />
+                </RelativeLayout>
+                <!--include
+                    layout="@layout/view_conectar_dispositivo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/imageView"
+                    android:layout_gravity="center_horizontal" /-->
+
+            </LinearLayout>
+
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/loading">
+
+                <TextView
+                    android:id="@+id/tvEstado"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </ScrollView>
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight=".95">
+
+                <net.hova_it.barared.brio.apis.views.BrioButton2
+                    android:id="@+id/btCancelar"
+                    style="@style/BrioButton.Gris"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".4"
+                    android:text="@string/brio_limpiar"
+                    android:visibility="gone" />
+
+                <Space
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".15" />
+
+                <net.hova_it.barared.brio.apis.views.BrioButton2
+                    android:id="@+id/btAcceptar"
+                    style="@style/BrioButton.Rosa"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".4"
+                    android:visibility="gone"
+                    android:text="@string/brio_continuar"/>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <lat.brio.api.botones.Cerrar
+        android:id="@+id/btCerrar"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_gravity="end|top" />
+
+</FrameLayout>

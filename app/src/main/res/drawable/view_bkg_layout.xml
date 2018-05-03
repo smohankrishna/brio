@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <corners android:radius="3dp"/>
+    <stroke android:color="@color/app_pleca_grd_gris_2" android:width="1dp"/>
+    <gradient android:angle="270"
+        android:startColor="@color/app_pleca_grd_gris_3"
+        android:endColor="@color/app_pleca_grd_gris_3"/>
+</shape>

@@ -1,0 +1,507 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--FrameLayout - xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/dialogo_contrato_titulo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/dialogo_contrato_titulo"
+                android:gravity="center"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:layout_marginBottom="16dp"
+                android:visibility="visible" />
+
+        </LinearLayout>
+
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:id="@+id/dialogo_contrato_contrato"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Ejemplar para un ejemplo de ejemplos ejemplificados como un ejemplo ejemplar de ejemplos ejemplificados de un ejemplo ejemplar ejemplicifado, un ejemplo de esto es un ejemplar para un ejemplo de ejemplos ejemplificados como un ejemplo ejemplar de ejemplos ejemplificados de un ejemplo ejemplar ejemplicifado."
+                    android:gravity="center"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:layout_margin="16dp"
+                    android:paddingEnd="16dp"
+                    android:paddingStart="16dp" />
+
+            </LinearLayout>
+
+
+
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/dialog_bkg"
+            android:layout_margin="16dp"
+            android:padding="16dp"
+            android:gravity="center">
+
+            <LinearLayout
+                android:id="@+id/AreaFirma"
+                android:layout_width="wrap_content"
+                android:layout_height="250dp"
+                android:layout_below="@+id/imageView"
+                android:gravity="center">
+
+                <RelativeLayout
+                    android:id="@+id/vistaFirma"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_centerHorizontal="true">
+
+                    <lat.brio.api.vistas.VistaFirma
+                        android:id="@+id/vfFirma"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_centerInParent="true"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_centerHorizontal="true"
+                        />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="bottom"
+            android:gravity="center">
+
+            <net.hova_it.barared.brio.apis.views.BrioButton2
+                android:id="@+id/btnAceptar"
+                style="@style/BrioButton.Rosa"
+                android:layout_width="wrap_content"
+                android:text="@string/brio_aceptar" />
+
+            <net.hova_it.barared.brio.apis.views.BrioButton2
+                android:id="@+id/btnLimpiar"
+                style="@style/BrioButton.Naranja"
+                android:layout_width="wrap_content"
+                android:text="@string/brio_limpiar" />
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+    </ScrollView>
+</FrameLayout-->
+
+
+    <!--
+
+     <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+<LinearLayout
+android:orientation="vertical"
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:background="@drawable/dialog_bkg"
+android:layout_margin="16dp"
+android:padding="16dp"
+android:gravity="center">
+
+<TextView
+    android:id="@+id/dialogo_contrato_titulo"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="@string/dialogo_contrato_titulo"
+    android:gravity="center"
+    android:textAppearance="?android:attr/textAppearanceLarge"
+    android:layout_marginBottom="16dp"
+    android:visibility="visible" />
+
+<TextView
+    android:id="@+id/dialogo_contrato_contrato"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="Ejemplar para un ejemplo de ejemplos ejemplificados como un ejemplo ejemplar de ejemplos ejemplificados de un ejemplo ejemplar ejemplicifado, un ejemplo de esto es un ejemplar para un ejemplo de ejemplos ejemplificados como un ejemplo ejemplar de ejemplos ejemplificados de un ejemplo ejemplar ejemplicifado."
+    android:gravity="center"
+    android:textAppearance="?android:attr/textAppearanceMedium"
+    android:layout_margin="16dp"
+    android:paddingEnd="16dp"
+    android:paddingStart="16dp" />
+
+<LinearLayout
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/dialog_bkg"
+    android:layout_margin="16dp"
+    android:padding="16dp"
+    android:gravity="center">
+    <LinearLayout
+        android:id="@+id/AreaFirma"
+        android:layout_width="wrap_content"
+        android:layout_height="250dp"
+        android:layout_below="@+id/imageView"
+        android:gravity="center">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_centerHorizontal="true">
+
+            <lat.brio.api.vistas.VistaFirma
+                android:id="@+id/vfFirma"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:layout_gravity="right"
+                android:layout_centerHorizontal="true"
+                />
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:gravity="center">
+
+    <net.hova_it.barared.brio.apis.views.BrioButton2
+        android:id="@+id/btnAceptar"
+        style="@style/BrioButton.Rosa"
+        android:layout_width="wrap_content"
+        android:text="@string/brio_aceptar" />
+
+    <net.hova_it.barared.brio.apis.views.BrioButton2
+        android:id="@+id/btnLimpiar"
+        style="@style/BrioButton.Naranja"
+        android:layout_width="wrap_content"
+        android:text="@string/brio_limpiar" />
+</LinearLayout>
+</LinearLayout>
+    </ScrollView>
+    </LinearLayout>
+
+     -->
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/app_dialog_margin_root"
+        android:layout_marginLeft="@dimen/app_dialog_margin_root"
+        android:layout_marginRight="@dimen/app_dialog_margin_root"
+        android:layout_marginTop="@dimen/app_dialog_margin_root"
+        android:background="@drawable/dialog_bkg"
+        android:gravity="center"
+        android:padding="@dimen/app_dialog_margin_root">
+
+        <!--ImageView
+                android:id="@+id/imageView"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/app_ic_brio_logo2"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentStart="true" /-->
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+                <!-- Titulo -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/dialogo_contrato_titulo"
+                        android:textAppearance="?android:attr/textAppearanceLarge" />
+                </LinearLayout>
+
+                <!-- Contrato -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_horizontal"
+                    android:orientation="horizontal">
+
+                    <lat.brio.api.web.Web
+                        android:id="@+id/wvContrato"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                    </lat.brio.api.web.Web>
+                    <!--WebView
+                        android:id="@+id/wvContrato"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                    </WebView-->
+                    <!--TextView
+                        android:id="@+id/tvContrato"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/dialogo_contrato_titulo"
+                        android:textAppearance="?android:attr/textAppearanceMedium" /-->
+                </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llContratoFirmas"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/imageView"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <lat.brio.api.vistas.VistaFirma
+                        android:id="@+id/vfFirma"
+                        android:layout_width="800dp"
+                        android:layout_height="300dp"
+                        android:background="@drawable/fondo_area_firma"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerInParent="true"
+                        android:layout_gravity="center_horizontal" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_below="@+id/imageView"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:paddingTop="15dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textAllCaps="true"
+                        android:gravity="center"
+                        android:textStyle="bold"
+                        android:text="@string/razon_social_brio"
+                        android:textAlignment="center"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textAllCaps="false"
+                        android:gravity="center"
+                        android:textStyle="bold"
+                        android:text="@string/contrato_representado_por"
+                        android:textAlignment="center"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textAllCaps="false"
+                        android:gravity="center"
+                        android:textStyle="bold"
+                        android:text="@string/brio_representante_legal"
+                        android:textAlignment="center"/>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/imageView"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:paddingTop="15dp">
+
+                    <lat.brio.api.vistas.VistaFirma
+                        android:id="@+id/vfFirmaAsociado"
+                        android:layout_width="800dp"
+                        android:layout_height="300dp"
+                        android:background="@drawable/fondo_area_firma"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerInParent="true"
+                        android:layout_gravity="center_horizontal" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_below="@+id/imageView"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:paddingTop="15dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textAllCaps="true"
+                        android:gravity="center"
+                        android:textStyle="bold"
+                        android:text="@string/razon_social_asociado"
+                        android:textAlignment="center"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textAllCaps="false"
+                        android:gravity="center"
+                        android:textStyle="bold"
+                        android:text="@string/brio_comercio_titular"
+                        android:textAlignment="center"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="@string/brio_asociado"
+                        android:textAlignment="center"
+                        android:textAllCaps="false"
+                        android:textStyle="bold" />
+
+
+                </LinearLayout>
+
+                <!--TextView
+                            android:id="@+id/tvFondoAreaFirma"
+                            android:text="Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío Brío "
+                            android:textColor="@color/app_pleca_grd_rosa_1"
+                            android:layout_width="1024dp"
+                            android:layout_height="wrap_content"
+                            android:rotation="-23"
+                            /-->
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight=".95"
+                    android:paddingTop="15dp">
+
+
+                    <LinearLayout
+                        android:gravity="start|center"
+                        android:orientation="horizontal"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_width="220dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".95">
+
+
+                        <net.hova_it.barared.brio.apis.views.BrioButton2
+                            android:id="@+id/btLimpiar"
+                            style="@style/BrioButton.Naranja"
+                            android:layout_width="120dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.4"
+                            android:text="@string/brio_limpiar"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_width="60dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight=".95">
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:gravity="end|center"
+                        android:orientation="horizontal"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_width="220dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".95">
+
+
+                        <net.hova_it.barared.brio.apis.views.BrioButton2
+                            android:id="@+id/btContinuar"
+                            style="@style/BrioButton.Rosa"
+                            android:layout_width="120dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.4"
+                            android:text="@string/brio_continuar"/>
+                    </LinearLayout>
+                </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+
+
+        <!--LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="bottom"
+                android:gravity="center">
+
+                <net.hova_it.barared.brio.apis.views.BrioButton2
+                    android:id="@+id/btnAceptar"
+                    style="@style/BrioButton.Rosa"
+                    android:layout_width="wrap_content"
+                    android:text="@string/brio_aceptar" />
+
+                <net.hova_it.barared.brio.apis.views.BrioButton2
+                    android:id="@+id/btnLimpiar"
+                    style="@style/BrioButton.Naranja"
+                    android:layout_width="wrap_content"
+                    android:text="@string/brio_limpiar" />
+
+
+            </LinearLayout-->
+
+    </RelativeLayout>
+
+</FrameLayout>

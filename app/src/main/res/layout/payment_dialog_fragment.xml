@@ -1,0 +1,407 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clickable="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/app_dialog_margin_root"
+        android:background="@drawable/dialog_bkg"
+        android:gravity="center_vertical"
+        android:orientation="vertical"
+        android:padding="12dp">
+
+        <TextView
+            android:id="@+id/tvTitle"
+            style="@style/AppTheme.Pleca.Activa"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="4dp"
+            android:layout_marginStart="4dp"
+            android:text="@string/payment_title" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+            <!-- Tipos de pago -->
+            <android.support.v7.widget.CardView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_horizontal"
+                android:layout_weight=".4"
+                android:elevation="20dp"
+                android:visibility="visible"
+                card_view:cardCornerRadius="8dp"
+                card_view:cardUseCompatPadding="true">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:id="@+id/tvtitle0"
+                        style="@style/AppTheme.Pleca.Inactiva"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="Agregar pago" />
+
+                    <ScrollView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_below="@+id/tvtitle0"
+                        android:scrollbarAlwaysDrawVerticalTrack="true">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_horizontal"
+                            android:orientation="vertical"
+                            android:paddingEnd="12dp"
+                            android:paddingStart="12dp">
+
+                            <!-- btnTipoPagoEfectivo -->
+                            <RelativeLayout
+                                android:id="@+id/btnTipoPagoEfectivo"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal">
+
+                                <ImageView
+                                    android:id="@+id/img1"
+                                    android:layout_width="160dp"
+                                    android:layout_height="160dp"
+                                    android:layout_centerHorizontal="true"
+                                    android:src="@drawable/payment_ic_cash" />
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentStart="true"
+                                    android:layout_below="@+id/img1"
+                                    android:gravity="center_horizontal"
+                                    android:text="@string/payment_title_efectivo"
+                                    android:textAppearance="?android:attr/textAppearanceMedium"
+                                    android:textColor="#FF000000" />
+                            </RelativeLayout>
+
+                            <View
+                                android:layout_width="wrap_content"
+                                android:layout_height="3dp"
+                                android:layout_marginBottom="4dp"
+                                android:layout_marginTop="4dp"
+                                android:background="@color/black" />
+
+                            <!-- btnTipoPagoTarjeta -->
+                            <RelativeLayout
+                                android:id="@+id/btnTipoPagoTarjeta"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal">
+
+                                <ImageView
+                                    android:id="@+id/img2"
+                                    android:layout_width="160dp"
+                                    android:layout_height="160dp"
+                                    android:layout_centerHorizontal="true"
+                                    android:src="@drawable/payment_ic_card" />
+                                <!--android:scaleType="fitCenter"-->
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentStart="true"
+                                    android:layout_below="@+id/img2"
+                                    android:gravity="center_horizontal"
+                                    android:text="@string/payment_title_tarjeta"
+                                    android:textAppearance="?android:attr/textAppearanceMedium"
+                                    android:textColor="#FF000000" />
+                            </RelativeLayout>
+
+                            <View
+                                android:layout_width="wrap_content"
+                                android:layout_height="3dp"
+                                android:layout_marginBottom="4dp"
+                                android:layout_marginTop="4dp"
+                                android:background="@color/black" />
+
+                            <!-- btnTipoPagoVales -->
+                            <RelativeLayout
+                                android:id="@+id/btnTipoPagoVales"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal"
+                                android:visibility="gone">
+
+                                <ImageView
+                                    android:id="@+id/img4"
+                                    android:layout_width="160dp"
+                                    android:layout_height="160dp"
+                                    android:layout_centerHorizontal="true"
+                                    android:src="@drawable/payment_ic_fiado" />
+                                <!--android:scaleType="fitCenter"-->
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentStart="true"
+                                    android:layout_below="@+id/img4"
+                                    android:gravity="center_horizontal"
+                                    android:text="@string/payment_title_fiado"
+                                    android:textAppearance="?android:attr/textAppearanceMedium"
+                                    android:textColor="#FF000000" />
+                            </RelativeLayout>
+
+                            <View
+                                android:layout_width="wrap_content"
+                                android:layout_height="3dp"
+                                android:layout_marginBottom="4dp"
+                                android:layout_marginTop="4dp"
+                                android:background="@color/black"
+                                android:visibility="gone" />
+
+                            <!-- btnTipoPagoFiado -->
+                            <RelativeLayout
+                                android:id="@+id/btnTipoPagoFiado"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal">
+
+                                <ImageView
+                                    android:id="@+id/img3"
+                                    android:layout_width="160dp"
+                                    android:layout_height="160dp"
+                                    android:layout_centerHorizontal="true"
+                                    android:src="@drawable/payment_ic_fiado"
+                                    android:visibility="gone" />
+                                <!--android:scaleType="fitCenter"-->
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentStart="true"
+                                    android:layout_below="@+id/img3"
+                                    android:gravity="center_horizontal"
+                                    android:text="@string/payment_title_fiado"
+                                    android:textAppearance="?android:attr/textAppearanceMedium"
+                                    android:textColor="#FF000000"
+                                    android:visibility="gone" />
+                            </RelativeLayout>
+
+                            <View
+                                android:layout_width="wrap_content"
+                                android:layout_height="3dp"
+                                android:layout_marginBottom="4dp"
+                                android:layout_marginTop="4dp"
+                                android:background="@color/black"
+                                android:visibility="gone" />
+
+                        </LinearLayout>
+                    </ScrollView>
+                </RelativeLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <!-- Cobros y totales -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight=".6"
+                android:orientation="vertical"
+                android:paddingEnd="3dp"
+                android:paddingStart="3dp"
+                android:weightSum="1"
+                tools:ignore="NestedWeights">
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_weight=".4"
+                    android:elevation="20dp"
+                    card_view:cardCornerRadius="8dp"
+                    card_view:cardUseCompatPadding="true">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_vertical"
+                        android:gravity="center_vertical"
+                        android:padding="8dp">
+
+                        <!-- panelInfo y panelEnvioCorreo -->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_above="@+id/panelBotonesPago"
+                            android:layout_alignParentTop="true"
+                            android:layout_gravity="center_vertical"
+                            android:gravity="center_vertical"
+                            android:orientation="vertical">
+
+                            <!-- panelInfo -->
+                            <LinearLayout
+                                android:id="@+id/panelInfo"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center_vertical"
+                                android:gravity="center_vertical"
+                                android:orientation="vertical"
+                                android:visibility="visible">
+
+                                <!-- total a cobrar -->
+                                <RelativeLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginBottom="8dp"
+                                    android:layout_marginEnd="16dp"
+                                    android:layout_marginStart="16dp"
+                                    android:layout_marginTop="8dp">
+
+                                    <TextView
+                                        android:id="@+id/textView5"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_alignParentStart="true"
+                                        android:gravity="center_vertical|start"
+                                        android:text="@string/payment_total"
+                                        android:textColor="#000000"
+                                        android:textSize="@dimen/payment_text" />
+
+                                    <TextView
+                                        android:id="@+id/tvImporteNeto"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_alignParentEnd="true"
+                                        android:layout_toEndOf="@+id/textView5"
+                                        android:gravity="center_vertical|end"
+                                        android:textColor="#000000"
+                                        android:textSize="@dimen/payment_text" />
+
+                                </RelativeLayout>
+
+                                <!-- Restante / cambio -->
+                                <RelativeLayout
+                                    android:id="@+id/panelRestanteCambio"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginBottom="8dp"
+                                    android:layout_marginEnd="16dp"
+                                    android:layout_marginStart="16dp"
+                                    android:layout_marginTop="8dp">
+
+                                    <TextView
+                                        android:id="@+id/tvRestanteTitle"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_alignParentStart="true"
+                                        android:gravity="center_vertical|start"
+                                        android:text="@string/payment_restante"
+                                        android:textColor="#000000"
+                                        android:textSize="@dimen/payment_text" />
+
+                                    <TextView
+                                        android:id="@+id/tvCambio"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_alignParentEnd="true"
+                                        android:layout_toEndOf="@+id/tvRestanteTitle"
+                                        android:gravity="center_vertical|end"
+                                        android:textColor="#000000"
+                                        android:textSize="@dimen/payment_text" />
+
+                                </RelativeLayout>
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <!-- botones regresar, continuar -->
+                        <RelativeLayout
+                            android:id="@+id/panelBotonesPago"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginEnd="16dp"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginTop="4dp">
+
+                            <net.hova_it.barared.brio.apis.views.BrioButton2
+                                android:id="@+id/btnBack"
+                                style="@style/BrioButton.Gris"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentStart="true"
+                                android:layout_alignParentTop="true"
+                                android:layout_gravity="start"
+                                android:text="@string/brio_regresar"
+                                android:visibility="visible" />
+
+                            <net.hova_it.barared.brio.apis.views.BrioButton2
+                                android:id="@+id/btnAccept"
+                                style="@style/BrioButton.Rosa"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentEnd="true"
+                                android:layout_alignParentTop="true"
+                                android:layout_gravity="end"
+                                android:text="@string/brio_continuar"
+                                android:visibility="gone" />
+
+                        </RelativeLayout>
+
+                    </RelativeLayout>
+
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_weight=".6"
+                    android:elevation="20dp"
+                    android:visibility="visible"
+                    card_view:cardCornerRadius="8dp"
+                    card_view:cardUseCompatPadding="true">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:padding="10dp"
+                        android:paddingBottom="3dp">
+
+                        <TextView
+                            style="@style/AppTheme.Pleca.Inactiva"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Pagos" />
+
+                        <android.support.v7.widget.RecyclerView
+                            android:id="@+id/pos_pagos_list"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingTop="3dp" />
+
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <net.hova_it.barared.brio.apis.views.BrioCloseButton
+        android:id="@+id/btnClose"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_gravity="end|top"
+        android:focusable="false" />
+</FrameLayout>

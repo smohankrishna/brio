@@ -1,0 +1,141 @@
+<android.support.v7.widget.CardView
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:brio="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    card_view:cardUseCompatPadding="true"
+    >
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:brio="http://schemas.android.com/apk/res-auto"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="7"
+        android:gravity="center">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="Producto"
+            android:id="@+id/producto"
+            android:padding="4dp"
+            android:layout_weight="1"
+            android:maxLines="2"
+            android:minLines="1"
+            android:singleLine="true"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="Marca"
+            android:id="@+id/marca"
+            android:padding="4dp"
+            android:layout_weight="1"
+            android:singleLine="true"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="Contenido"
+            android:id="@+id/contenido"
+            android:padding="4dp"
+            android:layout_weight="1"
+            android:singleLine="true"/>
+
+        <!--<TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="Presentacion"
+            android:id="@+id/presentacion"
+            android:padding="4dp"
+            android:layout_weight=".98"
+            android:singleLine="true"/>-->
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="Categoria"
+            android:id="@+id/categoria"
+            android:padding="4dp"
+            android:layout_weight="1"
+            android:singleLine="true"/>
+
+        <net.hova_it.barared.brio.apis.views.BrioEditText
+            android:id="@+id/precioCompra"
+            brio:tipo_teclado="numerico"
+            brio:titulo_teclado="@string/inventario_ingresar_precio_nuevo"
+            brio:mostrar_como_dialogo="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:padding="4dp"
+            android:text="precio Compra"
+            android:textAppearance="?android:attr/textAppearanceSmall" />
+
+
+        <Space
+            android:layout_width="10px"
+            android:layout_height="10px" />
+
+
+        <net.hova_it.barared.brio.apis.views.BrioEditText
+            android:id="@+id/precioVenta"
+            brio:tipo_teclado="numerico"
+            brio:titulo_teclado="@string/inventario_ingresar_precio_nuevo"
+            brio:mostrar_como_dialogo="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:padding="4dp"
+            android:text="precio Venta"
+            android:textAppearance="?android:attr/textAppearanceSmall" />
+
+
+        <Space
+            android:layout_width="10px"
+            android:layout_height="10px" />
+
+        <net.hova_it.barared.brio.apis.views.BrioEditText
+            android:id="@+id/existencias"
+            brio:tipo_teclado="numerico"
+            brio:mostrar_como_dialogo="true"
+            brio:valor_default_teclado="0.00"
+            brio:titulo_teclado="@string/inventario_ingresar_cantidad_articulos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:padding="4dp"
+            android:text="Existencias"
+            android:textAppearance="?android:attr/textAppearanceSmall" />
+
+        <!--<TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:id="@+id/editar"
+            android:padding="4dp"
+            android:layout_weight="1"
+            android:background="@android:drawable/ic_menu_edit" />-->
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:id="@+id/borrar"
+            android:visibility="gone"
+            android:layout_weight="1.11"
+            android:background="@drawable/brio_ic_remove"
+            android:layout_marginLeft="4dp" />
+
+
+
+
+    </LinearLayout>
+</android.support.v7.widget.CardView>

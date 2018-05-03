@@ -1,0 +1,1240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_margin="0dp"
+    android:orientation="vertical"
+    android:background="@drawable/view_menu_grd">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/report_title"
+        style="@style/AppTheme.Brio_title"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="0dp"
+        android:layout_marginBottom="0dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:gravity="center_vertical"
+        android:layout_gravity="center_vertical">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:textSize="20sp"
+            android:textColor="#FFFFFF"
+            android:id="@+id/select_type_report"
+            android:text="@string/report_tipo"
+            android:layout_marginLeft="10dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true"
+            android:gravity="center_vertical"
+            android:background="@drawable/view_bkg_pleca_activa"
+            android:layout_gravity="center_vertical">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:textSize="20sp"
+                android:textColor="#FFFFFF"
+                android:text="@string/report_tipo"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentStart="true"
+                android:gravity="center_vertical"
+                android:id="@+id/textView" />
+            <Space
+                android:layout_width="10dp"
+                android:layout_height="40dp"/>
+
+            <Spinner
+                android:id="@+id/spin_report"
+                android:layout_width="300dp"
+                android:layout_height="25dp"
+                android:textSize="18sp"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
+                android:textColor="@color/black"
+                android:background="#FFFFFF"
+                android:layout_alignParentTop="true"
+                android:layout_toEndOf="@+id/textView">
+
+            </Spinner>
+            <Space
+                android:layout_width="10dp"
+                android:layout_height="40dp"/>
+        </LinearLayout>
+
+        <net.hova_it.barared.brio.apis.views.BrioButton2
+            android:id="@+id/btn_report"
+            android:layout_width="200dp"
+            android:layout_height="40dp"
+            style="@style/BrioButton.Rosa"
+            android:gravity="center"
+            android:text="@string/report_button"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:orientation="horizontal"
+        android:layout_marginLeft="5dp"
+        android:gravity="center_vertical"
+        android:background="@drawable/view_bkg_layout"
+        android:layout_marginRight="5dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:layout_marginLeft="10dp"
+            android:textColor="#FFFFFF"
+            android:text="@string/report_start_date"
+            />
+
+
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:id="@+id/fecha_inicial"
+            android:textSize="18sp"
+            android:text=""
+            android:gravity="center"
+            android:visibility="visible"
+            android:background="#FFFFFF"
+            android:layout_weight="1" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:textColor="#FFFFFF"
+            android:text="@string/report_end_date"
+            />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:id="@+id/fecha_fin"
+            android:text=""
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:gravity="center"
+            android:visibility="visible"
+            android:background="#FFFFFF"
+            android:layout_weight="1" />
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/report_sin_internet"
+        android:id="@+id/textSinInternet"
+        android:visibility="gone"
+        android:gravity="center"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:textColor="#8d8181"
+        android:textSize="30dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="visible"
+            android:id="@+id/layout_vendidos"
+            android:orientation="vertical">
+
+            <include
+                android:id="@+id/loading_reports"
+                layout="@layout/view_loading"
+                android:visibility="gone"/>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:visibility="gone"
+                        android:id="@+id/layout_detalle_estado_de_cuenta"
+                        android:orientation="vertical">
+
+                        <ScrollView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            >
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+                        <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp"
+                            android:background="@color/pink_500"
+                            android:id="@+id/mostrar_ventas">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:padding="10dp"
+                                android:textStyle="bold"
+                                android:textColor="#FFFFFF"
+                                android:text="@string/report_show_detalle_pos" />
+
+                            <TextView
+                                android:id="@+id/parent_list_item_detalles_ventas_results"
+                                android:layout_width="450dp"
+                                android:layout_height="wrap_content"
+                                android:padding="10dp"
+                                android:textStyle="bold"
+                                android:textColor="#FFFFFF"
+                                android:text="Transacciones= 0 Total=$0.0"
+                                android:layout_toStartOf="@+id/parent_list_item_expand_arrow_ventas" />
+
+                            <ImageButton
+                                android:id="@+id/parent_list_item_expand_arrow_ventas"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_margin="8dp"
+                                android:background="@color/pink_500"
+                                android:src="@android:drawable/arrow_down_float" />
+
+
+                        </RelativeLayout>
+
+                        <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp"
+
+                            android:background="@color/pink_500"
+                            android:id="@+id/mostrar_servicios">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:padding="10dp"
+                                android:textStyle="bold"
+                                android:textColor="#FFFFFF"
+                                android:text="@string/report_show_detalle_servicios" />
+
+                            <TextView
+                                android:id="@+id/parent_list_item_detalles_servicios_results"
+                                android:layout_width="450dp"
+                                android:layout_height="wrap_content"
+                                android:padding="10dp"
+                                android:textStyle="bold"
+                                android:textColor="#FFFFFF"
+                                android:text="Transacciones= 0 Total=$0.0"
+                                android:layout_toStartOf="@+id/parent_list_item_expand_arrow_servicios" />
+
+                            <ImageButton
+                                android:id="@+id/parent_list_item_expand_arrow_servicios"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_margin="8dp"
+                                android:background="@color/pink_500"
+                                android:src="@android:drawable/arrow_down_float" />
+
+
+                        </RelativeLayout>
+
+                        <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp"
+                            android:background="@color/pink_500"
+                            android:id="@+id/mostrar_tae">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:padding="10dp"
+                                android:textStyle="bold"
+                                android:textColor="#FFFFFF"
+                                android:text="@string/report_show_detalle_tae" />
+
+                            <TextView
+                                android:id="@+id/parent_list_item_detalles_tae_results"
+                                android:layout_width="450dp"
+                                android:layout_height="wrap_content"
+                                android:padding="10dp"
+                                android:textStyle="bold"
+                                android:textColor="#FFFFFF"
+                                android:text="Transacciones= 0 Total=$0.0"
+                                android:layout_toStartOf="@+id/parent_list_item_expand_arrow_tae" />
+
+                            <ImageButton
+                                android:id="@+id/parent_list_item_expand_arrow_tae"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_margin="8dp"
+                                android:background="@color/pink_500"
+                                android:src="@android:drawable/arrow_down_float" />
+
+
+                        </RelativeLayout>
+
+                        <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp"
+                            android:background="@color/pink_500"
+                            android:id="@+id/mostrar_internet">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:padding="10dp"
+                                android:textStyle="bold"
+                                android:textColor="#FFFFFF"
+                                android:text="@string/report_show_detalle_internet" />
+
+                            <TextView
+                                android:id="@+id/parent_list_item_detalles_internet_results"
+                                android:layout_width="450dp"
+                                android:layout_height="wrap_content"
+                                android:padding="10dp"
+                                android:textStyle="bold"
+                                android:textColor="#FFFFFF"
+                                android:text="Transacciones= 0 Total=$0.0"
+                                android:layout_toStartOf="@+id/parent_list_item_expand_arrow_internet" />
+
+                            <ImageButton
+                                android:id="@+id/parent_list_item_expand_arrow_internet"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_margin="8dp"
+                                android:background="@color/pink_500"
+                                android:src="@android:drawable/arrow_down_float" />
+
+
+                        </RelativeLayout>
+
+                        <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp"
+                            android:background="@color/pink_500"
+                            android:id="@+id/mostrar_transacciones_tarjeta"
+                            >
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:padding="10dp"
+                                android:textStyle="bold"
+                                android:textColor="#FFFFFF"
+                                android:text="@string/report_show_detalle_tarjeta" />
+
+                            <TextView
+                                android:id="@+id/parent_list_item_detalles_tarjeta_results"
+                                android:layout_width="450dp"
+                                android:layout_height="wrap_content"
+                                android:padding="10dp"
+                                android:textStyle="bold"
+                                android:textColor="#FFFFFF"
+                                android:text="Transacciones= 0 Total=$0.0"
+                                android:layout_toStartOf="@+id/parent_list_item_expand_arrow_tarjeta" />
+
+                            <ImageButton
+                                android:id="@+id/parent_list_item_expand_arrow_tarjeta"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_margin="8dp"
+                                android:background="@color/pink_500"
+                                android:src="@android:drawable/arrow_down_float" />
+
+
+                        </RelativeLayout>
+
+                        <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp"
+                            android:background="@color/pink_500"
+                            android:id="@+id/mostrar_banco">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:padding="10dp"
+                                android:textStyle="bold"
+                                android:textColor="#FFFFFF"
+                                android:text="@string/report_show_detalle_banco" />
+
+                            <TextView
+                                android:id="@+id/parent_list_item_detalles_banco_results"
+                                android:layout_width="450dp"
+                                android:layout_height="wrap_content"
+                                android:padding="10dp"
+                                android:textStyle="bold"
+                                android:textColor="#FFFFFF"
+                                android:text="Transacciones= 0 Total=$0.0"
+                                android:layout_toStartOf="@+id/parent_list_item_expand_arrow_banco" />
+
+                            <ImageButton
+                                android:id="@+id/parent_list_item_expand_arrow_banco"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_margin="8dp"
+                                android:background="@color/pink_500"
+                                android:src="@android:drawable/arrow_down_float" />
+
+
+                        </RelativeLayout>
+                        <!--Se agrego para seguros-->
+                        <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp"
+                            android:background="@color/pink_500"
+                            android:id="@+id/mostrar_seguros">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:padding="10dp"
+                                android:textStyle="bold"
+                                android:textColor="#FFFFFF"
+                                android:text="@string/report_show_detalle_seguros" />
+
+                            <TextView
+                                android:id="@+id/parent_list_item_detalles_seguros_results"
+                                android:layout_width="450dp"
+                                android:layout_height="wrap_content"
+                                android:padding="10dp"
+                                android:textStyle="bold"
+                                android:textColor="#FFFFFF"
+                                android:text="Transacciones= 0 Total=$0.0"
+                                android:layout_toStartOf="@+id/parent_list_item_expand_arrow_seguros" />
+
+                            <ImageButton
+                                android:id="@+id/parent_list_item_expand_arrow_seguros"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_margin="8dp"
+                                android:background="@color/pink_500"
+                                android:src="@android:drawable/arrow_down_float" />
+
+
+                        </RelativeLayout>
+
+                        <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp"
+                            android:background="@color/pink_500"
+                            android:id="@+id/mostrar_western">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:padding="10dp"
+                                android:textStyle="bold"
+                                android:textColor="#FFFFFF"
+                                android:text="@string/report_show_detalle_western" />
+
+                            <TextView
+                                android:id="@+id/parent_list_item_detalles_western_results"
+                                android:layout_width="450dp"
+                                android:layout_height="wrap_content"
+                                android:padding="10dp"
+                                android:textStyle="bold"
+                                android:textColor="#FFFFFF"
+                                android:text="Transacciones= 0 Total=$0.0"
+                                android:layout_toStartOf="@+id/parent_list_item_expand_arrow_western" />
+
+                            <ImageButton
+                                android:id="@+id/parent_list_item_expand_arrow_western"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_margin="8dp"
+                                android:background="@color/pink_500"
+                                android:src="@android:drawable/arrow_down_float" />
+
+
+                        </RelativeLayout>
+
+
+
+
+                            </LinearLayout>
+                        </ScrollView>
+
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:visibility="gone"
+                            android:id="@+id/columnas_detalles_ventas"
+                            >
+
+                            <Button
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Id Ticket"
+                                style="@style/BrioButton.Gris"
+                                android:layout_weight="1"
+                                android:textColor="#FFFFFFFF"
+                                android:textSize="19dp"
+                                android:layout_marginRight="2dp"
+                                android:singleLine="true"
+                                android:background="@drawable/view_bkg_pleca_activa" />
+
+                            <Button
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Fecha de venta"
+                                style="@style/BrioButton.Gris"
+                                android:layout_weight="1"
+                                android:textColor="#FFFFFFFF"
+                                android:textSize="19dp"
+                                android:layout_marginRight="2dp"
+                                android:singleLine="true"
+                                android:background="@drawable/view_bkg_pleca_activa" />
+                            <Button
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Total"
+                                style="@style/BrioButton.Gris"
+                                android:layout_weight="1"
+                                android:textColor="#FFFFFFFF"
+                                android:textSize="19dp"
+                                android:layout_marginRight="2dp"
+                                android:singleLine="true"
+                                android:background="@drawable/view_bkg_pleca_activa" />
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingTop="5dp"
+                            android:id="@+id/list_detalles_pos"
+                            android:orientation="vertical"
+                            android:visibility="gone"
+                            >
+
+                            <android.support.v7.widget.RecyclerView
+                                android:id="@+id/recycler_view_detalles_pos"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                tools:listitem="@layout/reports_row_fragment"
+                                />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:visibility="gone"
+                            android:id="@+id/columnas_detalles_servicios"
+                            >
+
+                            <Button
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Id Ticket"
+                                style="@style/BrioButton.Gris"
+                                android:layout_weight="1"
+                                android:textColor="#FFFFFFFF"
+                                android:textSize="19dp"
+                                android:layout_marginRight="2dp"
+                                android:singleLine="true"
+                                android:background="@drawable/view_bkg_pleca_activa" />
+
+                            <Button
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Fecha"
+                                style="@style/BrioButton.Gris"
+                                android:layout_weight="1"
+                                android:textColor="#FFFFFFFF"
+                                android:textSize="19dp"
+                                android:layout_marginRight="2dp"
+                                android:singleLine="true"
+                                android:background="@drawable/view_bkg_pleca_activa" />
+                            <Button
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Total"
+                                style="@style/BrioButton.Gris"
+                                android:layout_weight="1"
+                                android:textColor="#FFFFFFFF"
+                                android:textSize="19dp"
+                                android:layout_marginRight="2dp"
+                                android:singleLine="true"
+                                android:background="@drawable/view_bkg_pleca_activa" />
+
+                            <Button
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Comision"
+                                style="@style/BrioButton.Gris"
+                                android:layout_weight="1"
+                                android:textColor="#FFFFFFFF"
+                                android:textSize="19dp"
+                                android:layout_marginRight="2dp"
+                                android:singleLine="true"
+                                android:background="@drawable/view_bkg_pleca_activa" />
+
+                            <Button
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Ganancia"
+                                style="@style/BrioButton.Gris"
+                                android:layout_weight="1"
+                                android:textColor="#FFFFFFFF"
+                                android:textSize="19dp"
+                                android:layout_marginRight="2dp"
+                                android:singleLine="true"
+                                android:background="@drawable/view_bkg_pleca_activa" />
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:visibility="gone"
+                            android:id="@+id/columnas_detalles_banco"
+                            >
+
+                            <Button
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Id Ticket"
+                                style="@style/BrioButton.Gris"
+                                android:layout_weight="1"
+                                android:textColor="#FFFFFFFF"
+                                android:textSize="19dp"
+                                android:layout_marginRight="2dp"
+                                android:singleLine="true"
+                                android:background="@drawable/view_bkg_pleca_activa" />
+
+                            <Button
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Tipo Ticket"
+                                style="@style/BrioButton.Gris"
+                                android:layout_weight="1"
+                                android:textColor="#FFFFFFFF"
+                                android:textSize="19dp"
+                                android:layout_marginRight="2dp"
+                                android:singleLine="true"
+                                android:background="@drawable/view_bkg_pleca_activa" />
+                            <Button
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Fecha"
+                                style="@style/BrioButton.Gris"
+                                android:layout_weight="1"
+                                android:textColor="#FFFFFFFF"
+                                android:textSize="19dp"
+                                android:layout_marginRight="2dp"
+                                android:singleLine="true"
+                                android:background="@drawable/view_bkg_pleca_activa" />
+                            <Button
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Total"
+                                style="@style/BrioButton.Gris"
+                                android:layout_weight="1"
+                                android:textColor="#FFFFFFFF"
+                                android:textSize="19dp"
+                                android:layout_marginRight="2dp"
+                                android:singleLine="true"
+                                android:background="@drawable/view_bkg_pleca_activa" />
+
+                            <Button
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Comision"
+                                style="@style/BrioButton.Gris"
+                                android:layout_weight="1"
+                                android:textColor="#FFFFFFFF"
+                                android:textSize="19dp"
+                                android:layout_marginRight="2dp"
+                                android:singleLine="true"
+                                android:background="@drawable/view_bkg_pleca_activa" />
+
+                            <Button
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Ganancia"
+                                style="@style/BrioButton.Gris"
+                                android:layout_weight="1"
+                                android:textColor="#FFFFFFFF"
+                                android:textSize="19dp"
+                                android:layout_marginRight="2dp"
+                                android:singleLine="true"
+                                android:background="@drawable/view_bkg_pleca_activa" />
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:visibility="gone"
+                            android:id="@+id/columnas_detalles_seguros"
+                            >
+
+                            <Button
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Id Ticket"
+                                style="@style/BrioButton.Gris"
+                                android:layout_weight="1"
+                                android:textColor="#FFFFFFFF"
+                                android:textSize="19dp"
+                                android:layout_marginRight="2dp"
+                                android:singleLine="true"
+                                android:background="@drawable/view_bkg_pleca_activa" />
+
+                            <Button
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Fecha de venta"
+                                style="@style/BrioButton.Gris"
+                                android:layout_weight="1"
+                                android:textColor="#FFFFFFFF"
+                                android:textSize="19dp"
+                                android:layout_marginRight="2dp"
+                                android:singleLine="true"
+                                android:background="@drawable/view_bkg_pleca_activa" />
+                            <Button
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Total"
+                                style="@style/BrioButton.Gris"
+                                android:layout_weight="1"
+                                android:textColor="#FFFFFFFF"
+                                android:textSize="19dp"
+                                android:layout_marginRight="2dp"
+                                android:singleLine="true"
+                                android:background="@drawable/view_bkg_pleca_activa" />
+                            <Button
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Comision"
+                                style="@style/BrioButton.Gris"
+                                android:layout_weight="1"
+                                android:textColor="#FFFFFFFF"
+                                android:textSize="19dp"
+                                android:layout_marginRight="2dp"
+                                android:singleLine="true"
+                                android:background="@drawable/view_bkg_pleca_activa" />
+
+                            <Button
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Ganancia"
+                                style="@style/BrioButton.Gris"
+                                android:layout_weight="1"
+                                android:textColor="#FFFFFFFF"
+                                android:textSize="19dp"
+                                android:layout_marginRight="2dp"
+                                android:singleLine="true"
+                                android:background="@drawable/view_bkg_pleca_activa" />
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:visibility="gone"
+                            android:id="@+id/columnas_detalles_western"
+                            >
+
+                            <Button
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Id Ticket"
+                                style="@style/BrioButton.Gris"
+                                android:layout_weight="1"
+                                android:textColor="#FFFFFFFF"
+                                android:textSize="19dp"
+                                android:layout_marginRight="2dp"
+                                android:singleLine="true"
+                                android:background="@drawable/view_bkg_pleca_activa" />
+
+                            <Button
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Fecha de venta"
+                                style="@style/BrioButton.Gris"
+                                android:layout_weight="1"
+                                android:textColor="#FFFFFFFF"
+                                android:textSize="19dp"
+                                android:layout_marginRight="2dp"
+                                android:singleLine="true"
+                                android:background="@drawable/view_bkg_pleca_activa" />
+                            <Button
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Total"
+                                style="@style/BrioButton.Gris"
+                                android:layout_weight="1"
+                                android:textColor="#FFFFFFFF"
+                                android:textSize="19dp"
+                                android:layout_marginRight="2dp"
+                                android:singleLine="true"
+                                android:background="@drawable/view_bkg_pleca_activa" />
+                            <Button
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Comision"
+                                style="@style/BrioButton.Gris"
+                                android:layout_weight="1"
+                                android:textColor="#FFFFFFFF"
+                                android:textSize="19dp"
+                                android:layout_marginRight="2dp"
+                                android:singleLine="true"
+                                android:background="@drawable/view_bkg_pleca_activa" />
+
+                            <Button
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Ganancia"
+                                style="@style/BrioButton.Gris"
+                                android:layout_weight="1"
+                                android:textColor="#FFFFFFFF"
+                                android:textSize="19dp"
+                                android:layout_marginRight="2dp"
+                                android:singleLine="true"
+                                android:background="@drawable/view_bkg_pleca_activa" />
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingTop="5dp"
+                            android:id="@+id/list_detalles_servicios"
+                            android:orientation="vertical"
+                            android:visibility="gone"
+                            >
+
+                            <android.support.v7.widget.RecyclerView
+                                android:id="@+id/recycler_view_detalles_servicios"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                tools:listitem="@layout/reports_row_fragment"
+                                />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingTop="5dp"
+                            android:id="@+id/list_detalles_tae"
+                            android:orientation="vertical"
+                            android:visibility="gone"
+                            >
+
+                            <android.support.v7.widget.RecyclerView
+                                android:id="@+id/recycler_view_detalles_tae"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                tools:listitem="@layout/reports_row_fragment"
+                                />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingTop="5dp"
+                            android:id="@+id/list_detalles_internet"
+                            android:orientation="vertical"
+                            android:visibility="gone"
+                            >
+
+                            <android.support.v7.widget.RecyclerView
+                                android:id="@+id/recycler_view_detalles_internet"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                tools:listitem="@layout/reports_row_fragment"
+                                />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingTop="5dp"
+                            android:id="@+id/list_detalles_tarjeta"
+                            android:orientation="vertical"
+                            android:visibility="gone"
+                            >
+
+                            <android.support.v7.widget.RecyclerView
+                                android:id="@+id/recycler_view_detalles_tarjeta"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                tools:listitem="@layout/reports_row_fragment"
+                                />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingTop="5dp"
+                            android:id="@+id/list_detalles_banco"
+                            android:orientation="vertical"
+                            android:visibility="gone"
+                            >
+
+                            <android.support.v7.widget.RecyclerView
+                                android:id="@+id/recycler_view_detalles_banco"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                tools:listitem="@layout/reports_row_fragment"
+                                />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingTop="5dp"
+                            android:id="@+id/list_detalles_seguros"
+                            android:orientation="vertical"
+                            android:visibility="gone"
+                            >
+
+                            <android.support.v7.widget.RecyclerView
+                                android:id="@+id/recycler_view_detalles_seguros"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                tools:listitem="@layout/reports_row_fragment"
+                                />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingTop="5dp"
+                            android:id="@+id/list_detalles_western"
+                            android:orientation="vertical"
+                            android:visibility="gone"
+                            >
+
+                            <android.support.v7.widget.RecyclerView
+                                android:id="@+id/recycler_view_detalles_western"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                tools:listitem="@layout/reports_row_fragment"
+                                />
+
+                        </LinearLayout>
+
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:textAppearance="?android:attr/textAppearanceLarge"
+                                android:text="@string/report_sin_articulos"
+                                android:id="@+id/textSinInformacionReporte"
+                                android:visibility="gone"
+                                android:gravity="center"
+                                android:layout_centerVertical="true"
+                                android:layout_centerHorizontal="true"
+                                android:textColor="#8d8181"
+                                android:textSize="30dp" />
+
+
+
+                    <!--    <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingTop="5dp"
+                            android:orientation="vertical"
+                            >
+
+                            <android.support.v7.widget.RecyclerView
+                                android:id="@+id/recicler_view_detalles"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:visibility="gone"
+                                tools:listitem="@layout/reports_row_fragment"
+                                />
+
+                        </LinearLayout> -->
+
+                    </LinearLayout>
+
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:visibility="gone"
+                >
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="@string/report_column_ticket"
+                    style="@style/BrioButton.Gris"
+                    android:layout_weight="1"
+                    android:textColor="#FFFFFFFF"
+                    android:textSize="19dp"
+                    android:layout_marginRight="2dp"
+                    android:singleLine="true"
+                    android:background="@drawable/view_bkg_pleca_activa" />
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="@string/report_column_fecha"
+                    style="@style/BrioButton.Gris"
+                    android:layout_weight="1"
+                    android:textColor="#FFFFFFFF"
+                    android:singleLine="true"
+                    android:textSize="19dp"
+                    android:layout_marginLeft="2dp"
+                    android:background="@drawable/view_bkg_pleca_activa" />
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="@string/report_column_total"
+                    style="@style/BrioButton.Gris"
+                    android:layout_weight="1"
+                    android:textColor="#FFFFFFFF"
+                    android:singleLine="true"
+                    android:textSize="19dp"
+                    android:layout_marginLeft="2dp"
+                    android:background="@drawable/view_bkg_pleca_activa" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:id="@+id/columnas_ventas"
+                android:visibility="gone"
+                >
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="@string/report_column_articulo"
+                    android:id="@+id/btnProducto"
+                    style="@style/BrioButton.Gris"
+                    android:layout_weight="1"
+                    android:textColor="#FFFFFFFF"
+                    android:textSize="19dp"
+                    android:layout_marginRight="2dp"
+                    android:singleLine="true"
+                    android:background="@drawable/view_bkg_pleca_activa" />
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="@string/report_column_vendidos"
+                    style="@style/BrioButton.Gris"
+                    android:layout_weight="1"
+                    android:textColor="#FFFFFFFF"
+                    android:singleLine="true"
+                    android:textSize="19dp"
+                    android:layout_marginLeft="2dp"
+                    android:background="@drawable/view_bkg_pleca_activa" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:id="@+id/columnas_caja"
+                android:visibility="gone"
+                >
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="@string/report_column_tipo_ticket"
+                    style="@style/BrioButton.Gris"
+                    android:layout_weight="1"
+                    android:textColor="#FFFFFFFF"
+                    android:textSize="19dp"
+                    android:layout_marginRight="2dp"
+                    android:singleLine="true"
+                    android:background="@drawable/view_bkg_pleca_activa" />
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="@string/report_column_fecha"
+                    style="@style/BrioButton.Gris"
+                    android:layout_weight="1"
+                    android:textColor="#FFFFFFFF"
+                    android:singleLine="true"
+                    android:textSize="19dp"
+                    android:layout_marginLeft="2dp"
+                    android:background="@drawable/view_bkg_pleca_activa" />
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="@string/report_column_total"
+                    style="@style/BrioButton.Gris"
+                    android:layout_weight="1"
+                    android:textColor="#FFFFFFFF"
+                    android:singleLine="true"
+                    android:textSize="19dp"
+                    android:layout_marginLeft="2dp"
+                    android:background="@drawable/view_bkg_pleca_activa" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:weightSum="5"
+                android:visibility="gone"
+                android:id="@+id/columnas_vendidos"
+                >
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="@string/report_column_articulo"
+                    style="@style/BrioButton.Gris"
+                    android:textColor="#FFFFFFFF"
+                    android:textSize="19dp"
+                    android:layout_marginRight="2dp"
+                    android:layout_weight=".85"
+                    android:singleLine="true"
+                    android:background="@drawable/view_bkg_pleca_activa" />
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="@string/report_column_vendidos"
+                    style="@style/BrioButton.Gris"
+                    android:layout_weight="1.04"
+                    android:textColor="#FFFFFFFF"
+                    android:textSize="18dp"
+                    android:layout_marginRight="2dp"
+                    android:singleLine="true"
+                    android:background="@drawable/view_bkg_pleca_activa" />
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="@string/report_column_compra"
+                    style="@style/BrioButton.Gris"
+                    android:layout_weight="1.04"
+                    android:textColor="#FFFFFFFF"
+                    android:textSize="18dp"
+                    android:layout_marginRight="2dp"
+                    android:singleLine="true"
+                    android:background="@drawable/view_bkg_pleca_activa" />
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="@string/report_column_venta"
+                    style="@style/BrioButton.Gris"
+                    android:layout_weight="1.04"
+                    android:textColor="#FFFFFFFF"
+                    android:textSize="18dp"
+                    android:layout_marginRight="2dp"
+                    android:singleLine="true"
+                    android:background="@drawable/view_bkg_pleca_activa" />
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="@string/report_column_ganancia"
+                    style="@style/BrioButton.Gris"
+                    android:layout_weight="1.04"
+                    android:textColor="#FFFFFFFF"
+                    android:singleLine="true"
+                    android:textSize="18dp"
+                    android:layout_marginLeft="2dp"
+                    android:background="@drawable/view_bkg_pleca_activa" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="5dp"
+                android:orientation="vertical"
+                >
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/recicler_view_report"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    tools:listitem="@layout/reports_row_fragment"
+                    />
+
+            </LinearLayout>
+        </LinearLayout>
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="@string/report_sin_articulos"
+            android:id="@+id/textSinArticulosReporte"
+            android:visibility="visible"
+            android:gravity="center"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:textColor="#8d8181"
+            android:textSize="30dp" />
+
+    </LinearLayout>
+
+</LinearLayout>
+

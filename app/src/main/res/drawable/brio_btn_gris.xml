@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android" >
+    <!-- sombra
+    <item>
+        <shape android:shape="rectangle">
+            <gradient android:type="radial" android:gradientRadius="100dp"
+                android:startColor="#FF000000" android:endColor="#44FFFFFF" />
+            <size android:height="50dp"/>
+            <corners
+                android:bottomRightRadius="25dp"
+                android:bottomLeftRadius="25dp"
+                android:topRightRadius="25dp"
+                android:topLeftRadius="25dp" />
+        </shape>
+    </item>
+    -->
+
+    <!-- marco -->
+    <item android:drawable="@drawable/brio_btn_marco"/> <!-- android:left="3dp" android:top="3dp" android:bottom="3dp" android:right="3dp" -->
+
+    <!-- boton gris -->
+    <item android:left="@dimen/brio_button_position_padding" android:top="@dimen/brio_button_position_padding" android:bottom="@dimen/brio_button_position_padding" android:right="@dimen/brio_button_position_padding">
+        <shape android:shape="rectangle">
+            <gradient android:angle="270" android:startColor="@color/app_btn_grd_gris_1" android:endColor="@color/app_btn_grd_gris_2"/>
+            <corners
+                android:bottomRightRadius="25dp"
+                android:bottomLeftRadius="25dp"
+                android:topRightRadius="25dp"
+                android:topLeftRadius="25dp" />
+        </shape>
+    </item>
+
+    <!-- reflejo -->
+    <item android:drawable="@drawable/brio_btn_reflejo"
+        android:left="@dimen/brio_button_position_padding" android:top="@dimen/brio_button_position_padding" android:bottom="@dimen/brio_button_position_padding" android:right="@dimen/brio_button_position_padding"/>
+</layer-list>

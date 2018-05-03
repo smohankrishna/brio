@@ -1,0 +1,135 @@
+
+Changelog 0.1.36 [noviembre 28, 2016] RAMA:
+-h Version actualizada a 36.
+-h Se agrego la clase FileLogger para escribir mensajes a archivo, el cual posteriormente se puede enviar por correo.
+-h Se limpio la parte de billpocket, moviendo la parte de guardar el ticket a PaymentService y quitarlo de PaymentSendTicketFragment.
+-h Se agrego la validacion de status del comercio al iniciar sesión.
+-h Se cambio a android Studio 2.2.2
+
+Changelog 0.1.35 [noviembre 9, 2016] RAMA: release-35-rb-32 APK: $proyecto/app/brio-release-35-rb-32.apk
+- Esta version es un rollback a la 0.1.32 en caso de problemas con la sincronizacion por REST.
+- Lo unico que cambio en esta version es el gradle para cambiar la version a 35.
+
+Changelog 0.1.34 [noviembre 11, 2016] RAMA: release34 APK: $proyecto/app/brio-release-34.apk
+- Se agrego recordatorio para evitar que se duerma la impresora cada 20 minutos.
+
+- Se arreglo el problema de sincronización con REST (insert/update) cuando se suben articulos desde android.
+    Recordar que para probar hay que setear en 0 el LAST_CATALOG_SEQUENCE de la base de datos del comercio en el ftp.
+- ------Primera version de producción con sincronizacion REST-------
+
+Changelog 0.1.33 [julio 28, 2016]
+- ------ Version intermedia de pruebas ---------
+- Se invirtio la logica al guardar los tickets (primero se guardan los pagos y luego los items).
+- Se agregó manejo de tickets de billpocket (muestra tipo de tarjeta, num. y autorización) en el ticket html y en la impresión.
+- Se agrego también el manejo de tickets western union para impresión y para html.
+- Se removió la sincronización en el cierre de sesión automático.
+- Se mejoraron los mensajes del recordatorio de sincronización.
+- Se agregó validación de id de comercio al loguearse (>=10000).
+- Se agregó validación de cambio de contraseña de admin si ésta es "admin".
+- Se realizó corrección al procear pagos de billpocket para evitar un cierre de brio al recibir los datos del pago billpocket.
+- Se corrigió bug que reiniciaba la aplicación al mostrar el diálogo de cierre de sesión por inactividad cuando la aplicación no está visible.
+- Cambiar el nombre de "Brío Universidad" por "Universidad Brío".
+- Cambiar el nombre de "Brío mi mail" por "Mi Mail Brío".
+- Sincronización de catálogos (bajada) por servicio web REST.
+- Videollamada funcionando correctamente.
+- Sincronización (subida) por servicio web REST.
+* Bugs corregidos:
+    [OK] [Banners$1.onRestSyncFinished] android.view.WindowManager$BadTokenException: Unable to add window -- token android.os.BinderProxy@30664b91 is not valid; is your activity running?
+
+Changelog 0.1.32 [julio 20, 2016]
+
+- Se corrigió el problema de archivos de 0 bytes en el servidor FTP.
+- Se arregló el problema de archivos de sync duplicados en el servidor FTP.
+- Se agregó botón de varios en el grid de granel.
+
+Changelog 0.1.31 [julio 11, 2016]
+
+- Se corrigió el problema de acceso a base de datos en el recordatorio de sincronizacion.
+- Se agregó recordatorio de falta de sincronización cada hora a partir de 24 horas sin sincronizar.
+- Se agregó soporte para impresora STAR TSP100 al momento de la venta y en Reportes.
+- Se agregó botón de reimprimir en el fragment de ticket de venta.
+- Se ajustaron los iconos de banners y de envío de tickets pendientes.
+- Se corrigió el problema en creacion de nuevo usuario después de editar usuario.
+
+Changelog 0.1.27 [junio 13, 2016]
+
+- Se corrigieron todos los timeouts a 30 segundos, con lo que el envío de billpocket ya funciona.
+- Se corrigió el problema del boton back de android que mandaba a cerrar sesión.
+- Reparacion de borrar datos viejos de sync.
+- Reportes de bankaool en detalles de estado de cuenta y estado de cuenta.
+- Correcion del splash y la sincronizacion, que se quedaba trabado.
+- Correccion de selección de ticket mientras se realiza una busqueda de articulo.
+- Problema de borrado de ticket al cambiar de pestaña y al cancelar.
+
+Changelog 0.1.26 * [junio 3, 2016]
+
+* - Envío de correos sys y tickets desde brio.lat.
+* - Bloqueo de pestañas servicios.
+* - Bankaool en estado de cuenta y detalle.
+* - Versión de app en barra y DB.
+* - Se arreglo el sonido de scaner y caja registradora. falta el del teclado.
+* - Ya funciona envio de tickets con correo sistemas@brio.lat y el buzón de salida de correos encolados.
+
+
+Changelog 0.1.25
+
+- Ajuste de monto en tickets.
+- Ajuste barras en 0 granel.
+- Ajuste barras en granel nuevo.
+- Ajuste duplicados.
+- Ajuste de fechas en zombies y pos.
+- Sync permisos y settings fuera.
+- Sync limpieza de cadenas(regex y length).
+- Validaciones de alta de producto para granel.
+- Tiempo de espera banner.
+
+
+
+Changelog 0.1.24
+
+- Banners promocionales.
+- Bloqueo de doble click en actualización.
+- Totalización en reportes.
+- Detalle de tickets caja.
+- Ocultar campos no usados en servicios.
+- Validación de decimales en servicios.
+- Sincronización de pagos con tarjeta.
+- Limpieza de sync data.
+- Ajuste de monto en items ticket.
+- POJO datos billpocket.
+- Validacion de sonidos.
+- Correos de Version de app.
+
+
+Changelog 0.1.23
+
+- Correción en reportes y balance.
+- Mejora en tiempo de ejecución carga de reportes.
+- Timeout en conexión a red.
+- Corrección de timestamps
+
+
+Changelog 0.1.21
+
+- Loader para reportes.
+- Bloqueo de botones mientras genera reportes.
+- Validación de Internet para reportes.
+- Desbloqueo de pistola en servicios y estado de cuenta.
+- Sincronización de Tickets aprovados en servidor.
+- Cambio de comisiones a 7 pesos.
+- Balance solo con tickets autorizados.
+- Estado de cuenta solo con tickets autorizados.
+- Limite de caracteres en alta de comercio.
+
+
+
+Changelog 0.1.18
+
+- Menús a 2 columnas.
+- Ticket validado en servicios.
+- Sincronización automática en cierre de sesión por inactividad.
+- Corrección punto decimal en teclado.
+- Botones de navegacion en Brio Universidad.
+- Nueva URL en Brio Noticias.
+- Edo. de cuenta con Pagos con Tarjeta.
+- Reducción de tiempo de carga en servicios.

@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/tvHeader"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/pos_ticket_bkg_header"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <!-- el ticke completo -->
+    <RelativeLayout
+        android:id="@+id/ticketcontainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/tvHeader"
+        android:background="@drawable/pos_ticket_bkg_papel"
+        android:paddingBottom="16dp"
+        android:paddingLeft="25dip"
+        android:paddingRight="25dip">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingRight="16dp"
+            android:paddingLeft="16dp">
+
+            <!-- datos cliente -->
+            <RelativeLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/linearLayout7">
+
+                <TextView
+                    android:id="@+id/tvCliente"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="CLIENTE"
+                    android:layout_gravity="center_vertical|end"
+                    android:gravity="center_vertical|end" />
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_below="@id/tvCliente"
+                    android:src="@drawable/pos_ticket_item_separator"
+                    android:layout_alignParentStart="true"
+                    android:layerType="software"/>
+
+            </RelativeLayout>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rvList"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scrollbars="vertical"
+                android:layout_below="@+id/linearLayout7"
+                android:layout_above="@+id/separator1" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/relativeLayout"
+                android:gravity="center"
+                android:layout_alignParentBottom="true"
+                android:layout_marginTop="4dp">
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_toStartOf="@+id/btnNuevo"
+                    android:id="@+id/layTicketTools"
+                    android:gravity="center"
+                    android:weightSum="1.4">
+
+                    <net.hova_it.barared.brio.apis.views.BrioButton2
+                        android:id="@+id/btnCancelar"
+                        android:layout_weight=".3"
+                        style="@style/BrioButton.Gris"
+                        android:layout_width="wrap_content"
+                        android:text="@string/brio_cancelar"
+                        android:layout_gravity="start"/>
+
+                    <Space
+                        android:layout_weight=".2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <net.hova_it.barared.brio.apis.views.BrioButton2
+                        android:id="@+id/btnIdentificar"
+                        android:layout_weight=".4"
+                        style="@style/BrioButton.Naranja"
+                        android:layout_width="wrap_content"
+                        android:text="Identificar\nCliente"
+                        android:layout_gravity="start"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:visibility="gone" />
+
+                    <Space
+                        android:layout_weight=".2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+
+                    <net.hova_it.barared.brio.apis.views.BrioButton2
+                        android:id="@+id/btnCobrar"
+                        android:layout_weight=".3"
+                        style="@style/BrioButton.Rosa"
+                        android:layout_width="wrap_content"
+                        android:text="Cobrar"
+                        android:layout_gravity="end"/>
+
+                </LinearLayout>
+
+                <net.hova_it.barared.brio.apis.views.BrioButton2
+                    android:id="@+id/btnNuevo"
+                    style="@style/BrioButton.Rosa"
+                    android:layout_width="wrap_content"
+                    android:text="Nuevo"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:visibility="gone"/>
+
+            </RelativeLayout>
+
+            <ImageView
+                android:id="@+id/separator1"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:src="@drawable/pos_ticket_item_separator"
+
+                android:layerType="software"
+                android:layout_above="@+id/linearLayout"
+                android:layout_alignParentStart="true" />
+
+            <!-- panel detalles -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="1"
+                android:layout_above="@+id/relativeLayout"
+                android:layout_alignParentEnd="true"
+                android:id="@+id/linearLayout"
+                android:layout_marginTop="2dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="Detalles"
+                    android:id="@+id/tvDetail"
+                    android:gravity="center_vertical|start"
+                    android:layout_weight=".5"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="Total"
+                    android:id="@+id/tvImporteNeto"
+                    android:gravity="center_vertical|end"
+                    android:layout_weight=".5"/>
+
+            </LinearLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>

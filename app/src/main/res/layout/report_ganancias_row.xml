@@ -1,0 +1,73 @@
+<android.support.v7.widget.CardView
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:brio="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    card_view:cardUseCompatPadding="true"
+    >
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:brio="http://schemas.android.com/apk/res-auto"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="5"
+        android:gravity="center">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="Producto"
+            android:id="@+id/reporte_ganancia_producto"
+            android:padding="4dp"
+            android:layout_weight=".86"
+            android:maxLines="2"
+            android:minLines="1"
+            android:singleLine="true"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="Vendidos"
+            android:id="@+id/reporte_vendidos"
+            android:gravity="center"
+            android:padding="4dp"
+            android:layout_weight="1.04"
+            android:singleLine="true" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="Precio Compra"
+            android:id="@+id/reporte_precio_compra"
+            android:gravity="center"
+            android:padding="4dp"
+            android:layout_weight="1.04"
+            android:singleLine="true" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="Precio Venta"
+            android:id="@+id/reporte_precio_venta"
+            android:gravity="center"
+            android:padding="4dp"
+            android:layout_weight="1.04"
+            android:singleLine="true" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="Ganancia"
+            android:id="@+id/reporte_ganancia"
+            android:gravity="center"
+            android:padding="4dp"
+            android:layout_weight="1.04"
+            android:singleLine="true" />
+    </LinearLayout>
+</android.support.v7.widget.CardView>

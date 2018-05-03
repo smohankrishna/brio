@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <!-- body -->
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/dialog_bkg"
+        android:layout_margin="16dp"
+        android:padding="16dp"
+        android:gravity="center">
+
+        <ImageView
+            android:layout_width="@dimen/brio_dialog_ic_size"
+            android:layout_height="@dimen/brio_dialog_ic_size"
+            android:src="@drawable/dialog_ic_alert"
+            android:layout_marginBottom="16dp" />
+
+        <TextView
+            android:id="@+id/dialog_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="title"
+            android:gravity="center"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:layout_marginBottom="16dp"
+            android:visibility="visible" />
+
+        <TextView
+            android:id="@+id/dialog_msg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="msg"
+            android:gravity="center"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:paddingEnd="16dp"
+            android:paddingStart="16dp" />
+
+    </LinearLayout>
+    </ScrollView>
+
+    <net.hova_it.barared.brio.apis.views.BrioCloseButton
+        android:id="@+id/btnCancelar"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_gravity="end|top" />
+
+</FrameLayout>

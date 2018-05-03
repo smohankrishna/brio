@@ -1,0 +1,129 @@
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:brio="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/activity_vertical_margin"
+    android:orientation="vertical">
+
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_height="50dp"
+        android:layout_marginBottom="5dp"
+        android:id="@+id/imageView"
+        android:src="@drawable/app_ic_brio_logo2"/>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="5dp"
+    android:padding="@dimen/activity_vertical_margin"
+    tools:context="hovait.example.com.caja.caja1"
+    android:background="@drawable/pos_bkg_gradient"
+    android:orientation="vertical">
+
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:layout_marginBottom="30dp"
+        android:layout_weight="1"
+        android:layout_marginTop="10dp"
+        android:visibility="visible"
+        >
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/AppTheme.Brio_title"
+            android:layout_marginBottom="10dp"
+            android:text="@string/titulo6"
+            android:layout_margin="15dp"
+             />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:scrollbarStyle="insideOverlay"
+
+            >
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_marginLeft="20dp"
+
+                android:layout_marginRight="20dp">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="1">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="-2dp"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:text="@string/terminos_texto"
+                        android:layout_gravity="center_horizontal"
+                        android:visibility="visible"
+                        android:textSize="15dp"
+                        android:layout_weight="1.01" />
+                </LinearLayout>
+
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/TextCheck"
+                    android:id="@+id/CheckTer"
+                    android:layout_gravity="center_horizontal"
+                    android:checked="false"
+                    android:layout_marginTop="10dp"
+                    style="@style/AppTheme.Brio_subtitle"
+                    android:buttonTint="#2483fe" />
+
+                <!--
+                <net.hova_it.barared.brio.apis.views.BrioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    brio:text="@string/textButt"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_gravity="center_horizontal"
+                    android:id="@+id/btnAceptarTerm"
+                    android:background="@drawable/view_bkg_accept"
+                    android:textColor="#ffffff" />
+                -->
+
+                <net.hova_it.barared.brio.apis.views.BrioButton2
+                    android:id="@+id/btnAceptarTerm"
+                    style="@style/BrioButton.Rosa"
+                    android:layout_width="wrap_content"
+                    android:text="@string/brio_continuar"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_gravity="center_horizontal" />
+
+
+            </LinearLayout>
+        </ScrollView>
+
+    </LinearLayout>
+</LinearLayout>
+
+</LinearLayout>

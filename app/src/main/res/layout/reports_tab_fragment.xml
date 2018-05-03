@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+
+        >
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/report_column_articulo"
+            android:id="@+id/btnProducto"
+            style="@style/BrioButton.Gris"
+            android:layout_weight="1"
+            android:textColor="#FFFFFFFF"
+            android:textSize="19dp"
+            android:singleLine="true"
+            android:background="@drawable/view_bkg_pleca_inactiva" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/report_column_vendidos"
+            android:id="@+id/btnMarca"
+            style="@style/BrioButton.Gris"
+            android:layout_weight="1"
+            android:textColor="#FFFFFFFF"
+            android:singleLine="true"
+            android:textSize="19dp"
+            android:background="@drawable/view_bkg_pleca_inactiva" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="5dp"
+        android:orientation="vertical"
+        >
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recicler_view_report"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:listitem="@layout/reports_row_fragment"
+        />
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:brio="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="hovait.example.com.cb.Entrada"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/pos_bkg_gradient"
+    android:padding="10dp">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="15dp"
+            android:layout_marginTop="15dp"
+            android:orientation="vertical"
+            >
+
+            <TextView
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/TituloSalida"
+                style="@style/AppTheme.Brio_title"
+                />
+
+        </LinearLayout>
+        <ScrollView
+            android:id="@+id/scroll_article"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginRight="10dp"
+                android:orientation="vertical">
+
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/articulo_alta_height_form"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:paddingEnd="12dp"
+                        android:layout_weight="1.5"
+                        android:text="@string/Cantidad_Caja"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/articulo_alta_botones_form"
+                        android:textAlignment="textEnd"/>
+
+                    <net.hova_it.barared.brio.apis.views.BrioEditText
+                        android:id="@+id/id_cantidad_sal"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10dp"
+                        android:paddingLeft="10dp"
+                        android:layout_weight="1"
+                        brio:tipo_teclado="numerico"
+                        android:hint="@string/validacion_Cantidad"
+                        android:textSize="@dimen/articulo_alta_botones_form"
+                        android:background="@drawable/ap_bkg_blue"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/articulo_alta_height_form"
+                    android:layout_marginTop="20dp"
+                    android:orientation="horizontal"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    >
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:paddingEnd="12dp"
+                        android:layout_weight="1.5"
+                        android:text="@string/TipodeMoneda_Caja"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/articulo_alta_botones_form"
+                        android:textAlignment="textEnd"/>
+
+                    <Spinner
+                        android:id="@+id/spinner_sa"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="1"
+                        android:textSize="@dimen/articulo_alta_botones_form"
+                        android:background="@drawable/ap_bkg_blue"/>
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:orientation="horizontal"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/articulo_alta_height_form"
+                        android:paddingEnd="12dp"
+                        android:layout_weight="1.5"
+                        android:text="@string/concepto_cajas"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/articulo_alta_botones_form"
+                        android:textAlignment="textEnd"/>
+
+                    <net.hova_it.barared.brio.apis.views.BrioEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10dp"
+                        android:paddingLeft="10dp"
+                        android:layout_weight="1"
+                        android:lines="10"
+                        android:maxLines="10"
+                        brio:tipo_teclado="alfanumerico"
+                        android:id="@+id/concepto_sa"
+                        android:textSize="@dimen/articulo_alta_botones_form"
+                        android:background="@drawable/ap_bkg_blue"
+                        android:hint="@string/concepto_Caja_editable1"/>
+
+                </LinearLayout>
+
+                <net.hova_it.barared.brio.apis.views.BrioButton2
+                    android:id="@+id/btnAceptar"
+                    style="@style/BrioButton.Rosa"
+                    android:layout_width="wrap_content"
+                    android:text="@string/brio_continuar"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="50dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true" />
+            </LinearLayout>
+        </ScrollView>
+   </LinearLayout>

@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:brio="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageButton
+        android:id="@+id/btn_rollback_app"
+        style="@style/Base.Widget.AppCompat.Button.Borderless"
+        android:layout_width="@dimen/_60sdp"
+        android:layout_height="@dimen/_55sdp"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="@dimen/_20sdp"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:adjustViewBounds="true"
+        android:scaleType="fitXY"
+        android:src="@drawable/ic_rollback_version" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical">
+        <!-- login -->
+
+
+        <ScrollView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="visible">
+
+            <LinearLayout
+                android:id="@+id/loginLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/login_bkg_form"
+                android:orientation="vertical"
+                android:padding="@dimen/_15sdp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="#ffffff"
+                    android:orientation="vertical"
+                    android:padding="@dimen/_10sdp">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_margin="@dimen/_15sdp"
+                        android:gravity="center"
+                        android:src="@drawable/app_ic_brio_logo2" />
+
+                    <!-- Se cambio por un Edit Text nativo para usar el teclado nativo de android /// Se elimino el EditText De Brio-->
+                    <EditText
+                        android:id="@+id/editLoginUsuario"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/_10sdp"
+                        android:gravity="center"
+                        android:hint="@string/form_login_user"
+                        android:inputType="text"
+                        android:textAlignment="center"
+                        android:textSize="18sp" />
+
+                    <!-- Se cambio por un Edit Text nativo para usar el teclado nativo de android /// Se elimino el EditText De Brio-->
+                    <EditText
+                        android:id="@+id/editLoginPassword"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/_10sdp"
+                        android:gravity="center"
+                        android:hint="@string/form_login_password"
+                        android:imeOptions="actionDone"
+                        android:inputType="textPassword"
+                        android:textAlignment="center"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/textLoginError"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="@dimen/_10sdp"
+                        android:paddingRight="@dimen/_10sdp"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:textColor="#ff0000" />
+
+                    <net.hova_it.barared.brio.apis.views.BrioButton2
+                        android:id="@+id/buttonLogin"
+                        style="@style/BrioButton.Rosa"
+                        android:layout_width="@dimen/_200sdp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginBottom="@dimen/_10sdp"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:text="@string/form_login_title" />
+
+                    <TextView
+                        android:id="@+id/textChangeAdminPass"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/_5sdp"
+                        android:layout_marginTop="@dimen/_15sdp"
+                        android:gravity="center"
+                        android:text="@string/form_login_reset_admin"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="@color/app_sol_azul"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:id="@+id/textForgetLink"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/_5sdp"
+                        android:layout_marginTop="@dimen/_15sdp"
+                        android:gravity="center"
+                        android:text="@string/form_login_password_forgot"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="#ff63e5" />
+
+
+                    <!-- <TextView
+                        android:id="@+id/textUpdate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Actualizar"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="#6368ff"
+                        android:layout_weight="50"
+                        android:gravity="start"
+                        android:textSize="14sp" /> -->
+
+                    <TextView
+                        android:id="@+id/textVersion"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:layout_weight="50"
+                        android:gravity="end"
+                        android:text="Versión"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:textColor="#6368ff"
+                        android:textSize="14sp" />
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+
+        <!-- Reestablecer contraseña -->
+        <LinearLayout
+            android:id="@+id/resetLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@drawable/pos_bkg_gradient"
+            android:orientation="vertical"
+            android:padding="@dimen/_20sdp"
+            android:visibility="gone">
+
+            <TextView
+                style="@style/AppTheme.Brio_title"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_15sdp"
+                android:padding="@dimen/_10sdp"
+                android:text="@string/form_login_reset_title" />
+
+            <TextView
+                android:id="@+id/tv_Preguntas"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:layout_marginTop="@dimen/_10sdp"
+                android:padding="@dimen/_10sdp"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+
+            <net.hova_it.barared.brio.apis.views.BrioEditText
+                android:id="@+id/editResetRespuesta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:hint="@string/form_login_reset_response"
+                android:padding="@dimen/_10sdp" />
+
+            <net.hova_it.barared.brio.apis.views.BrioEditText
+                android:id="@+id/editResetPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:hint="@string/form_login_reset_password"
+                android:inputType="textPassword"
+                android:padding="@dimen/_10sdp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <net.hova_it.barared.brio.apis.views.BrioButton2
+                    android:id="@+id/buttonBack"
+                    style="@style/BrioButton.Gris"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/_10sdp"
+                    android:layout_marginEnd="@dimen/_15sdp"
+                    android:layout_marginStart="@dimen/_20sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_weight="1"
+                    android:text="@string/brio_cancelar" />
+
+                <net.hova_it.barared.brio.apis.views.BrioButton2
+                    android:id="@+id/buttonReset"
+                    style="@style/BrioButton.Rosa"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/_10sdp"
+                    android:layout_marginLeft="@dimen/_15sdp"
+                    android:layout_marginRight="@dimen/_20sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_weight="1"
+                    android:text="@string/form_login_reset_reset" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/textResetResult"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:text="New Text" />
+
+        </LinearLayout>
+
+        <!-- Cambio contraseña admin panelChangeAdminPass -->
+        <LinearLayout
+            android:id="@+id/panelChangeAdminPass"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@drawable/pos_bkg_gradient"
+            android:orientation="vertical"
+            android:padding="@dimen/_20sdp"
+            android:visibility="gone">
+
+            <TextView
+                style="@style/AppTheme.Brio_title"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_15sdp"
+                android:padding="@dimen/_10sdp"
+                android:text="@string/form_login_reset_admin_title" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:layout_marginTop="@dimen/_10sdp"
+                android:padding="@dimen/_10sdp"
+                android:text="@string/form_login_reset_admin_sub_1"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+
+            <net.hova_it.barared.brio.apis.views.BrioEditText
+                android:id="@+id/editPass1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:gravity="center"
+                android:padding="@dimen/_10sdp"
+                brio:tipo_teclado="alfanumerico_pass" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:layout_marginTop="@dimen/_10sdp"
+                android:padding="@dimen/_10sdp"
+                android:text="@string/form_login_reset_admin_sub_2"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+            <net.hova_it.barared.brio.apis.views.BrioEditText
+                android:id="@+id/editPass2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:gravity="center"
+                android:inputType="textPassword"
+                android:padding="@dimen/_10sdp"
+                brio:tipo_teclado="alfanumerico_pass" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <net.hova_it.barared.brio.apis.views.BrioButton2
+                    android:id="@+id/btnAdminPassBack"
+                    style="@style/BrioButton.Gris"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/_10sdp"
+                    android:layout_marginEnd="@dimen/_15sdp"
+                    android:layout_marginStart="@dimen/_20sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_weight="1"
+                    android:text="@string/brio_cancelar" />
+
+                <net.hova_it.barared.brio.apis.views.BrioButton2
+                    android:id="@+id/btnAdminPassAccept"
+                    style="@style/BrioButton.Rosa"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/_10sdp"
+                    android:layout_marginLeft="@dimen/_15sdp"
+                    android:layout_marginRight="@dimen/_20sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_weight="1"
+                    android:text="@string/form_login_reset_reset" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+</RelativeLayout>
+

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    >
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="56dp"
+        android:layout_gravity="center_horizontal"
+
+        >
+
+
+
+        <ImageButton
+            android:id="@+id/bBack"
+            android:background="?android:selectableItemBackground"
+            android:src="@drawable/ic_go_back2x"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:adjustViewBounds="true"
+            />
+
+        <ImageButton
+            android:id="@+id/bHome"
+            android:background="?android:selectableItemBackground"
+            android:src="@drawable/ic_home"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:adjustViewBounds="true"
+
+            />
+
+        <ImageButton
+            android:id="@+id/bForward"
+            android:background="?android:selectableItemBackground"
+            android:src="@drawable/ic_go_forward2x"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:adjustViewBounds="true"
+            />
+
+    </LinearLayout>
+
+    </LinearLayout>

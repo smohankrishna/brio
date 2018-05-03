@@ -1,0 +1,43 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:windowSoftInputMode="adjustResize"
+    tools:context=".apis.services.ServicesViewFragment">
+
+    <WebView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:id="@+id/servicesWebView"
+        android:nestedScrollingEnabled="true"
+        android:focusable="true"
+        android:touchscreenBlocksFocus="false"
+        android:focusableInTouchMode="true"
+        android:windowSoftInputMode="adjustResize"
+        android:contextClickable="true" />
+
+<!--
+    <ProgressBar
+        style="?android:attr/progressBarStyleSmall"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:id="@+id/webViewBar1"
+        android:layout_gravity="center"
+        android:visibility="gone"
+        android:background="@drawable/view_menu_grd"
+        android:padding="100dp" />
+-->
+
+    <LinearLayout
+        android:id="@+id/webViewBar1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:visibility="visible"
+        android:background="@drawable/view_menu_grd">
+
+        <include layout="@layout/view_loading"/>
+
+    </LinearLayout>
+
+</FrameLayout>

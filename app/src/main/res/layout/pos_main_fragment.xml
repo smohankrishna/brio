@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:brio="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingEnd="4dp"
+    android:paddingStart="4dp">
+
+    <RelativeLayout
+        android:id="@+id/pos_panel_search"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="4dp"
+        android:layout_marginTop="2dp">
+
+        <net.hova_it.barared.brio.apis.views.BrioSearchView
+            android:id="@+id/pos_search"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            brio:hint="Buscar..."
+            brio:id_layout_ocultable_por_teclado="@+id/pos_panel_left" />
+
+    </RelativeLayout>
+
+    <FrameLayout
+        android:id="@+id/pos_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/pos_panel_search">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+            <LinearLayout
+                android:id="@+id/pos_panel_left"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5"
+                android:orientation="vertical"
+                android:paddingBottom="@dimen/inner_space"
+                android:paddingEnd="@dimen/inner_space_center">
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5"
+                android:orientation="vertical"
+                android:paddingStart="@dimen/inner_space_center">
+
+                <android.support.design.widget.TabLayout
+                    android:id="@+id/tab_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+
+                    android:elevation="6dp"
+
+                    app:tabBackground="@drawable/selector_tabs"
+                    app:tabIndicatorColor="@android:color/transparent"
+                    app:tabSelectedTextColor="@color/app_sol_blanco"
+                    app:tabTextAppearance="?android:attr/textAppearanceMedium"
+                    app:tabTextColor="@color/app_sol_fuente_inactiva" />
+
+                <!--android:minHeight="?attr/actionBarSize"
+                "@android:style/TextAppearance.Widget.TabWidget"-->
+                <!-- app:tabIndicatorColor="@android:color/white"
+                    app:tabIndicatorHeight="2dp" -->
+
+                <android.support.v4.view.ViewPager xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:id="@+id/pos_pager"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                </android.support.v4.view.ViewPager>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <Button
+                    android:id="@+id/btnPistola"
+                    android:layout_width="30dip"
+                    android:layout_height="45dip"
+                    android:background="@drawable/scanner_ic"
+                    android:text="1"
+                    android:textAppearance="?android:attr/textAppearanceSmall" />
+
+                <Button
+                    android:id="@+id/btnPistola2"
+                    android:layout_width="30dip"
+                    android:layout_height="45dip"
+                    android:background="@drawable/scanner_ic"
+                    android:text="2"
+                    android:textAppearance="?android:attr/textAppearanceSmall" />
+
+                <Button
+                    android:id="@+id/btnPistola3"
+                    android:layout_width="30dip"
+                    android:layout_height="45dip"
+                    android:background="@drawable/scanner_ic"
+                    android:text="3"
+                    android:textAppearance="?android:attr/textAppearanceSmall" />
+            </LinearLayout>
+        </LinearLayout>
+    </FrameLayout>
+</RelativeLayout>

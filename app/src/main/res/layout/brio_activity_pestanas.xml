@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:orientation="horizontal"
+    android:weightSum="5">
+
+    <TextView
+        android:id="@+id/btnTab1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+
+        style="@style/AppTheme.Pleca.Pestana_Inactiva"
+
+        android:text="@string/activity_tab_1" />
+
+    <TextView
+        android:id="@+id/btnTab2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+
+        style="@style/AppTheme.Pleca.Pestana_Inactiva"
+
+        android:text="@string/activity_tab_2" />
+
+    <TextView
+        android:id="@+id/btnTab3"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+
+        style="@style/AppTheme.Pleca.Pestana_Inactiva"
+
+        android:text="@string/activity_tab_3" />
+
+    <TextView
+        android:id="@+id/btnTab4"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+
+        style="@style/AppTheme.Pleca.Pestana_Inactiva"
+
+        android:text="@string/activity_tab_4"/>
+
+    <TextView
+        android:id="@+id/btnTab5"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+
+        style="@style/AppTheme.Pleca.Pestana_Inactiva"
+
+        android:text="@string/activity_tab_5" />
+</LinearLayout>

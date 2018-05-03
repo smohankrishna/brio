@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/pos_bkg_gradient">
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="@string/Titulo_Balance"
+        android:id="@+id/tvRestanteTitle"
+        style="@style/AppTheme.Brio_title"
+      />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingRight="100dp"
+            android:paddingLeft="100dp">
+
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/articulo_alta_subtitles_form"
+                    android:textColor="@color/black"
+                    android:gravity="end"
+                    android:layout_weight="1"
+                    android:text="@string/balance_saldo_inicial" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="$0.00"
+                    android:textSize="@dimen/articulo_alta_subtitles_form"
+                    android:textColor="@color/black"
+                    android:gravity="end"
+                    android:layout_weight="1"
+                    android:id="@+id/Sinicial" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/articulo_alta_subtitles_form"
+                    android:textColor="@color/black"
+                    android:gravity="end"
+                    android:layout_weight="1"
+                    android:text="@string/balance_entradas_din" />
+
+                <TextView
+                    android:id="@+id/EntrDinero"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="$0.00"
+                    android:textSize="@dimen/articulo_alta_subtitles_form"
+                    android:textColor="@color/black"
+                    android:gravity="end"
+                    android:layout_weight="1" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                >
+
+            <TextView
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/articulo_alta_subtitles_form"
+                android:textColor="@color/black"
+                android:gravity="end"
+                android:layout_weight="1"
+                android:text="@string/balance_salidas_din"/>
+
+                <TextView
+
+                    android:id="@+id/SalDinero"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="$0.00"
+                    android:textSize="@dimen/articulo_alta_subtitles_form"
+                    android:textColor="@color/black"
+                    android:gravity="end"
+                    android:layout_weight="1" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:visibility="gone"
+                >
+                <TextView
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/articulo_alta_subtitles_form"
+                    android:textColor="@color/black"
+                    android:gravity="end"
+                    android:layout_weight="1"
+                    android:text="@string/balance_ventas_fiado"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="$0.00"
+                    android:textSize="@dimen/articulo_alta_subtitles_form"
+                    android:textColor="@color/black"
+                    android:gravity="end"
+                    android:layout_weight="1"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/articulo_alta_subtitles_form"
+                    android:textColor="@color/black"
+                    android:gravity="end"
+                    android:layout_weight="1"
+                    android:text="@string/balance_ventas_efect"/>
+
+                <TextView
+                    android:id="@+id/VenEfect"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="$0.00"
+                    android:textSize="@dimen/articulo_alta_subtitles_form"
+                    android:textColor="#040404"
+                    android:gravity="end"
+                    android:layout_weight="1"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                >
+
+                <TextView
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/articulo_alta_subtitles_form"
+                    android:textColor="@color/black"
+                    android:gravity="end"
+                    android:layout_weight="1"
+                    android:text="@string/balance_ventas_pagadas"/>
+
+                <TextView
+
+                    android:id="@+id/VenPaTar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="$0.00"
+                    android:textSize="@dimen/articulo_alta_subtitles_form"
+                    android:textColor="@color/black"
+                    android:gravity="end"
+                    android:layout_weight="1"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:visibility="gone"
+                >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/articulo_alta_subtitles_form"
+                    android:textColor="@color/black"
+                    android:gravity="end"
+                    android:layout_weight="1"
+                    android:text="@string/balance_venta_vales"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="$0.00"
+                    android:textSize="@dimen/articulo_alta_subtitles_form"
+                    android:textColor="@color/black"
+                    android:gravity="end"
+                    android:layout_weight="1"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/articulo_alta_titles_form"
+                    android:textColor="@color/black"
+                    android:gravity="end"
+                    android:layout_weight="1"
+                    android:text="@string/balance_total"/>
+
+                <TextView
+                    android:id="@+id/total"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="$0.00"
+                    android:textSize="@dimen/articulo_alta_titles_form"
+                    android:textColor="@color/black"
+                    android:gravity="end"
+                    android:layout_weight="1"
+
+                    />
+            </LinearLayout>
+
+
+
+        <net.hova_it.barared.brio.apis.views.BrioButton2
+            style="@style/BrioButton.Rosa"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:layout_marginBottom="30dp"
+            android:text="@string/brio_aceptar"
+            android:layout_gravity="center"
+            android:id="@+id/btnAceptar"
+           />
+
+
+
+        </LinearLayout>
+
+    </ScrollView>
+</LinearLayout>

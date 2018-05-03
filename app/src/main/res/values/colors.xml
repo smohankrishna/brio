@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- ###############  COLORES DE NIVEL CRM #################-->
+
+    <color name="primary_color">@color/app_sol_rosa</color>
+
+    <color name="app_gris_barared">#8b8a8a</color>
+    <color name="app_gris_barared3">#FFCCCCCC</color>
+
+    <color name="pink_500">#E91E63</color>
+    <color name="black">#000000</color>
+    <color name="blue_cien">#82B1FF</color>
+    <color name="shiftOn">#FF11C219</color>
+    <color name="shiftOff">#FF000000</color>
+
+    <!-- ############################################################################################################################# -->
+
+    <!-- nuevos -->
+    <!--
+        <modulo>_<submodulo>_<tipo>_<nombre>
+
+       bkg: fondo
+       grd: gradiente
+       sol: solido
+    -->
+    <color name="app_bkg_grd_gris_1">#FFE6E6E6</color>
+
+    <color name="app_pleca_grd_gris_1">#FFEEF1F5</color>
+    <color name="app_pleca_grd_gris_2">#FFC1CDDA</color>
+    <color name="app_pleca_grd_gris_3">#868686</color>
+
+    <color name="app_pleca_grd_rosa_1">#FFFF028F</color>
+    <color name="app_pleca_grd_rosa_2">#FF9C0067</color>
+
+    <color name="app_btn_grd_gris_1">#FF8B939A</color>
+    <color name="app_btn_grd_gris_2">#FF384553</color>
+
+    <color name="app_btn_grd_naranja_1">#FFE69D7F</color>
+    <color name="app_btn_grd_naranja_2">#FFD57D02</color>
+
+    <color name="app_sol_blanco">#FFFFFFFF</color>
+    <color name="app_sol_rosa">#FFEE008A</color>
+    <color name="app_sol_rosa_2">#ff56b8</color>
+    <color name="app_sol_gris">#FFC1CDDA</color>
+    <color name="app_sol_azul">#FF69ABFC</color>
+
+    <color name="app_sol_fuente_inactiva">#FF4D4D4D</color>
+
+    <color name="menu_grd_1">#FFFBFBFB</color>
+    <color name="dialog_sol_bkg">#CCCDD7E1</color>
+
+    <color name="transparent">#00000000</color>
+    <color name="font_gris_1">#4d4d4d</color>
+    <color name="font_gris_2">#808080</color>
+    <color name="font_gris_3">#999999</color>
+</resources>

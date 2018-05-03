@@ -1,0 +1,113 @@
+apply plugin: 'com.android.application'
+
+apply plugin: 'findbugs'
+apply plugin: 'pmd'
+
+android {
+    signingConfigs {
+        brioKey {
+            keyAlias 'brio-key'
+            keyPassword 'Brio16*Hova'
+            storeFile file('../Llaves.kjs')
+            storePassword 'Brio16*Hova'
+        }
+    }
+    compileSdkVersion 23
+    buildToolsVersion '27.0.3'
+    defaultConfig {
+        applicationId "net.hova_it.barared.brio"
+        minSdkVersion 21
+        targetSdkVersion 23
+        versionCode 57
+        versionName '0.1.59'
+        signingConfig signingConfigs.brioKey
+        multiDexEnabled true
+    }
+
+    buildTypes {
+        beta {
+            debuggable true
+            jniDebuggable true
+            signingConfig signingConfigs.brioKey
+        }
+        release {
+            signingConfig signingConfigs.brioKey
+            debuggable true
+//            minifyEnabled true
+//            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+        debug {
+            signingConfig signingConfigs.brioKey
+            debuggable true
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    packagingOptions {
+        exclude 'META-INF/ASL2.0'
+        exclude 'META-INF/LGPL2.1'
+        exclude 'META-INF/DEPENDENCIES.txt'
+        exclude 'META-INF/DEPENDENCIES'
+        exclude 'META-INF/dependencies.txt'
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/license.txt'
+        exclude 'META-INF/NOTICE.txt'
+        exclude 'META-INF/NOTICE'
+        exclude 'META-INF/notice.txt'
+        exclude 'META-INF/SERVICES.txt'
+        exclude 'META-INF/SERVICES'
+        exclude 'META-INF/services.txt'
+    }
+    lintOptions {
+        abortOnError false
+    }
+    productFlavors {
+    }
+}
+
+configurations.all {
+    resolutionStrategy {
+        cacheChangingModulesFor 0, 'seconds'
+    }
+}
+
+repositories {
+    mavenCentral()
+    flatDir { dirs 'libs' }
+}
+
+
+dependencies {
+    implementation 'com.android.support:support-v4:23.4.0'
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation 'com.android.support:appcompat-v7:23.4.0'
+    implementation 'com.google.code.gson:gson:2.8.0'
+    implementation 'com.mcxiaoke.volley:library:1.0.19'
+    implementation 'com.android.support:design:23.4.0'
+    implementation 'commons-net:commons-net:3.3'
+    implementation 'org.apache.commons:commons-lang3:3.4'
+    //Ticket
+    implementation 'com.android.support:cardview-v7:23.4.0'
+    // TEST
+    testImplementation 'junit:junit:4.12'
+    implementation 'uk.co.jemos.podam:podam:5.2.0.RELEASE'
+    implementation 'com.android.support:recyclerview-v7:23.4.0'
+    //>= 23.2 para centrar horizontal en recycler view, estaba en 23.1.1
+    //Impresora USB
+    implementation files('libs/StarIOPort3.1.jar')
+    implementation files('libs/StarIO_Extension.jar')
+    // VIDEO CONFERENCIA
+    implementation files('libs/opentok-android-sdk-2.7.0.jar')
+    // MAILS
+    implementation files('libs/activation.jar')
+    implementation files('libs/additionnal.jar')
+    implementation files('libs/mail.jar')
+    implementation files('libs/bbdevice-android-3.1.0.jar')
+    implementation(name: 'BrioLogger', ext: 'aar')
+    implementation 'com.android.support:multidex:1.0.2'
+    //    librería para resize de vistas
+    //    compile 'com.intuit.ssp:ssp-android:1.0.5'//Para textos
+}
