@@ -20,6 +20,16 @@ public class Reporte {
     private double venta;
     private double vendidos;
     private double ganancia;
+    private String concepto;
+    private String cantidad;
+    private String hora;
+    private String fecha;
+    private int idUsuario;
+    private String nombreUsuario;
+    private int orden;
+
+
+
 
 
 
@@ -176,6 +186,30 @@ public class Reporte {
         this.ganancia=ganancia;
     }
 
+    public String getConcepto() {
+        return concepto;
+    }
+
+    public void setConcepto(String concepto) {
+        this.concepto = concepto;
+    }
+
+    public String getCantidad() {
+        return cantidad;
+    }
+
+    public void setCantidad(String cantidad) {
+        this.cantidad = cantidad;
+    }
+
+    public String getHora() {
+        return hora;
+    }
+
+    public void setHora(String hora) {
+        this.hora = hora;
+    }
+
     public String getDescripcionItem() {
         String desc = nombreArticulo + " " + nombreMarca + " " + presentacion;
 
@@ -186,5 +220,38 @@ public class Reporte {
         }
 
         return desc;
+    }
+
+
+    public String getFecha() {
+        return fecha;
+    }
+
+    public void setFecha(String fecha) {
+        this.fecha = fecha;
+    }
+
+    public int getIdUsuario() {
+        return idUsuario;
+    }
+
+    public void setIdUsuario(int idUsuario) {
+        this.idUsuario = idUsuario;
+    }
+
+    public String getNombreUsuario() {
+        return nombreUsuario;
+    }
+
+    public void setNombreUsuario(String nombreUsuario) {
+        this.nombreUsuario = nombreUsuario;
+    }
+
+    public int getOrden() {
+        return orden;
+    }
+
+    public void setOrden(int orden) {
+        this.orden = orden;
     }
 }

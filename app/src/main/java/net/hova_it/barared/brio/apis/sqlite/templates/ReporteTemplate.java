@@ -155,34 +155,125 @@ public class ReporteTemplate {
                         " AND granel = 1", null);
                 break;
 
+            case 5:
+                Log.w("Reporte", "Cash Closing");
+                final String sql = "Select * From\n" +
+                        "\n" +
+                        "                (Select  strftime('%d-%m-%Y', datetime(a.timestamp, 'unixepoch', 'localtime')) As Fecha,\n" +
+                        "\n" +
+                        "                a.id_usuario, b.nombre As Nombre_Usuario, 'Saldo Inicial' As Concepto, a.importe_real As Cantidad, strftime('%H:%M:%S', a.fecha_apertura) As Hora, 1 As Orden\n" +
+                        "\n" +
+                        "                From Registro_apertura a\n" +
+                        "\n" +
+                        "                Left Join Usuarios b On a.id_usuario = b.id_usuario\n" +
+                        "\n" +
+                        "                LIMIT 1) a\n" +
+                        "\n" +
+                        "Union\n" +
+                        "\n" +
+                        "Select * From\n" +
+                        "\n" +
+                        "                (Select strftime('%d-%m-%Y', datetime(a.timestamp, 'unixepoch', 'localtime')) As Fecha, a.id_usuario, b.nombre As Nombre_Usuario, 'Entradas de dinero' As Concepto,\n" +
+                        "\n" +
+                        "                a.importe_neto As Cantidad, 'NA' As Hora, 2 As Orden\n" +
+                        "\n" +
+                        "                From Tickets a\n" +
+                        "\n" +
+                        "                Left Join Usuarios b On a.id_usuario = b.id_usuario\n" +
+                        "\n" +
+                        "                LIMIT 1) b\n" +
+                        "\n" +
+                        "Union  \n" +
+                        "\n" +
+                        "Select * From\n" +
+                        "\n" +
+                        "                (Select strftime('%d-%m-%Y', datetime(a.timestamp, 'unixepoch', 'localtime')) As Fecha, a.id_usuario, b.nombre As Nombre_Usuario, 'Salidas de dinero' As Concepto,\n" +
+                        "\n" +
+                        "                a.importe_neto As Cantidad, 'NA' As Hora, 3 As Orden\n" +
+                        "\n" +
+                        "                From Tickets a\n" +
+                        "\n" +
+                        "                Left Join Usuarios b On a.id_usuario = b.id_usuario\n" +
+                        "\n" +
+                        "                LIMIT 1) c\n" +
+                        "\n" +
+                        "Union  \n" +
+                        "\n" +
+                        "Select * From\n" +
+                        "\n" +
+                        "                (Select strftime('%d-%m-%Y', datetime(a.timestamp, 'unixepoch', 'localtime')) As Fecha, a.id_usuario, b.nombre As Nombre_Usuario, 'Ventas en efectivo' As Concepto,\n" +
+                        "\n" +
+                        "                a.importe_neto As Cantidad, 'NA' As Hora, 4 As Orden\n" +
+                        "\n" +
+                        "                From Tickets a\n" +
+                        "\n" +
+                        "                Left Join Usuarios b On a.id_usuario = b.id_usuario\n" +
+                        "\n" +
+                        "                LIMIT 1) d          \n" +
+                        "\n" +
+                        "Union\n" +
+                        "\n" +
+                        "Select * From\n" +
+                        "\n" +
+                        "                (Select  strftime('%d-%m-%Y', datetime(a.fecha_cierre, 'unixepoch', 'localtime')) As Fecha,\n" +
+                        "\n" +
+                        "                a.id_usuario, b.nombre As Nombre_Usuario, 'Total en caja al cierre' As Concepto, 10.0 As Cantidad, '06:00 PM' As Hora, 5 As Orden\n" +
+                        "\n" +
+                        "                From Registro_cierre a\n" +
+                        "\n" +
+                        "                Left Join Usuarios b On a.id_usuario = b.id_usuario\n" +
+                        "\n" +
+                        "                LIMIT 1) e\n" +
+                        "\n" +
+                        "Order By Orden asc";
+
+                resourse = db.rawQuery(sql, null);
+
         }
 
         List<Reporte> reportes = new ArrayList<>();
         Reporte reporte ;
 
-        while(resourse.moveToNext()){
-            reporte = new Reporte();
-
-            reporte.setIdArticulo(resourse.getInt(0));
-            reporte.setIdCentral(resourse.getInt(1));
-            reporte.setPrecioBase(resourse.getDouble(2));
-            if(tipoReporte != 3) {
-                reporte.setPrecioCompra(resourse.getDouble(3));
-            }else{
-                reporte.setPrecioCompra(resourse.getDouble(15));
+        if(tipoReporte == 5) {
+            while(resourse.moveToNext()){
+                reporte = new Reporte();
+                reporte.setFecha(resourse.getString(0));
+                reporte.setIdUsuario(resourse.getInt(1));
+                reporte.setNombreUsuario(resourse.getString(2));
+                reporte.setConcepto(resourse.getString(3));
+                reporte.setCantidad(resourse.getString(4));
+                reporte.setHora(resourse.getString(5));
+                reporte.setOrden(resourse.getInt(6));
+                Log.w("REPORTE", Utils.pojoToString(reporte));
+                reportes.add(reporte);
             }
-            reporte.setCodigoBarras(resourse.getString(4));
-            reporte.setNombreArticulo(resourse.getString(5));
-            reporte.setNombreMarca(resourse.getString(6));
-            reporte.setPresentacion(resourse.getString(7));
-            reporte.setContenido(resourse.getInt(8));
-            reporte.setUnidad(resourse.getString(9));
-            reporte.setGranel(resourse.getInt(10) != 0);
-            reporte.setVenta(resourse.getDouble(12));
-            reporte.setVendidos(resourse.getDouble(13));
-            reporte.setGanancia(resourse.getDouble(14));
-            Log.w("REPORTE", Utils.pojoToString(reporte));
-            reportes.add(reporte);
+
+        } else {
+            while(resourse.moveToNext()){
+                reporte = new Reporte();
+
+                reporte.setIdArticulo(resourse.getInt(0));
+                reporte.setIdCentral(resourse.getInt(1));
+                reporte.setPrecioBase(resourse.getDouble(2));
+                if(tipoReporte != 3) {
+                    reporte.setPrecioCompra(resourse.getDouble(3));
+                }else{
+                    reporte.setPrecioCompra(resourse.getDouble(15));
+                }
+                reporte.setCodigoBarras(resourse.getString(4));
+                reporte.setNombreArticulo(resourse.getString(5));
+                reporte.setNombreMarca(resourse.getString(6));
+                reporte.setPresentacion(resourse.getString(7));
+                reporte.setContenido(resourse.getInt(8));
+                reporte.setUnidad(resourse.getString(9));
+                reporte.setGranel(resourse.getInt(10) != 0);
+                reporte.setVenta(resourse.getDouble(12));
+                reporte.setVendidos(resourse.getDouble(13));
+                reporte.setGanancia(resourse.getDouble(14));
+                Log.w("REPORTE", Utils.pojoToString(reporte));
+                reportes.add(reporte);
+            }
+
         }
 
         resourse.close();

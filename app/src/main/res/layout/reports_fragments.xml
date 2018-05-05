@@ -1203,6 +1203,57 @@
             </LinearLayout>
 
             <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:weightSum="3"
+                android:visibility="gone"
+                android:id="@+id/columnas_closedcash"
+                >
+
+                <Space
+                    android:layout_width="10dp"
+                    android:layout_height="40dp"/>
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="@string/concepto_cajas"
+                    style="@style/BrioButton.Gris"
+                    android:textColor="#FFFFFFFF"
+                    android:textSize="19dp"
+                    android:layout_marginRight="2dp"
+                    android:layout_weight=".85"
+                    android:singleLine="true"
+                    android:background="@drawable/view_bkg_pleca_inactiva" />
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="@string/Cantidad_Cajas"
+                    style="@style/BrioButton.Gris"
+                    android:layout_weight="1.04"
+                    android:textColor="#FFFFFFFF"
+                    android:textSize="18dp"
+                    android:layout_marginRight="2dp"
+                    android:singleLine="true"
+                    android:background="@drawable/view_bkg_pleca_inactiva" />
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="@string/Cantidad_Hora"
+                    style="@style/BrioButton.Gris"
+                    android:layout_weight="1.04"
+                    android:textColor="#FFFFFFFF"
+                    android:textSize="18dp"
+                    android:layout_marginRight="2dp"
+                    android:singleLine="true"
+                    android:background="@drawable/view_bkg_pleca_inactiva" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:paddingTop="5dp"

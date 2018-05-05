@@ -55,16 +55,17 @@ public class ReportesFragment extends OptionMenuFragment implements View.OnClick
     private EditText fechaInicio;
     private EditText fechaFin;
     private TextView showDetallesVentas, showDetallesServicios, showDetallesTae, showDetallesInternet, showDetallesTarjeta,
-                        showDetallesBanco, showDetallesSeguros, showDetallesWestern;
+            showDetallesBanco, showDetallesSeguros, showDetallesWestern;
     //private LinearLayout layoutDetallesVentas;
     private TextView textSinArticulos,textSinInformacion , textSinInternet;
     private RecyclerView mRecyclerView,RecyclerViewPos , RecyclerViewServicio, RecyclerViewTAE,
-                         RecyclerViewInternet, RecyclerViewTarjeta,RecyclerViewBanco, RecyclerViewSeguros, RecyclerViewWestern;
+            RecyclerViewInternet, RecyclerViewTarjeta,RecyclerViewBanco, RecyclerViewSeguros, RecyclerViewWestern;
     private LinearLayout mRecyclerViewDetallesPos, mRecyclerViewDetallesServicios, mRecyclerViewDetallesTAE
-                         , mRecyclerViewDetallesInternet, mRecyclerViewDetallesTarjeta,mRecyclerViewDetallesBanco,
-                            mRecyclerViewDetallesSeguros, mRecyclerViewDetallesWestern;
+            , mRecyclerViewDetallesInternet, mRecyclerViewDetallesTarjeta,mRecyclerViewDetallesBanco,
+            mRecyclerViewDetallesSeguros, mRecyclerViewDetallesWestern;
     private ReportesAdapter mAdapter;
     private ReportesGananciaAdapter mGananciaAdapter;
+    private ReportesClosedCashAdapter mClosedCashAdapter;
     private ReportesCajaAdapter mCaja;
     private ModelManager modelManager;
     private List<Reporte> reportList;
@@ -72,8 +73,8 @@ public class ReportesFragment extends OptionMenuFragment implements View.OnClick
     private List<TransaccionTarjeta> tTransaccionesTarjeta;
     private View listReport;
     private LinearLayout listResults,columnasVendidos,columnasGanancias,columnasCaja
-                        ,columnasDetallesVentas,columnasDetallesServicios,columnasDetallesBanco
-                        ,columnasDetallesSeguros, columnasDetallesWestern;
+            ,columnasDetallesVentas,columnasDetallesServicios,columnasDetallesBanco
+            ,columnasDetallesSeguros, columnasDetallesWestern,columnas_closedcash;
     private LinearLayout listaDetalles,selectTypeReport;
     private Button articulo;
     private RelativeLayout detallesVentas, detallesServicios, detallesTae, detallesInternet, detallesTarjeta,detallesBanco, detallesSeguros, detallesWestern;
@@ -118,6 +119,7 @@ public class ReportesFragment extends OptionMenuFragment implements View.OnClick
         loading = (RelativeLayout)rootView.findViewById(R.id.loading_reports);
         columnasVendidos = (LinearLayout) rootView.findViewById(R.id.columnas_ventas);
         columnasGanancias = (LinearLayout) rootView.findViewById(R.id.columnas_vendidos);
+        columnas_closedcash = (LinearLayout) rootView.findViewById(R.id.columnas_closedcash);
         columnasCaja = (LinearLayout) rootView.findViewById(R.id.columnas_caja);
         columnasDetallesVentas = (LinearLayout) rootView.findViewById(R.id.columnas_detalles_ventas);
         columnasDetallesServicios = (LinearLayout) rootView.findViewById(R.id.columnas_detalles_servicios);
@@ -152,7 +154,7 @@ public class ReportesFragment extends OptionMenuFragment implements View.OnClick
         showDetallesSeguros = (TextView) rootView.findViewById(R.id.parent_list_item_detalles_seguros_results);
         showDetallesWestern = (TextView) rootView.findViewById(R.id.parent_list_item_detalles_western_results);
         ////////////////////////////
-       // layoutDetallesVentas  = (LinearLayout) rootView.findViewById(R.id.layout_detalles);
+        // layoutDetallesVentas  = (LinearLayout) rootView.findViewById(R.id.layout_detalles);
         selecReporte = (Spinner) rootView.findViewById(R.id.spin_report);
         reporteBtn = (BrioButton2) rootView.findViewById(R.id.btn_report);
         reporteBtn.setOnClickListener(this);
@@ -314,6 +316,8 @@ public class ReportesFragment extends OptionMenuFragment implements View.OnClick
         spinnerReportsType.add(Utils.getString(R.string.report_earning, getContext()));
         //spinnerReportsType.add(Utils.getString(R.string.report_sales, getContext()));
         spinnerReportsType.add(Utils.getString(R.string.report_drawer, getContext()));
+        //TODO TESYS21 agregar Reporte de cierre de caja
+        spinnerReportsType.add(Utils.getString(R.string.report_cash_closing, getContext()));
         ArrayAdapter<String> spinnerAdapter =
                 new ArrayAdapter<>(
                         getContext(),
@@ -365,234 +369,257 @@ public class ReportesFragment extends OptionMenuFragment implements View.OnClick
                 fechaFin.setEnabled(false);
 
                 loading.setVisibility(View.VISIBLE);
-                    switch (tipoReporte) {
+                columnas_closedcash.setVisibility(View.GONE);
+                switch (tipoReporte) {
 
-                        case 1:// los 10 mas vendidos
-                            reportList = modelManager.reporte.getReport(tFechaInicio, tFechaFin, tipoReporte);
-                            mAdapter = new ReportesAdapter(getActivity(), reportList);
-                            mRecyclerView.setAdapter(mAdapter);
-                            textSinArticulos.setVisibility(View.GONE);
-                            columnasVendidos.setVisibility(View.VISIBLE);
-                            columnasGanancias.setVisibility(View.GONE);
-                            columnasCaja.setVisibility(View.GONE);
-                            mRecyclerView.setVisibility(View.VISIBLE);
-                            listResults.setVisibility(View.VISIBLE);
-                            listaDetalles.setVisibility(View.GONE);
+                    case 1:// los 10 mas vendidos
+                        reportList = modelManager.reporte.getReport(tFechaInicio, tFechaFin, tipoReporte);
+                        mAdapter = new ReportesAdapter(getActivity(), reportList);
+                        mRecyclerView.setAdapter(mAdapter);
+                        textSinArticulos.setVisibility(View.GONE);
+                        columnasVendidos.setVisibility(View.VISIBLE);
+                        columnasGanancias.setVisibility(View.GONE);
+                        columnasCaja.setVisibility(View.GONE);
+                        mRecyclerView.setVisibility(View.VISIBLE);
+                        listResults.setVisibility(View.VISIBLE);
+                        listaDetalles.setVisibility(View.GONE);
+                        loading.setVisibility(View.GONE);
+
+                        ((BrioActivityMain)getActivity()).enableMenus();
+                        ((BrioActivityMain)getActivity()).enableBackNavigation();
+                        reporteBtn.setEnabled(true);
+                        fechaInicio.setEnabled(true);
+                        fechaFin.setEnabled(true);
+                        break;
+
+                    case 2:// los 10 menos vendidos
+                        reportList = modelManager.reporte.getReport(tFechaInicio, tFechaFin, tipoReporte);
+                        mAdapter = new ReportesAdapter(getActivity(), reportList);
+                        mRecyclerView.setAdapter(mAdapter);
+                        textSinArticulos.setVisibility(View.GONE);
+                        columnasVendidos.setVisibility(View.VISIBLE);
+                        columnasCaja.setVisibility(View.GONE);
+                        columnasGanancias.setVisibility(View.GONE);
+                        mRecyclerView.setVisibility(View.VISIBLE);
+                        listResults.setVisibility(View.VISIBLE);
+                        listaDetalles.setVisibility(View.GONE);
+                        loading.setVisibility(View.GONE);
+
+
+                        ((BrioActivityMain)getActivity()).enableMenus();
+                        ((BrioActivityMain)getActivity()).enableBackNavigation();
+                        reporteBtn.setEnabled(true);
+                        fechaInicio.setEnabled(true);
+                        fechaFin.setEnabled(true);
+                        break;
+
+                    case 3://Ganancias
+                        reportList = modelManager.reporte.getReport(tFechaInicio, tFechaFin, tipoReporte);
+                        mGananciaAdapter = new ReportesGananciaAdapter(getActivity(), reportList);
+                        mRecyclerView.setAdapter(mGananciaAdapter);
+                        textSinArticulos.setVisibility(View.GONE);
+                        columnasVendidos.setVisibility(View.GONE);
+                        columnasCaja.setVisibility(View.GONE);
+                        columnasGanancias.setVisibility(View.VISIBLE);
+                        mRecyclerView.setVisibility(View.VISIBLE);
+                        listResults.setVisibility(View.VISIBLE);
+                        listaDetalles.setVisibility(View.GONE);
+                        loading.setVisibility(View.GONE);
+
+
+                        ((BrioActivityMain)getActivity()).enableMenus();
+                        ((BrioActivityMain)getActivity()).enableBackNavigation();
+                        reporteBtn.setEnabled(true);
+                        fechaInicio.setEnabled(true);
+                        fechaFin.setEnabled(true);
+                        break;
+
+                    case 5://ClosedCash
+                        reportList = modelManager.reporte.getReport(tFechaInicio, tFechaFin, tipoReporte);
+                        mClosedCashAdapter = new ReportesClosedCashAdapter(getActivity(), reportList);
+                        mRecyclerView.setAdapter(mClosedCashAdapter);
+                        textSinArticulos.setVisibility(View.GONE);
+                        columnasVendidos.setVisibility(View.GONE);
+                        columnasCaja.setVisibility(View.GONE);
+                        columnas_closedcash.setVisibility(View.VISIBLE);
+                        columnasGanancias.setVisibility(View.GONE);
+                        mRecyclerView.setVisibility(View.VISIBLE);
+                        listResults.setVisibility(View.VISIBLE);
+                        listaDetalles.setVisibility(View.GONE);
+                        loading.setVisibility(View.GONE);
+
+
+                        ((BrioActivityMain)getActivity()).enableMenus();
+                        ((BrioActivityMain)getActivity()).enableBackNavigation();
+                        reporteBtn.setEnabled(true);
+                        fechaInicio.setEnabled(true);
+                        fechaFin.setEnabled(true);
+                        break;
+
+                    case 4://Entradas y salidas caja
+                        ticketsCaja = modelManager.tickets.getTicketsEntradaSalida(tFechaInicio, tFechaFin);
+                        mCaja = new ReportesCajaAdapter(getActivity(), ticketsCaja);
+                        mRecyclerView.setAdapter(mCaja
+                        );
+                        textSinArticulos.setVisibility(View.GONE);
+                        columnasVendidos.setVisibility(View.GONE);
+                        columnasGanancias.setVisibility(View.GONE);
+                        columnasCaja.setVisibility(View.VISIBLE);
+                        mRecyclerView.setVisibility(View.VISIBLE);
+                        listResults.setVisibility(View.VISIBLE);
+                        listaDetalles.setVisibility(View.GONE);
+                        loading.setVisibility(View.GONE);
+
+
+                        ((BrioActivityMain)getActivity()).enableMenus();
+                        ((BrioActivityMain)getActivity()).enableBackNavigation();
+                        reporteBtn.setEnabled(true);
+                        fechaInicio.setEnabled(true);
+                        fechaFin.setEnabled(true);
+
+                        break;
+
+                    case 6: // Este es el tipo Detalle estado de cuenta - Comentado por: Manuel Delgadillo 25/02/2017
+
+                        loading.setVisibility(View.VISIBLE);
+                        Log.w("Reporte", "antes de la lista pintando");
+
+                        // Ocultar la vista de texto sin articulos - Comentado por: Manuel Delgadillo 25/02/2017
+                        textSinArticulos.setVisibility(View.GONE);
+                        // Ocultar la vista de columnas de "Venta de productos" - Comentado por: Manuel Delgadillo 25/02/2017
+                        columnasVendidos.setVisibility(View.GONE);
+
+                        columnasCaja.setVisibility(View.GONE);
+                        columnasGanancias.setVisibility(View.GONE);
+                        mRecyclerView.setVisibility(View.GONE);
+                        listResults.setVisibility(View.VISIBLE);
+                        //textSinInformacion.setVisibility(View.VISIBLE);
+                        //mRecyclerViewDetallesPos.setVisibility(View.VISIBLE);
+
+
+                        try {
+
+                            long bench = System.currentTimeMillis();
+                            Log.w("Reporte", "antes de la lista try");
+                            //tickets = modelManager.tickets.getPosByFechaTicket(tFechaInicio, tFechaFin);
+
+                            long bench2 = System.currentTimeMillis()-bench;
+                            Log.w("Reporte","bench(modelManager.tickets.getPosByFechaTicket(tFechaInicio, tFechaFin)): "+bench2);
+                            //ticketsServiciosAutorizados = modelManager.tickets.getAutorizadosByRangoFechaTicket(tFechaInicio, tFechaFin);
+
+                            bench = System.currentTimeMillis();
+                            bench2 = System.currentTimeMillis()-bench;
+                            Log.w("Reporte","bench(modelManager.tickets.getAutorizadosByRangoFechaTicket(tFechaInicio, tFechaFin)): "+bench2);
+                            //Log.w("Reporte","Lista tickets size "+tickets.size());
+
+                            /////////////////Async Get Transactions//////////////////////////////
+                            GetTransactions serverService = new GetTransactions(getActivity());
+
+                            String idComercio = modelManager.settings.getByNombre("ID_COMERCIO").getValor();
+                            final long fInicio = tFechaInicio;
+                            final long fFin = tFechaFin;
+                            String url = "http://" + BrioGlobales.URL_ZERO_BRIO+ "/session/api/tickets/estado?idComercio=" + idComercio + "&fechaInicio=" + (fInicio * 1000) + "&fechaFin=" + (fFin * 1000);
+
+                            Log.w("Reporte", url);
+
+                            serverService.request(url, new GetTransactions.ServerServiceListener() {
+
+                                @Override
+                                public void onServerResponse(List<GetTransactions.ServerResponse> syncResponse) {
+
+                                    getDetalle = new Detalle(syncResponse,loading, textSinInformacion, getActivity(), modelManager,
+                                            fInicio, fFin, RecyclerViewPos, RecyclerViewServicio, RecyclerViewTAE,
+                                            RecyclerViewInternet, RecyclerViewTarjeta, RecyclerViewBanco, RecyclerViewSeguros, RecyclerViewWestern, showDetallesVentas, showDetallesServicios,
+                                            showDetallesTae, showDetallesInternet, showDetallesTarjeta, showDetallesBanco, showDetallesSeguros, showDetallesWestern);
+                                    getDetalle.execute();
+                                    getDetalle.setDetallesListener(new Detalle.DetallesListener() {
+                                        @Override
+                                        public void onFinshed(List<Object> listas) {
+                                            objectListasDetalles = listas;
+                                            tVentas = objectListasDetalles.get(0) == null ? new ArrayList<Ticket>() : (List<Ticket>) objectListasDetalles.get(0);
+                                            //Log.w("Reportes","tVentas="+tVentas.size());
+                                            tServicios = objectListasDetalles.get(1) == null ? new ArrayList<Ticket>() : (List<Ticket>) objectListasDetalles.get(1);
+                                            //Log.w("Reportes","tServicios="+tServicios.size());
+                                            tTae = objectListasDetalles.get(2) == null ? new ArrayList<Ticket>() : (List<Ticket>) objectListasDetalles.get(2);
+                                            //Log.w("Reportes","tTae="+tTae.size());
+                                            tInternet = objectListasDetalles.get(3) == null ? new ArrayList<Ticket>() : (List<Ticket>) objectListasDetalles.get(3);
+                                            //Log.w("Reportes","tInternet="+tInternet.size());
+                                            tTransaccionesTarjeta = objectListasDetalles.get(4) == null ? new ArrayList<TransaccionTarjeta>() : (List<TransaccionTarjeta>) objectListasDetalles.get(4);
+                                            //Log.w("Reportes","tTransaccionesTarjeta="+tTransaccionesTarjeta.size());
+                                            tBanco = objectListasDetalles.get(5) == null ? new ArrayList<Ticket>() : (List<Ticket>) objectListasDetalles.get(5);
+
+                                            tSeguros = objectListasDetalles.get(6) == null ? new ArrayList<Ticket>() : (List<Ticket>) objectListasDetalles.get(6);
+
+                                            tWestern = objectListasDetalles.get(7) == null ? new ArrayList<Ticket>() : (List<Ticket>) objectListasDetalles.get(7);
+
+
+                                            loading.setVisibility(View.GONE);
+                                            listaDetalles.setVisibility(View.VISIBLE);
+
+                                            ((BrioActivityMain) getActivity()).enableMenus();
+                                            ((BrioActivityMain) getActivity()).enableBackNavigation();
+                                            reporteBtn.setEnabled(true);
+                                            fechaInicio.setEnabled(true);
+                                            fechaFin.setEnabled(true);
+                                        }
+                                    });
+                                }
+
+                                @Override
+                                public void onErrorResponse(String syncResponse) {
+                                    Log.w("Reporte", "Error en la consulta del servicio!!!!");
+                                    Log.w("Reporte", "onErrorResponse");
+                                    //listResults.setVisibility(View.VISIBLE);
+                                    //detallesVentas.setVisibility(View.VISIBLE);
+                                    detallesServicios.setVisibility(View.GONE);
+                                    detallesTae.setVisibility(View.GONE);
+                                    detallesInternet.setVisibility(View.GONE);
+                                    detallesTarjeta.setVisibility(View.GONE);
+                                    detallesBanco.setVisibility(View.GONE);
+                                    detallesSeguros.setVisibility(View.GONE);
+                                    detallesWestern.setVisibility(View.GONE);
+                                    mRecyclerViewDetallesPos.setVisibility(View.GONE);
+                                    textSinInternet.setVisibility(View.VISIBLE);
+                                    loading.setVisibility(View.GONE);
+
+
+                                    ((BrioActivityMain)getActivity()).enableMenus();
+                                    ((BrioActivityMain)getActivity()).enableBackNavigation();
+                                    reporteBtn.setEnabled(true);
+                                    fechaInicio.setEnabled(true);
+                                    fechaFin.setEnabled(true);
+
+                                }
+                            });
+                            ////////////////////////////////////////////////////////////////////
+                            //aqui estaba Async Detalles
+                            ////////////////////////////////////////////////////////////////////
+                        }catch (Exception e){
+
+                            Log.w("Reporte", "antes de la lista catch!!!!");
+                            Log.w("Reporte", "la lista esta vacia ocurrio un problema");
+                            detallesVentas.setVisibility(View.GONE);
+                            detallesServicios.setVisibility(View.GONE);
+                            detallesTae.setVisibility(View.GONE);
+                            detallesInternet.setVisibility(View.GONE);
+                            detallesTarjeta.setVisibility(View.GONE);
+                            detallesBanco.setVisibility(View.GONE);
+                            detallesSeguros.setVisibility(View.GONE);
+                            detallesWestern.setVisibility(View.GONE);
+                            mRecyclerViewDetallesPos.setVisibility(View.GONE);
+                            textSinInformacion.setVisibility(View.VISIBLE);
                             loading.setVisibility(View.GONE);
+
 
                             ((BrioActivityMain)getActivity()).enableMenus();
                             ((BrioActivityMain)getActivity()).enableBackNavigation();
                             reporteBtn.setEnabled(true);
                             fechaInicio.setEnabled(true);
                             fechaFin.setEnabled(true);
-                            break;
+                        }
 
-                        case 2:// los 10 menos vendidos
-                            reportList = modelManager.reporte.getReport(tFechaInicio, tFechaFin, tipoReporte);
-                            mAdapter = new ReportesAdapter(getActivity(), reportList);
-                            mRecyclerView.setAdapter(mAdapter);
-                            textSinArticulos.setVisibility(View.GONE);
-                            columnasVendidos.setVisibility(View.VISIBLE);
-                            columnasCaja.setVisibility(View.GONE);
-                            columnasGanancias.setVisibility(View.GONE);
-                            mRecyclerView.setVisibility(View.VISIBLE);
-                            listResults.setVisibility(View.VISIBLE);
-                            listaDetalles.setVisibility(View.GONE);
-                            loading.setVisibility(View.GONE);
-
-
-                            ((BrioActivityMain)getActivity()).enableMenus();
-                            ((BrioActivityMain)getActivity()).enableBackNavigation();
-                            reporteBtn.setEnabled(true);
-                            fechaInicio.setEnabled(true);
-                            fechaFin.setEnabled(true);
-                            break;
-
-                        case 3://Ganancias
-                            reportList = modelManager.reporte.getReport(tFechaInicio, tFechaFin, tipoReporte);
-                            mGananciaAdapter = new ReportesGananciaAdapter(getActivity(), reportList);
-                            mRecyclerView.setAdapter(mGananciaAdapter);
-                            textSinArticulos.setVisibility(View.GONE);
-                            columnasVendidos.setVisibility(View.GONE);
-                            columnasCaja.setVisibility(View.GONE);
-                            columnasGanancias.setVisibility(View.VISIBLE);
-                            mRecyclerView.setVisibility(View.VISIBLE);
-                            listResults.setVisibility(View.VISIBLE);
-                            listaDetalles.setVisibility(View.GONE);
-                            loading.setVisibility(View.GONE);
-
-
-                            ((BrioActivityMain)getActivity()).enableMenus();
-                            ((BrioActivityMain)getActivity()).enableBackNavigation();
-                            reporteBtn.setEnabled(true);
-                            fechaInicio.setEnabled(true);
-                            fechaFin.setEnabled(true);
-                            break;
-
-                        case 4://Entradas y salidas caja
-                            ticketsCaja = modelManager.tickets.getTicketsEntradaSalida(tFechaInicio, tFechaFin);
-                            mCaja = new ReportesCajaAdapter(getActivity(), ticketsCaja);
-                            mRecyclerView.setAdapter(mCaja
-                            );
-                            textSinArticulos.setVisibility(View.GONE);
-                            columnasVendidos.setVisibility(View.GONE);
-                            columnasGanancias.setVisibility(View.GONE);
-                            columnasCaja.setVisibility(View.VISIBLE);
-                            mRecyclerView.setVisibility(View.VISIBLE);
-                            listResults.setVisibility(View.VISIBLE);
-                            listaDetalles.setVisibility(View.GONE);
-                            loading.setVisibility(View.GONE);
-
-
-                            ((BrioActivityMain)getActivity()).enableMenus();
-                            ((BrioActivityMain)getActivity()).enableBackNavigation();
-                            reporteBtn.setEnabled(true);
-                            fechaInicio.setEnabled(true);
-                            fechaFin.setEnabled(true);
-
-                            break;
-
-                        case 5: // Este es el tipo Detalle estado de cuenta - Comentado por: Manuel Delgadillo 25/02/2017
-
-                            loading.setVisibility(View.VISIBLE);
-                            Log.w("Reporte", "antes de la lista pintando");
-
-                            // Ocultar la vista de texto sin articulos - Comentado por: Manuel Delgadillo 25/02/2017
-                            textSinArticulos.setVisibility(View.GONE);
-                            // Ocultar la vista de columnas de "Venta de productos" - Comentado por: Manuel Delgadillo 25/02/2017
-                            columnasVendidos.setVisibility(View.GONE);
-
-                            columnasCaja.setVisibility(View.GONE);
-                            columnasGanancias.setVisibility(View.GONE);
-                            mRecyclerView.setVisibility(View.GONE);
-                            listResults.setVisibility(View.VISIBLE);
-                            //textSinInformacion.setVisibility(View.VISIBLE);
-                            //mRecyclerViewDetallesPos.setVisibility(View.VISIBLE);
-
-
-                            try {
-
-                                long bench = System.currentTimeMillis();
-                                Log.w("Reporte", "antes de la lista try");
-                                //tickets = modelManager.tickets.getPosByFechaTicket(tFechaInicio, tFechaFin);
-
-                                long bench2 = System.currentTimeMillis()-bench;
-                                Log.w("Reporte","bench(modelManager.tickets.getPosByFechaTicket(tFechaInicio, tFechaFin)): "+bench2);
-                                //ticketsServiciosAutorizados = modelManager.tickets.getAutorizadosByRangoFechaTicket(tFechaInicio, tFechaFin);
-
-                                bench = System.currentTimeMillis();
-                                bench2 = System.currentTimeMillis()-bench;
-                                Log.w("Reporte","bench(modelManager.tickets.getAutorizadosByRangoFechaTicket(tFechaInicio, tFechaFin)): "+bench2);
-                                //Log.w("Reporte","Lista tickets size "+tickets.size());
-
-                                /////////////////Async Get Transactions//////////////////////////////
-                                GetTransactions serverService = new GetTransactions(getActivity());
-
-                                String idComercio = modelManager.settings.getByNombre("ID_COMERCIO").getValor();
-                                final long fInicio = tFechaInicio;
-                                final long fFin = tFechaFin;
-                                String url = "http://" + BrioGlobales.URL_ZERO_BRIO+ "/session/api/tickets/estado?idComercio=" + idComercio + "&fechaInicio=" + (fInicio * 1000) + "&fechaFin=" + (fFin * 1000);
-
-                                Log.w("Reporte", url);
-
-                                serverService.request(url, new GetTransactions.ServerServiceListener() {
-
-                                    @Override
-                                    public void onServerResponse(List<GetTransactions.ServerResponse> syncResponse) {
-
-                                        getDetalle = new Detalle(syncResponse,loading, textSinInformacion, getActivity(), modelManager,
-                                                fInicio, fFin, RecyclerViewPos, RecyclerViewServicio, RecyclerViewTAE,
-                                                RecyclerViewInternet, RecyclerViewTarjeta, RecyclerViewBanco, RecyclerViewSeguros, RecyclerViewWestern, showDetallesVentas, showDetallesServicios,
-                                                showDetallesTae, showDetallesInternet, showDetallesTarjeta, showDetallesBanco, showDetallesSeguros, showDetallesWestern);
-                                        getDetalle.execute();
-                                        getDetalle.setDetallesListener(new Detalle.DetallesListener() {
-                                            @Override
-                                            public void onFinshed(List<Object> listas) {
-                                                objectListasDetalles = listas;
-                                                tVentas = objectListasDetalles.get(0) == null ? new ArrayList<Ticket>() : (List<Ticket>) objectListasDetalles.get(0);
-                                                //Log.w("Reportes","tVentas="+tVentas.size());
-                                                tServicios = objectListasDetalles.get(1) == null ? new ArrayList<Ticket>() : (List<Ticket>) objectListasDetalles.get(1);
-                                                //Log.w("Reportes","tServicios="+tServicios.size());
-                                                tTae = objectListasDetalles.get(2) == null ? new ArrayList<Ticket>() : (List<Ticket>) objectListasDetalles.get(2);
-                                                //Log.w("Reportes","tTae="+tTae.size());
-                                                tInternet = objectListasDetalles.get(3) == null ? new ArrayList<Ticket>() : (List<Ticket>) objectListasDetalles.get(3);
-                                                //Log.w("Reportes","tInternet="+tInternet.size());
-                                                tTransaccionesTarjeta = objectListasDetalles.get(4) == null ? new ArrayList<TransaccionTarjeta>() : (List<TransaccionTarjeta>) objectListasDetalles.get(4);
-                                                //Log.w("Reportes","tTransaccionesTarjeta="+tTransaccionesTarjeta.size());
-                                                tBanco = objectListasDetalles.get(5) == null ? new ArrayList<Ticket>() : (List<Ticket>) objectListasDetalles.get(5);
-
-                                                tSeguros = objectListasDetalles.get(6) == null ? new ArrayList<Ticket>() : (List<Ticket>) objectListasDetalles.get(6);
-
-                                                tWestern = objectListasDetalles.get(7) == null ? new ArrayList<Ticket>() : (List<Ticket>) objectListasDetalles.get(7);
-
-
-                                                loading.setVisibility(View.GONE);
-                                                listaDetalles.setVisibility(View.VISIBLE);
-
-                                                ((BrioActivityMain) getActivity()).enableMenus();
-                                                ((BrioActivityMain) getActivity()).enableBackNavigation();
-                                                reporteBtn.setEnabled(true);
-                                                fechaInicio.setEnabled(true);
-                                                fechaFin.setEnabled(true);
-                                            }
-                                        });
-                                    }
-
-                                    @Override
-                                    public void onErrorResponse(String syncResponse) {
-                                        Log.w("Reporte", "Error en la consulta del servicio!!!!");
-                                        Log.w("Reporte", "onErrorResponse");
-                                        //listResults.setVisibility(View.VISIBLE);
-                                        //detallesVentas.setVisibility(View.VISIBLE);
-                                        detallesServicios.setVisibility(View.GONE);
-                                        detallesTae.setVisibility(View.GONE);
-                                        detallesInternet.setVisibility(View.GONE);
-                                        detallesTarjeta.setVisibility(View.GONE);
-                                        detallesBanco.setVisibility(View.GONE);
-                                        detallesSeguros.setVisibility(View.GONE);
-                                        detallesWestern.setVisibility(View.GONE);
-                                        mRecyclerViewDetallesPos.setVisibility(View.GONE);
-                                        textSinInternet.setVisibility(View.VISIBLE);
-                                        loading.setVisibility(View.GONE);
-
-
-                                        ((BrioActivityMain)getActivity()).enableMenus();
-                                        ((BrioActivityMain)getActivity()).enableBackNavigation();
-                                        reporteBtn.setEnabled(true);
-                                        fechaInicio.setEnabled(true);
-                                        fechaFin.setEnabled(true);
-
-                                    }
-                                });
-                                ////////////////////////////////////////////////////////////////////
-                                //aqui estaba Async Detalles
-                                ////////////////////////////////////////////////////////////////////
-                            }catch (Exception e){
-
-                                Log.w("Reporte", "antes de la lista catch!!!!");
-                                Log.w("Reporte", "la lista esta vacia ocurrio un problema");
-                                detallesVentas.setVisibility(View.GONE);
-                                detallesServicios.setVisibility(View.GONE);
-                                detallesTae.setVisibility(View.GONE);
-                                detallesInternet.setVisibility(View.GONE);
-                                detallesTarjeta.setVisibility(View.GONE);
-                                detallesBanco.setVisibility(View.GONE);
-                                detallesSeguros.setVisibility(View.GONE);
-                                detallesWestern.setVisibility(View.GONE);
-                                mRecyclerViewDetallesPos.setVisibility(View.GONE);
-                                textSinInformacion.setVisibility(View.VISIBLE);
-                                loading.setVisibility(View.GONE);
-
-
-                                ((BrioActivityMain)getActivity()).enableMenus();
-                                ((BrioActivityMain)getActivity()).enableBackNavigation();
-                                reporteBtn.setEnabled(true);
-                                fechaInicio.setEnabled(true);
-                                fechaFin.setEnabled(true);
-                            }
-
-                            break;
-                    }
+                        break;
+                }
 
 
 
@@ -1291,4 +1318,3 @@ public class ReportesFragment extends OptionMenuFragment implements View.OnClick
 
 
 }
-

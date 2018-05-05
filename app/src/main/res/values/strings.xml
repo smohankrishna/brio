@@ -37,7 +37,7 @@
     <string name="menu_subtitle">Seleccione la opción deseada</string>
 
     <string name="menu_reportes_estadocuenta">Estado de cuenta</string>
-    <string name="menu_reportes_ventas">Reportes de ventas</string>
+    <string name = "menu_reportes_ventas"> Reports </string>
     <string name="menu_reportes_detallesestadocuenta">Detalles estado de cuenta</string>
 
     <string name="menu_administracion_cajaentrada">Entrada de dinero</string>
@@ -262,6 +262,7 @@ recibiendo como Beneficiario, proceden de una fuente lícita
     <string name="report_10_less_sold">Los 10 articulos menos vendidos</string>
     <string name="report_earning">Ganancias</string>
     <string name="report_drawer">Entradas y Salidas de caja</string>
+    <string name="report_cash_closing"> Cash closure report </string>
     <string name="report_error_title">Error</string>
     <string name="report_error_date">Fecha fin debe ser mayor o igual\na Fecha inicio</string>
     <string name="report_error_type_report">Seleccione un tipo de reporte</string>
@@ -472,6 +473,8 @@ recibiendo como Beneficiario, proceden de una fuente lícita
     <string name="TituloSalida">Salida de Dinero</string>
     <string name="concepto_cajas">Concepto</string>
     <string name="Cantidad_Caja">Cantidad:</string>
+    <string name="Cantidad_Cajas">Cantidad</string>
+    <string name="Cantidad_Hora">Hora</string>
     <string name="concepto_Caja_editable">Ingrese un concepto</string>
     <string name="concepto_Caja_editable1">Ingrese un concepto</string>
     <string name="validacion_Cantidad">Ingrese una cantidad </string>
