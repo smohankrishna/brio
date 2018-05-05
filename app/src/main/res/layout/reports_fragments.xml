@@ -172,6 +172,7 @@
                 android:visibility="gone"/>
 
 
+
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
@@ -1202,6 +1203,16 @@
 
             </LinearLayout>
 
+
+
+            <include
+                android:id="@+id/report_specific_include"
+                layout="@layout/report_specfic_entry"
+                android:visibility="visible"
+
+                ></include>
+
+
             <LinearLayout
                 android:orientation="horizontal"
                 android:layout_width="match_parent"
@@ -1286,6 +1297,9 @@
             android:textSize="30dp" />
 
     </LinearLayout>
+
+
+
 
 </LinearLayout>
 

@@ -1,0 +1,119 @@
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    >
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/report_specfic_view"
+    android:layout_margin="20dp"
+    android:orientation="vertical"
+    android:background="@drawable/report_specific_round_corner">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="320dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="10dp"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center_vertical|left"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="70dp"
+            android:textStyle="bold"
+            android:id="@+id/report_specfic_concepto_name"
+            android:text="NAme" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/report_specfic_date"
+            android:text="1-2-2013"
+            android:textSize="40dp"
+            android:textStyle="bold"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:text="ajsfvhavsf"
+            android:id="@+id/report_specfic_user"
+            android:textSize="40dp"/>
+
+    </LinearLayout>
+
+
+
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/report_specfic_recyclerview"
+        android:layout_margin="20dp">
+
+    </android.support.v7.widget.RecyclerView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:text="Total de salidas:    "
+            android:textSize="30dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:text="      ajsfvhavsf"
+            android:id="@+id/report_specific_total"
+            android:textSize="30dp"/>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:layout_width="200dp"
+        android:gravity="center_vertical|left"
+        android:layout_gravity="center_horizontal"
+        android:layout_height="50dp">
+
+    <Button
+        android:layout_width="200dp"
+        android:gravity="center_vertical|center_horizontal"
+        android:layout_height="50dp"
+        android:id="@+id/report_specfic_backButton"
+        android:textColor="#ffff"
+        android:textSize="25dp"
+        android:textStyle="bold"
+        android:text="   Regresar   "
+        android:background="@drawable/round_button"
+        android:theme="@style/MyButton"/>
+    </LinearLayout>
+
+</LinearLayout>
+</ScrollView>

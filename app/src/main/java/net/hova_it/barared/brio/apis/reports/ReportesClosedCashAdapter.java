@@ -34,13 +34,16 @@ public class ReportesClosedCashAdapter extends RecyclerView.Adapter<ReportesClos
     private final Object me;
     private ReportesDAO reportesDAO;
 
+    private  CustomReportOnClickListner customReportOnClickListner;
 
 
-    public ReportesClosedCashAdapter(Context context, List<Reporte> reportes){
+
+    public ReportesClosedCashAdapter(Context context, List<Reporte> reportes,CustomReportOnClickListner customReportOnClickListner){
         this.context = context;
         this.reportes = reportes;//new ArrayList<>();
         this.me = this;
-        reportesDAO = ((BrioActivityMain)context).modelManager.reporte;
+        this.reportesDAO = ((BrioActivityMain)context).modelManager.reporte;
+        this.customReportOnClickListner = customReportOnClickListner;
         Log.w("ReporteAdapter", "entre");
 
 
@@ -62,7 +65,16 @@ public class ReportesClosedCashAdapter extends RecyclerView.Adapter<ReportesClos
     @Override
     public ClosedCashViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View vItem = LayoutInflater.from(context).inflate(R.layout.report_closedcash_row, parent, false);
-        return new ClosedCashViewHolder(vItem);
+        final ClosedCashViewHolder mViewHolder = new ClosedCashViewHolder(vItem);
+        //setting customreport onclick listner
+        vItem.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                customReportOnClickListner.onReportRowClick(vItem,mViewHolder.getLayoutPosition());
+            }
+        });
+
+        return mViewHolder;
     }
 
     /**

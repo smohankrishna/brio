@@ -117,7 +117,7 @@ public class ReportesAdapter extends RecyclerView.Adapter<ReportesAdapter.Report
 
         public ReportesViewHolder(View vitem) {
             super(vitem);
-            descArticulo=(TextView)vitem.findViewById(R.id.reporte_producto);
+           // descArticulo=(TextView)vitem.findViewById(R.id.reporte_producto);
             cantidad=(TextView)vitem.findViewById(R.id.reporte_cantidad);
 
         }

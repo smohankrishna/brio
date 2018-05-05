@@ -15,6 +15,10 @@ public class ReportesDAO {
     public ReportesDAO(SQLiteService sqLiteService) {
         this.sqLiteService = sqLiteService;
     }
+
+
+
+
     /**
      * Obtener todos los registros
      * @return

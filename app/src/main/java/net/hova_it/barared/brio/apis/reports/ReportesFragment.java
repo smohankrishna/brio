@@ -18,6 +18,7 @@ import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
+import android.widget.ScrollView;
 import android.widget.Spinner;
 import android.widget.TextView;
 
@@ -63,10 +64,17 @@ public class ReportesFragment extends OptionMenuFragment implements View.OnClick
     private LinearLayout mRecyclerViewDetallesPos, mRecyclerViewDetallesServicios, mRecyclerViewDetallesTAE
             , mRecyclerViewDetallesInternet, mRecyclerViewDetallesTarjeta,mRecyclerViewDetallesBanco,
             mRecyclerViewDetallesSeguros, mRecyclerViewDetallesWestern;
+
+
+
     private ReportesAdapter mAdapter;
     private ReportesGananciaAdapter mGananciaAdapter;
     private ReportesClosedCashAdapter mClosedCashAdapter;
     private ReportesCajaAdapter mCaja;
+
+
+
+
     private ModelManager modelManager;
     private List<Reporte> reportList;
     private List<Ticket> ticketsCaja,ticketsServiciosAutorizados,tVentas,tServicios,tTae,tInternet,tBanco, tSeguros, tWestern;
@@ -90,6 +98,14 @@ public class ReportesFragment extends OptionMenuFragment implements View.OnClick
 
     private DateFormat formatterToShow = new SimpleDateFormat("dd-MM-yyyy");
     private BrioAlertDialog errorFecha, errorTipoReporte;
+
+
+
+
+    //Report specific
+    private LinearLayout report_specific;
+    private ReportSpecificAdapter reportSpecificAdapter;
+
 
 
     public  ReportesFragment(){}
@@ -185,6 +201,12 @@ public class ReportesFragment extends OptionMenuFragment implements View.OnClick
         RecyclerViewSeguros = (RecyclerView) rootView.findViewById(R.id.recycler_view_detalles_seguros);
         mRecyclerViewDetallesWestern = (LinearLayout) rootView.findViewById(R.id.list_detalles_western);
         RecyclerViewWestern = (RecyclerView) rootView.findViewById(R.id.recycler_view_detalles_western);
+
+        //report specific view
+        report_specific = (LinearLayout) rootView.findViewById(R.id.report_specific_include);
+
+
+
         /////////////////////////////////////////////////////////////////////////////////////////////////
         selectTypeReport = (LinearLayout) rootView.findViewById(R.id.select_type_report);
         fechaInicio = (EditText) rootView.findViewById(R.id.fecha_inicial);
@@ -436,7 +458,35 @@ public class ReportesFragment extends OptionMenuFragment implements View.OnClick
 
                     case 5://ClosedCash
                         reportList = modelManager.reporte.getReport(tFechaInicio, tFechaFin, tipoReporte);
-                        mClosedCashAdapter = new ReportesClosedCashAdapter(getActivity(), reportList);
+                        mClosedCashAdapter = new ReportesClosedCashAdapter(getActivity(), reportList,new CustomReportOnClickListner(){
+                            @Override
+                            public void onReportRowClick(View specfic_report_item, int position) {
+
+                                loading.setVisibility(View.VISIBLE);
+
+                                //Same reporte list
+                                //report_specific
+
+                                ((TextView)report_specific.findViewById(R.id.report_specfic_concepto_name)).setText("Ayyapa");
+
+
+                                loading.setVisibility(View.GONE);
+                                report_specific.setVisibility(View.VISIBLE);
+
+
+
+                                //reportList
+
+
+                                //Need to load specfic_report fragment, on clicking on the row of the reports
+
+
+                            }
+
+                        });
+
+
+
                         mRecyclerView.setAdapter(mClosedCashAdapter);
                         textSinArticulos.setVisibility(View.GONE);
                         columnasVendidos.setVisibility(View.GONE);
